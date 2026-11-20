@@ -341,8 +341,14 @@ html[lang="ar"] .lb .cap .seed{font-family:var(--f-body)}
 
 
 /* INTRO */
-.intro{position:relative;z-index:3;padding-block:clamp(64px,8vw,110px) clamp(40px,5vw,72px);border-bottom:1px solid var(--line)}
-.introgrid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,6vw,96px);align-items:start}
+.intro{position:relative;z-index:3;overflow:hidden;border-bottom:1px solid var(--line)}
+.introgrid{position:relative;display:grid;grid-template-columns:minmax(0,43%) minmax(0,1fr);gap:clamp(20px,2.5vw,40px);align-items:start;min-height:min(47vw,720px);padding-block:clamp(64px,7vw,104px) clamp(48px,5.5vw,84px)}
+.iart{position:absolute;z-index:0;bottom:0;inset-inline-start:10%;height:94%;width:auto;max-width:none;pointer-events:none;user-select:none}
+html[dir="rtl"] .iart{transform:scaleX(-1)}
+html[dir="rtl"] .introgrid>.iart{inset-inline-start:11.5%}
+.ihead .hi,.ihead .irole{filter:drop-shadow(0 2px 14px rgba(10,12,23,.6))}
+@media(min-width:861px){html[lang="ar"]:not(.x) .introgrid:not(.x) .hi{font-size:clamp(50px,6vw,90px)}}
+.ihead,.itext{position:relative;z-index:1}
 .ihead{display:grid;gap:18px;align-content:start}
 .itext{display:grid;gap:18px;align-content:start;padding-top:clamp(0px,2.2vw,34px)}
 .hi{font-size:clamp(60px,8.2vw,124px);line-height:.9;font-weight:800;letter-spacing:-.05em}
@@ -358,9 +364,12 @@ html[lang="ar"] .isign{letter-spacing:0}
 .isign em{font-style:italic;color:var(--ember)}
 html[lang="ar"] .isign em{font-style:normal}
 .ictas{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
-@media(max-width:860px){.introgrid{grid-template-columns:1fr}.itext{padding-top:0}}
-.mob .intro{padding-top:44px;padding-bottom:44px}
-.mob .introgrid{grid-template-columns:1fr;gap:20px}
+@media(max-width:860px){.introgrid{grid-template-columns:1fr;min-height:0;padding-block:28px 48px;gap:22px}.itext{padding-top:0}
+.iart{top:0;bottom:auto;inset-inline-start:auto;inset-inline-end:-10px;height:min(96vw,400px);-webkit-mask-image:linear-gradient(#000 72%,transparent);mask-image:linear-gradient(#000 72%,transparent)}
+.ihead{min-height:min(92vw,384px);align-content:end}}
+.mob .introgrid{grid-template-columns:1fr;min-height:0;padding-block:28px 44px;gap:20px}
+.mob .iart{top:0;bottom:auto;inset-inline-start:auto;inset-inline-end:-10px;height:min(96vw,400px);-webkit-mask-image:linear-gradient(#000 72%,transparent);mask-image:linear-gradient(#000 72%,transparent)}
+.mob .ihead{min-height:min(92vw,384px);align-content:end}
 .mob .ihead{gap:12px}
 .mob .itext{padding-top:0;gap:14px}
 .mob .hi{font-size:clamp(52px,15.5vw,72px)}
@@ -493,6 +502,7 @@ html[lang="ar"] .msvc li{font-family:var(--f-body)}
 
 <section class="intro" id="about">
   <div class="wrap introgrid">
+    <img class="iart" src="i/art.webp" alt="" width="779" height="1200" decoding="async">
     <div class="ihead">
       <span class="eyebrow" data-t="aEye">About</span>
       <h2 class="hi"><span data-t="aHi1">Hi, I’m</span> <span class="grad" data-t="aHi2">Mostafa</span></h2>
