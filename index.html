@@ -184,6 +184,48 @@ html[lang="ar"] .orig .tagline{font-style:normal}
 .peekrow button{flex:0 0 clamp(220px,24vw,300px);aspect-ratio:16/9;border:1px solid var(--line);border-radius:10px;overflow:hidden;padding:0;background:var(--ink-2);cursor:pointer;scroll-snap-align:start;transition:transform .3s,border-color .3s}
 .peekrow button:hover{transform:translateY(-3px);border-color:var(--ember)}
 .peekrow img{width:100%;height:100%;object-fit:cover}
+/* Six Seconds (featured original) */
+.ssbadge{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;padding:5px 14px 5px 5px;border-radius:99px;background:rgba(11,13,16,.62);border:1px solid rgba(229,72,59,.55);color:var(--paper);text-decoration:none;font:500 13.5px var(--f-body);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:border-color .25s}
+.ssbadge:hover{border-color:#E5483B}
+.ssbadge b{background:#E5483B;color:#0B0D10;border-radius:99px;padding:3px 10px;font:700 11px var(--f-mono);letter-spacing:.08em}
+html[lang="ar"] .ssbadge b{font-family:var(--f-body);letter-spacing:0}
+.ss{position:relative;overflow:hidden;background:#0B0D10;padding-top:clamp(40px,5vw,72px)}
+.ss .ssbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.2;z-index:0;pointer-events:none}
+.ss::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,var(--ink) 0%,rgba(11,13,16,.55) 30%,rgba(11,13,16,.7) 70%,var(--ink) 100%)}
+.ss>*{position:relative;z-index:1}
+.ssband{margin:0 -6vw clamp(40px,5vw,72px);transform:rotate(-2deg);background:#C8352B;border-block:3px solid #96241C;box-shadow:0 20px 50px rgba(0,0,0,.5);overflow:hidden;white-space:nowrap;padding:14px 0}
+.ssband .row{display:inline-flex;gap:56px;padding-inline-start:56px;animation:ssmq 46s linear infinite;font:800 clamp(18px,2.3vw,30px)/1 var(--f-display);letter-spacing:.16em;text-transform:uppercase;color:#F3EADB}
+html[lang="ar"] .ssband .row{letter-spacing:0;animation-name:ssmqR}
+@keyframes ssmqR{to{transform:translateX(50%)}}
+.ssband .row span::after{content:"●";margin-inline-start:56px;color:#0B0D10;font-size:.6em;vertical-align:middle}
+@keyframes ssmq{to{transform:translateX(-50%)}}
+.ssgrid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,80px);align-items:center}
+.ssvid{position:relative;display:block;border-radius:30px;overflow:hidden;aspect-ratio:9/16;width:100%;max-width:400px;margin-inline:auto;background:#14181C;border:8px solid #1C2024;box-shadow:0 30px 80px rgba(0,0,0,.6);padding:0;cursor:pointer}
+.ssvid video{width:100%;height:100%;object-fit:cover}
+.ssvid .tc{position:absolute;top:16px;inset-inline-end:18px;font:600 13px var(--f-mono);letter-spacing:.14em;color:#ECE5D8;display:flex;align-items:center;gap:8px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.ssvid .tc i{width:9px;height:9px;border-radius:50%;background:#E5483B;animation:ssrec 1.2s steps(2) infinite}
+@keyframes ssrec{50%{opacity:.2}}
+.ss .eyebrow{color:#E5483B;display:inline-flex;align-items:center;gap:10px}
+.ss .new{background:#E5483B;color:#0B0D10;border-radius:4px;padding:3px 8px;font-weight:700}
+.ss h2{font:800 clamp(56px,8.4vw,128px)/.88 var(--f-display);text-transform:uppercase;letter-spacing:-.01em;margin-top:16px}
+.ss .tagline{font:300 italic clamp(20px,2.1vw,28px) var(--f-display);color:#E5483B;margin-top:14px}
+html[lang="ar"] .ss .tagline{font-style:normal}
+.ss p{color:#C9CDD1;font-size:18px;max-width:54ch;margin-top:20px}
+.btn-red{background:#E5483B;color:#140A0A}
+.btn-red:hover{background:#F0604F}
+.sseps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.6vw,20px);margin-top:clamp(48px,6vw,88px)}
+.ssep{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:1px solid rgba(236,229,216,.1);padding:0;background:#14181C;cursor:pointer;color:inherit;text-align:start;font:inherit}
+.ssep img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.ssep:hover img{transform:scale(1.05)}
+.ssep .m{position:absolute;inset:auto 0 0 0;padding:72px 16px 16px;display:grid;gap:6px;background:linear-gradient(0deg,rgba(11,13,16,.97) 35%,rgba(11,13,16,0))}
+.ssep .n{font:600 11px var(--f-mono);letter-spacing:.12em;color:#FF7A6B}
+html[lang="ar"] .ssep .n{font-family:var(--f-body);letter-spacing:0}
+.ssep h3{font-size:clamp(16px,1.6vw,22px);text-transform:uppercase}
+.ssep .pl{position:absolute;top:14px;inset-inline-start:14px;width:40px;height:40px;border-radius:50%;background:rgba(11,13,16,.6);display:grid;place-items:center;transition:background .25s}
+.ssep:hover .pl{background:#E5483B}
+.ssep .pl svg{width:14px;height:14px;fill:#ECE5D8}
+#ssPeek button:hover{border-color:#E5483B}
+@media(max-width:860px){.ssgrid{grid-template-columns:1fr}.sseps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* deck viewer */
 .dk{position:fixed;inset:0;z-index:110;background:#05060C;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:10px;padding:calc(env(safe-area-inset-top,0px) + 14px) var(--gutR) calc(env(safe-area-inset-bottom,0px) + 14px) var(--gut)}
 .dk[hidden]{display:none!important}
@@ -332,6 +374,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .lb .x{width:44px;height:44px;border-radius:50%;border:1px solid var(--ink-3);background:none;color:var(--paper);font-size:22px;cursor:pointer}
 .lb .stagebox{display:grid;place-items:center;min-height:0;padding-block:14px}
 .lb video{max-width:100%;max-height:100%;border-radius:12px;background:#000}
+.lb .stagebox video{max-height:calc(100svh - 210px)}
 .lb .cap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:14px;max-width:1100px;width:100%;margin:0 auto}
 .lb .cap h3{font-size:clamp(22px,3vw,34px)}
 .lb .cap .seed{font:400 14px var(--f-mono);color:#CFCBE0;margin-top:4px}
@@ -419,6 +462,10 @@ html[lang="ar"] .mob .hero h1{font-size:clamp(46px,13vw,72px);line-height:1.15}
 .mob .orig .ctas .btn{flex:1;justify-content:center}
 .mob .peek{margin-top:36px}
 .mob .peekrow button{flex-basis:72vw}
+.mob .ssvid{max-width:320px}
+.mob .ss h2{font-size:56px}
+.mob .ss p{font-size:16px}
+.mob .ss .ctas .btn{flex:1;justify-content:center}
 .mob .still{flex-basis:auto}
 .mob .still img{height:clamp(240px,64vw,320px)}
 .mob .services{display:grid;gap:10px;border-top:0}
@@ -464,6 +511,7 @@ html[lang="ar"] .msvc li{font-family:var(--f-body)}
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Mostafa Elsayaad, home"><i aria-hidden="true"></i><span data-t="brand">Mostafa Elsayaad</span><small data-t="role">Creative Producer &amp; AI Creative Director</small></a>
     <div class="links">
+      <a href="#sixseconds" data-t="nSeries">Six Seconds</a>
       <a href="#about" data-t="nAbout">About</a>
       <a href="#work" data-t="nWork">Work</a>
       <a href="#services" data-t="nServices">Services</a>
@@ -480,6 +528,7 @@ html[lang="ar"] .msvc li{font-family:var(--f-body)}
   <video id="heroVid" data-src="m/hero.mp4" data-msrc="m/herov.mp4" data-mposter="p/herov.jpg" poster="p/hero.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
   <canvas id="grain" aria-hidden="true"></canvas>
   <div class="wrap">
+    <a class="ssbadge" href="#sixseconds"><b data-t="ssNew">NEW</b><span data-t="ssBadge">Six Seconds · original micro-drama, 4 episodes out</span></a>
     <div class="prompt" aria-live="polite"><span class="tag">PROMPT</span><span class="typed" id="typed">a caravan crosses the dunes at dusk, led by a silver SUV</span><span class="bar" aria-hidden="true"><b id="bar"></b></span></div>
     <h1><span data-t="h1a">Ideas that</span> <span class="grad" data-t="h1b">render.</span></h1>
     <p class="lede" data-t="lede">I take a brand from one sentence to finished films, key visuals and pitch decks, with fourteen years of real production behind every frame.</p>
@@ -499,6 +548,44 @@ html[lang="ar"] .msvc li{font-family:var(--f-body)}
 <div class="marquee" aria-label="Brands">
   <div class="row" id="marq"></div>
 </div>
+
+<section id="sixseconds" class="ss">
+  <img class="ssbg" src="i/ss-keyart.jpg" alt="" loading="lazy" decoding="async">
+  <div class="ssband" aria-hidden="true"><div class="row" id="ssRow"></div></div>
+  <div class="wrap ssgrid">
+    <button class="ssvid" id="ssBtn" type="button" aria-label="Watch Six Seconds, episode 1">
+      <video id="ssVid" src="m/sixseconds.mp4" poster="p/sixseconds.jpg" muted loop playsinline preload="none"></video>
+      <span class="tc" aria-hidden="true"><i></i>00:00:06</span>
+    </button>
+    <div>
+      <span class="eyebrow"><span class="new" data-t="ssNew">NEW</span><span data-t="ssEye">Original micro-drama series</span></span>
+      <h2 data-t="ssH">Six Seconds</h2>
+      <p class="tagline" data-t="ssTag">Saving his brother means forgetting him.</p>
+      <p data-t="ssP">A London thriller told in one-minute vertical episodes. Two street kids fall into a begging racket run by a man posing as a charity benefactor. After an accident, one of them can see six seconds into the future, and every time he looks, he loses a memory of the brother he is trying to save. Written, designed and directed by me with AI.</p>
+      <div class="ostats">
+        <div><b>40</b><span data-t="ss1">episodes</span></div>
+        <div><b>60s</b><span data-t="st2">per episode</span></div>
+        <div><b>4</b><span data-t="ss3">episodes out now</span></div>
+        <div><b>9:16</b><span data-t="st3">vertical, mobile-first</span></div>
+      </div>
+      <dl class="credits">
+        <div><dt data-t="c1t">Role</dt><dd data-t="c1">Creator · Writer · Director · AI Artist</dd></div>
+        <div><dt data-t="c2t">Status</dt><dd data-t="ssC2">4 episodes produced · all 40 written</dd></div>
+      </dl>
+      <div class="ctas" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+        <button class="btn btn-red" type="button" id="ssWatch" data-t="ssCta">Watch episode 1</button>
+        <button class="btn btn-ghost" type="button" id="ssDeck" data-t="oDeck">Open the series deck</button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="sseps" id="ssEps"></div>
+    <div class="peek">
+      <span class="eyebrow" data-t="peek">Inside the deck · tap any page</span>
+      <div class="peekrow" id="ssPeek"></div>
+    </div>
+  </div>
+</section>
 
 <section class="intro" id="about">
   <div class="wrap introgrid">
@@ -703,6 +790,7 @@ h1a:"Ideas that",h1b:"render.",lede:"I take a brand from one sentence to finishe
 cta1:"See the work",cta2:"Brief me in one line",f1:"years in production",f2:"AI films & visuals",f3:"markets: UAE · KSA · Egypt",f4:"native creative",
 wEye:"Selected films",wH:"Every frame began as a sentence.",wSub:"Hover a film to read the line that started it. Click to watch with sound.",
 sEye:"Short form · 9:16",sH:"Made for the scroll.",
+nSeries:"Six Seconds",ssNew:"NEW",ssBadge:"Six Seconds · original micro-drama, 4 episodes out",ssEye:"Original micro-drama series",ssH:"Six Seconds",ssTag:"Saving his brother means forgetting him.",ssP:"A London thriller told in one-minute vertical episodes. Two street kids fall into a begging racket run by a man posing as a charity benefactor. After an accident, one of them can see six seconds into the future, and every time he looks, he loses a memory of the brother he is trying to save. Written, designed and directed by me with AI.",ss1:"episodes",ss3:"episodes out now",ssC2:"4 episodes produced · all 40 written",ssCta:"Watch episode 1",ssBand:["New original series","Six Seconds","Four episodes out now","London","40 × 60 seconds"],
 oEye:"Original micro-drama series",oH:"One Wish Before Dawn",oTag:"Every wish has a price.",oP:"A romantic fantasy thriller told in one-minute vertical episodes. A grieving photographer slips into the Great Pyramid in search of a scarab said to grant one wish, and finds a living world, a cursed guardian and a love that costs a life. Written, designed and directed by me with AI, in English and Arabic.",
 st1:"episodes",st2:"per episode",st3:"vertical, mobile-first",st4:"night, sunset to dawn",
 c1t:"Role",c1:"Creator · Writer · Director · AI Artist",c2t:"Status",c2:"2 episodes produced · all 30 written",oCta:"Watch the trailer",oDeck:"Open the series deck",peek:"Inside the deck · tap any page",dkGs:"Open in Google Slides",
@@ -724,7 +812,7 @@ h1a:"أفكارٌ",h1b:"تتحوّل إلى صورة.",lede:"آخذ علامتك
 cta1:"شاهد الأعمال",cta2:"أرسل فكرتك في سطر",f1:"عاماً في الإنتاج",f2:"فيلماً وتصميماً بالذكاء الاصطناعي",f3:"أسواق: الإمارات · السعودية · مصر",f4:"إبداع بلغتين",
 wEye:"أفلام مختارة",wH:"كل لقطة بدأت بجملة.",wSub:"مرّر على الفيلم لتقرأ السطر الذي بدأه، واضغط لتشاهده بالصوت.",
 sEye:"محتوى قصير · ٩:١٦",sH:"صُنع ليوقف التمرير.",
-oEye:"مسلسل دراما مصغّرة أصلي",oH:"أمنية قبل الفجر",oTag:"لكل أمنية ثمن.",oP:"تشويق رومانسي خيالي يُروى في حلقات عمودية مدة كل منها دقيقة. مصوّرة مفجوعة تتسلّل إلى الهرم الأكبر بحثاً عن جعرانٍ يُقال إنه يحقق أمنية واحدة، فتجد عالماً حيّاً وحارساً ملعوناً وحباً ثمنه حياة. من كتابتي وتصميمي وإخراجي بالذكاء الاصطناعي، بالعربية والإنجليزية.",
+nSeries:"ست ثوانٍ",ssNew:"جديد",ssBadge:"ست ثوانٍ · دراما مصغّرة أصلية، ٤ حلقات متاحة",ssEye:"مسلسل دراما مصغّرة أصلي",ssH:"ست ثوانٍ",ssTag:"إنقاذ أخيه يعني أن ينساه.",ssP:"دراما تشويق لندنية في حلقات عمودية مدة كل منها دقيقة. طفلان من الشارع يقعان في شبكة تسوّل يديرها رجل يختبئ خلف قناع العمل الخيري. بعد حادث، يصبح أحدهما قادراً على رؤية ست ثوانٍ من المستقبل، لكنه في كل مرة ينظر فيها يفقد ذكرى من الأخ الذي يحاول إنقاذه. كتابة وتصميم وإخراج بالذكاء الاصطناعي.",ss1:"حلقة",ss3:"حلقات متاحة الآن",ssC2:"٤ حلقات منتَجة · ٤٠ حلقة مكتوبة",ssCta:"شاهد الحلقة الأولى",ssBand:["مسلسل أصلي جديد","ست ثوانٍ","أربع حلقات متاحة","لندن","٤٠ × ٦٠ ثانية"],oEye:"مسلسل دراما مصغّرة أصلي",oH:"أمنية قبل الفجر",oTag:"لكل أمنية ثمن.",oP:"تشويق رومانسي خيالي يُروى في حلقات عمودية مدة كل منها دقيقة. مصوّرة مفجوعة تتسلّل إلى الهرم الأكبر بحثاً عن جعرانٍ يُقال إنه يحقق أمنية واحدة، فتجد عالماً حيّاً وحارساً ملعوناً وحباً ثمنه حياة. من كتابتي وتصميمي وإخراجي بالذكاء الاصطناعي، بالعربية والإنجليزية.",
 st1:"حلقة",st2:"لكل حلقة",st3:"عمودي، للجوال أولاً",st4:"ليلة واحدة، من الغروب إلى الفجر",
 c1t:"الدور",c1:"صاحب الفكرة · كاتب · مخرج · فنان ذكاء اصطناعي",c2t:"الحالة",c2:"حلقتان منتجتان · الحلقات الثلاثون مكتوبة",oCta:"شاهد الإعلان التشويقي",oDeck:"افتح عرض المسلسل",peek:"داخل العرض · اضغط على أي صفحة",dkGs:"افتح في Google Slides",
 kEye:"صور رئيسية",kH:"صورٌ توقف الإبهام.",
@@ -741,6 +829,11 @@ all:"الكل",copied:"تم نسخ الموجز",copyFail:"حدّد النص و�
 briefHead:"موجز جديد",bLine:"الفكرة",bNeed:"الاحتياج",bWhen:"الإطار الزمني",bCo:"العلامة",bFrom:"من",tbd:"للنقاش"}
 };
 const L=o=>o[lang]||o.en;
+const SIX=[
+ {id:"ss-ep1",n:{en:"Episode 01 · 0:42",ar:"الحلقة ٠١ · ٠:٤٢"},client:{en:"Six Seconds · Episode 01",ar:"ست ثوانٍ · الحلقة ٠١"},title:{en:"The Price",ar:"الثمن"},seed:{en:"“I’m here to buy my brother back.”",ar:"«جئت لأشتري أخي.»"}},
+ {id:"ss-ep2",n:{en:"Episode 02 · 0:46",ar:"الحلقة ٠٢ · ٠:٤٦"},client:{en:"Six Seconds · Episode 02",ar:"ست ثوانٍ · الحلقة ٠٢"},title:{en:"The Debt Book",ar:"دفتر الديون"},seed:{en:"“Now the other one has a reason to come back.”",ar:"«الآن صار للآخر سبب ليعود.»"}},
+ {id:"ss-ep3",n:{en:"Episode 03 · 0:32",ar:"الحلقة ٠٣ · ٠:٣٢"},client:{en:"Six Seconds · Episode 03",ar:"ست ثوانٍ · الحلقة ٠٣"},title:{en:"The Officer",ar:"الشرطية"},seed:{en:"“Are you here on your own?”",ar:"«هل أنت هنا وحدك؟»"}},
+ {id:"ss-ep4",n:{en:"Episode 04 · 0:38",ar:"الحلقة ٠٤ · ٠:٣٨"},client:{en:"Six Seconds · Episode 04",ar:"ست ثوانٍ · الحلقة ٠٤"},title:{en:"The Last Coin",ar:"العملة الأخيرة"},seed:{en:"“No one saw him come in.”",ar:"«لم يره أحد وهو يدخل.»"}}];
 let lang="en";
 try{const s=localStorage.getItem("me-lang");if(s==="ar"||s==="en")lang=s}catch(e){}
 
@@ -886,6 +979,8 @@ function render(){
   R.querySelectorAll("[data-t]").forEach(el=>{const v=T[lang][el.dataset.t];if(v!=null)el.textContent=v});
   $("#lang").textContent=T[lang].langBtn;
   const b=BRANDS.map(x=>`<span>${esc(x)}<em>✦</em></span>`).join("");$("#marq").innerHTML=b+b;
+  const sb=T[lang].ssBand.map(x=>`<span>${esc(x)}</span>`).join("");$("#ssRow").innerHTML=sb+sb+sb+sb;
+  $("#ssEps").innerHTML=SIX.map((e,i)=>`<button class="ssep" type="button" data-i="${i}" aria-label="${esc(L(e.client))}: ${esc(L(e.title))}"><img src="p/${e.id}.jpg" alt="" loading="lazy"><span class="pl">${playSVG}</span><span class="m"><span class="n">${esc(L(e.n))}</span><h3>${esc(L(e.title))}</h3></span></button>`).join("");
   $("#films").innerHTML=FILMS.map((f,i)=>`<button class="film ${f.cls}" type="button" data-i="${i}" data-kind="film"><img src="p/${f.id}.jpg" alt="" loading="lazy"><video data-src="m/${f.id}.mp4" muted loop playsinline preload="none"></video><span class="shade"></span><span class="play">${playSVG}</span><span class="dur">${f.dur}</span><span class="meta"><span class="client">${esc(L(f.client))}</span><h3>${esc(L(f.title))}</h3><span class="seed">${esc(L(f.seed))}</span></span></button>`).join("");
   $("#chips").innerHTML=CATS.map(([k,v])=>`<button class="chip" type="button" data-cat="${k}" aria-pressed="${k===cat}">${esc(L(v))}</button>`).join("");
   $("#wall").innerHTML=REELS.map((r,i)=>`<button class="reel" type="button" data-i="${i}" data-kind="reel" data-cat="${r.cat}" ${cat!=="all"&&r.cat!==cat?"hidden":""}><img src="p/${r.id}.jpg" alt="" loading="lazy"><video data-src="m/${r.id}.mp4" muted loop playsinline preload="none"></video><span class="shade"></span><span class="meta"><span class="client">${esc(L(r.client))}</span><h3>${esc(L(r.title))}</h3></span></button>`).join("");
@@ -922,7 +1017,7 @@ let mio=null;
 /* lightbox */
 let lbList=[],lbI=0;
 function openLB(kind,i){
-  lbList=kind==="film"?FILMS:kind==="reel"?REELS.filter(r=>cat==="all"||r.cat===cat):[{id:"onewish",client:{en:"Original micro-drama · Trailer",ar:"دراما مصغّرة أصلية · الإعلان"},title:{en:"One Wish Before Dawn",ar:"أمنية قبل الفجر"},seed:{en:"One night. One wish. One love that costs a life.",ar:"ليلة واحدة. أمنية واحدة. وحبٌّ ثمنه حياة."}}];
+  lbList=kind==="film"?FILMS:kind==="reel"?REELS.filter(r=>cat==="all"||r.cat===cat):kind==="six"?SIX:[{id:"onewish",client:{en:"Original micro-drama · Trailer",ar:"دراما مصغّرة أصلية · الإعلان"},title:{en:"One Wish Before Dawn",ar:"أمنية قبل الفجر"},seed:{en:"One night. One wish. One love that costs a life.",ar:"ليلة واحدة. أمنية واحدة. وحبٌّ ثمنه حياة."}}];
   if(kind==="reel"){const id=REELS[i].id;i=lbList.findIndex(r=>r.id===id)}
   lbI=i;$("#lb").hidden=false;document.body.style.overflow="hidden";showLB();$("#lbX").focus();
 }
@@ -964,27 +1059,37 @@ const owV=$("#owVid");
 const owIO=new IntersectionObserver(es=>es.forEach(en=>{if(reduce)return;if(en.isIntersecting){owV.play().catch(()=>{})}else owV.pause()}),{threshold:.3});owIO.observe(owV);
 $("#owBtn").onclick=$("#owPlay").onclick=()=>{owV.pause();openLB("orig",0)};
 
+/* Six Seconds */
+const ssV=$("#ssVid");
+const ssIO=new IntersectionObserver(es=>es.forEach(en=>{if(reduce)return;if(en.isIntersecting){ssV.play().catch(()=>{})}else ssV.pause()}),{threshold:.3});ssIO.observe(ssV);
+$("#ssBtn").onclick=$("#ssWatch").onclick=()=>{ssV.pause();openLB("six",0)};
+$("#ssEps").addEventListener("click",e=>{const b=e.target.closest(".ssep");if(b){ssV.pause();openLB("six",+b.dataset.i)}});
+
 
 /* series deck */
 const dk=$("#dk"),dkImg=$("#dkImg");let dkI=0,dkLast=null;
 const pad=n=>String(n).padStart(2,"0");
 const DECK=Array.from({length:34},(_,i)=>`d/s-${pad(i+1)}.jpg`);
 const STILL_SRC=STILLS.map(s=>`i/${s[0]}.jpg`);
+const SSDECK=Array.from({length:29},(_,i)=>`d/ss-${pad(i+1)}.jpg`);
 let SRC=null;
 function dkFill(list){if(SRC===list)return;SRC=list;
   $("#dkStrip").innerHTML=SRC.map((u,i)=>`<button type="button" data-k="${i}" aria-label="${i+1}"><img src="${u}" alt="" loading="lazy"></button>`).join("");
   const g=R.querySelector("#dk .gs");if(g)g.hidden=SRC!==DECK;
-  R.querySelectorAll("#dk .strip button").forEach(b=>b.classList.toggle("wide",SRC===DECK))}
+  R.querySelectorAll("#dk .strip button").forEach(b=>b.classList.toggle("wide",SRC!==STILL_SRC))}
 dkFill(DECK);
 $("#peekRow").innerHTML=[0,1,4,6,7,12,14,21,30,31].map(i=>`<button type="button" data-k="${i}" aria-label="Open deck at page ${i+1}"><img src="${DECK[i]}" alt="" loading="lazy"></button>`).join("");
 function dkShow(i){const n=SRC.length;dkI=(i+n)%n;dkImg.src=SRC[dkI];$("#dkIdx").textContent=`${pad(dkI+1)} / ${pad(n)}`;
   R.querySelectorAll("#dkStrip button").forEach(b=>{const on=+b.dataset.k===dkI;b.setAttribute("aria-current",on);if(on)b.scrollIntoView({block:"nearest",inline:"center"})});
   [dkI+1,dkI+2].forEach(k=>{if(k<n){const im=new Image();im.src=SRC[k]}})}
-function dkOpen(i,list){dkLast=document.activeElement;owV.pause();dkFill(list||DECK);dk.hidden=false;document.body.style.overflow="hidden";dkShow(i||0);$("#dkX").focus()}
+function dkOpen(i,list){dkLast=document.activeElement;owV.pause();ssV.pause();dkFill(list||DECK);dk.hidden=false;document.body.style.overflow="hidden";dkShow(i||0);$("#dkX").focus()}
 $("#stillsRow").addEventListener("click",e=>{const b=e.target.closest(".stillbtn");if(b)dkOpen(+b.dataset.k,STILL_SRC)});
 function dkClose(){dk.hidden=true;document.body.style.overflow="";dkLast&&dkLast.focus&&dkLast.focus()}
 $("#deckOpen").onclick=()=>dkOpen(0,DECK);
 $("#peekRow").addEventListener("click",e=>{const b=e.target.closest("button");if(b)dkOpen(+b.dataset.k,DECK)});
+$("#ssPeek").innerHTML=[0,3,6,8,10,11,12,15,18,26].map(i=>`<button type="button" data-k="${i}" aria-label="Open Six Seconds deck at page ${i+1}"><img src="${SSDECK[i]}" alt="" loading="lazy"></button>`).join("");
+$("#ssPeek").addEventListener("click",e=>{const b=e.target.closest("button");if(b)dkOpen(+b.dataset.k,SSDECK)});
+$("#ssDeck").onclick=()=>dkOpen(0,SSDECK);
 $("#dkStrip").addEventListener("click",e=>{const b=e.target.closest("button");if(b)dkShow(+b.dataset.k)});
 $("#dkX").onclick=dkClose;$("#dkN").onclick=()=>dkShow(dkI+1);$("#dkP").onclick=()=>dkShow(dkI-1);
 document.addEventListener("keydown",e=>{if(dk.hidden)return;const fwd=lang==="ar"?"ArrowLeft":"ArrowRight",back=lang==="ar"?"ArrowRight":"ArrowLeft";
