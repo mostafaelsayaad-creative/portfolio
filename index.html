@@ -213,7 +213,7 @@ html[lang="ar"] .ss .tagline{font-style:normal}
 .ss p{color:#C9CDD1;font-size:18px;max-width:54ch;margin-top:20px}
 .btn-red{background:#E5483B;color:#140A0A}
 .btn-red:hover{background:#F0604F}
-.sseps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.6vw,20px);margin-top:clamp(48px,6vw,88px)}
+.sseps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(10px,1.6vw,20px);margin-top:clamp(48px,6vw,88px)}
 .ssep{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:1px solid rgba(236,229,216,.1);padding:0;background:#14181C;cursor:pointer;color:inherit;text-align:start;font:inherit}
 .ssep img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .ssep:hover img{transform:scale(1.05)}
@@ -226,6 +226,7 @@ html[lang="ar"] .ssep .n{font-family:var(--f-body);letter-spacing:0}
 .ssep .pl svg{width:14px;height:14px;fill:#ECE5D8}
 #ssPeek button:hover{border-color:#E5483B}
 @media(max-width:860px){.ssgrid{grid-template-columns:1fr}.sseps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:861px) and (max-width:1100px){.sseps{grid-template-columns:repeat(3,minmax(0,1fr))}}
 /* deck viewer */
 .dk{position:fixed;inset:0;z-index:110;background:#05060C;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:10px;padding:calc(env(safe-area-inset-top,0px) + 14px) var(--gutR) calc(env(safe-area-inset-bottom,0px) + 14px) var(--gut)}
 .dk[hidden]{display:none!important}
@@ -511,9 +512,9 @@ html[lang="ar"] .msvc li{font-family:var(--f-body)}
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Mostafa Elsayaad, home"><i aria-hidden="true"></i><span data-t="brand">Mostafa Elsayaad</span><small data-t="role">Creative Producer &amp; AI Creative Director</small></a>
     <div class="links">
-      <a href="#sixseconds" data-t="nSeries">Six Seconds</a>
       <a href="#about" data-t="nAbout">About</a>
       <a href="#work" data-t="nWork">Work</a>
+      <a href="#sixseconds" data-t="nSeries">Six Seconds</a>
       <a href="#services" data-t="nServices">Services</a>
       <a href="#process" data-t="nProcess">Process</a>
       <a href="#packages" data-t="nPackages">Packages</a>
@@ -528,7 +529,7 @@ html[lang="ar"] .msvc li{font-family:var(--f-body)}
   <video id="heroVid" data-src="m/hero.mp4" data-msrc="m/herov.mp4" data-mposter="p/herov.jpg" poster="p/hero.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
   <canvas id="grain" aria-hidden="true"></canvas>
   <div class="wrap">
-    <a class="ssbadge" href="#sixseconds"><b data-t="ssNew">NEW</b><span data-t="ssBadge">Six Seconds · original micro-drama, 4 episodes out</span></a>
+    <a class="ssbadge" href="#sixseconds"><b data-t="ssNew">NEW</b><span data-t="ssBadge">Six Seconds · original micro-drama, 6 episodes out</span></a>
     <div class="prompt" aria-live="polite"><span class="tag">PROMPT</span><span class="typed" id="typed">a caravan crosses the dunes at dusk, led by a silver SUV</span><span class="bar" aria-hidden="true"><b id="bar"></b></span></div>
     <h1><span data-t="h1a">Ideas that</span> <span class="grad" data-t="h1b">render.</span></h1>
     <p class="lede" data-t="lede">I take a brand from one sentence to finished films, key visuals and pitch decks, with fourteen years of real production behind every frame.</p>
@@ -548,44 +549,6 @@ html[lang="ar"] .msvc li{font-family:var(--f-body)}
 <div class="marquee" aria-label="Brands">
   <div class="row" id="marq"></div>
 </div>
-
-<section id="sixseconds" class="ss">
-  <img class="ssbg" src="i/ss-keyart.jpg" alt="" loading="lazy" decoding="async">
-  <div class="ssband" aria-hidden="true"><div class="row" id="ssRow"></div></div>
-  <div class="wrap ssgrid">
-    <button class="ssvid" id="ssBtn" type="button" aria-label="Watch Six Seconds, episode 1">
-      <video id="ssVid" src="m/sixseconds.mp4" poster="p/sixseconds.jpg" muted loop playsinline preload="none"></video>
-      <span class="tc" aria-hidden="true"><i></i>00:00:06</span>
-    </button>
-    <div>
-      <span class="eyebrow"><span class="new" data-t="ssNew">NEW</span><span data-t="ssEye">Original micro-drama series</span></span>
-      <h2 data-t="ssH">Six Seconds</h2>
-      <p class="tagline" data-t="ssTag">Saving his brother means forgetting him.</p>
-      <p data-t="ssP">A London thriller told in one-minute vertical episodes. Two street kids fall into a begging racket run by a man posing as a charity benefactor. After an accident, one of them can see six seconds into the future, and every time he looks, he loses a memory of the brother he is trying to save. Written, designed and directed by me with AI.</p>
-      <div class="ostats">
-        <div><b>40</b><span data-t="ss1">episodes</span></div>
-        <div><b>60s</b><span data-t="st2">per episode</span></div>
-        <div><b>4</b><span data-t="ss3">episodes out now</span></div>
-        <div><b>9:16</b><span data-t="st3">vertical, mobile-first</span></div>
-      </div>
-      <dl class="credits">
-        <div><dt data-t="c1t">Role</dt><dd data-t="c1">Creator · Writer · Director · AI Artist</dd></div>
-        <div><dt data-t="c2t">Status</dt><dd data-t="ssC2">4 episodes produced · all 40 written</dd></div>
-      </dl>
-      <div class="ctas" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
-        <button class="btn btn-red" type="button" id="ssWatch" data-t="ssCta">Watch episode 1</button>
-        <button class="btn btn-ghost" type="button" id="ssDeck" data-t="oDeck">Open the series deck</button>
-      </div>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="sseps" id="ssEps"></div>
-    <div class="peek">
-      <span class="eyebrow" data-t="peek">Inside the deck · tap any page</span>
-      <div class="peekrow" id="ssPeek"></div>
-    </div>
-  </div>
-</section>
 
 <section class="intro" id="about">
   <div class="wrap introgrid">
@@ -614,6 +577,44 @@ html[lang="ar"] .msvc li{font-family:var(--f-body)}
       <p class="sub" data-t="wSub">Hover a film to read the line that started it. Click to watch with sound.</p>
     </div>
     <div class="films" id="films"></div>
+  </div>
+</section>
+
+<section id="sixseconds" class="ss">
+  <img class="ssbg" src="i/ss-keyart.jpg" alt="" loading="lazy" decoding="async">
+  <div class="ssband" aria-hidden="true"><div class="row" id="ssRow"></div></div>
+  <div class="wrap ssgrid">
+    <button class="ssvid" id="ssBtn" type="button" aria-label="Watch Six Seconds, episode 1">
+      <video id="ssVid" src="m/sixseconds.mp4" poster="p/sixseconds.jpg" muted loop playsinline preload="none"></video>
+      <span class="tc" aria-hidden="true"><i></i>00:00:06</span>
+    </button>
+    <div>
+      <span class="eyebrow"><span class="new" data-t="ssNew">NEW</span><span data-t="ssEye">Original micro-drama series</span></span>
+      <h2 data-t="ssH">Six Seconds</h2>
+      <p class="tagline" data-t="ssTag">Saving his brother means forgetting him.</p>
+      <p data-t="ssP">A London thriller told in one-minute vertical episodes. Two street kids fall into a begging racket run by a man posing as a charity benefactor. After an accident, one of them can see six seconds into the future, and every time he looks, he loses a memory of the brother he is trying to save. Written, designed and directed by me with AI.</p>
+      <div class="ostats">
+        <div><b>40</b><span data-t="ss1">episodes</span></div>
+        <div><b>60s</b><span data-t="st2">per episode</span></div>
+        <div><b>6</b><span data-t="ss3">episodes out now</span></div>
+        <div><b>9:16</b><span data-t="st3">vertical, mobile-first</span></div>
+      </div>
+      <dl class="credits">
+        <div><dt data-t="c1t">Role</dt><dd data-t="c1">Creator · Writer · Director · AI Artist</dd></div>
+        <div><dt data-t="c2t">Status</dt><dd data-t="ssC2">6 episodes produced · all 40 written</dd></div>
+      </dl>
+      <div class="ctas" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+        <button class="btn btn-red" type="button" id="ssWatch" data-t="ssCta">Watch episode 1</button>
+        <button class="btn btn-ghost" type="button" id="ssDeck" data-t="oDeck">Open the series deck</button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="sseps" id="ssEps"></div>
+    <div class="peek">
+      <span class="eyebrow" data-t="peek">Inside the deck · tap any page</span>
+      <div class="peekrow" id="ssPeek"></div>
+    </div>
   </div>
 </section>
 
@@ -790,7 +791,7 @@ h1a:"Ideas that",h1b:"render.",lede:"I take a brand from one sentence to finishe
 cta1:"See the work",cta2:"Brief me in one line",f1:"years in production",f2:"AI films & visuals",f3:"markets: UAE · KSA · Egypt",f4:"native creative",
 wEye:"Selected films",wH:"Every frame began as a sentence.",wSub:"Hover a film to read the line that started it. Click to watch with sound.",
 sEye:"Short form · 9:16",sH:"Made for the scroll.",
-nSeries:"Six Seconds",ssNew:"NEW",ssBadge:"Six Seconds · original micro-drama, 4 episodes out",ssEye:"Original micro-drama series",ssH:"Six Seconds",ssTag:"Saving his brother means forgetting him.",ssP:"A London thriller told in one-minute vertical episodes. Two street kids fall into a begging racket run by a man posing as a charity benefactor. After an accident, one of them can see six seconds into the future, and every time he looks, he loses a memory of the brother he is trying to save. Written, designed and directed by me with AI.",ss1:"episodes",ss3:"episodes out now",ssC2:"4 episodes produced · all 40 written",ssCta:"Watch episode 1",ssBand:["New original series","Six Seconds","Four episodes out now","London","40 × 60 seconds"],
+nSeries:"Six Seconds",ssNew:"NEW",ssBadge:"Six Seconds · original micro-drama, 6 episodes out",ssEye:"Original micro-drama series",ssH:"Six Seconds",ssTag:"Saving his brother means forgetting him.",ssP:"A London thriller told in one-minute vertical episodes. Two street kids fall into a begging racket run by a man posing as a charity benefactor. After an accident, one of them can see six seconds into the future, and every time he looks, he loses a memory of the brother he is trying to save. Written, designed and directed by me with AI.",ss1:"episodes",ss3:"episodes out now",ssC2:"6 episodes produced · all 40 written",ssCta:"Watch episode 1",ssBand:["New original series","Six Seconds","Six episodes out now","London","40 × 60 seconds"],
 oEye:"Original micro-drama series",oH:"One Wish Before Dawn",oTag:"Every wish has a price.",oP:"A romantic fantasy thriller told in one-minute vertical episodes. A grieving photographer slips into the Great Pyramid in search of a scarab said to grant one wish, and finds a living world, a cursed guardian and a love that costs a life. Written, designed and directed by me with AI, in English and Arabic.",
 st1:"episodes",st2:"per episode",st3:"vertical, mobile-first",st4:"night, sunset to dawn",
 c1t:"Role",c1:"Creator · Writer · Director · AI Artist",c2t:"Status",c2:"2 episodes produced · all 30 written",oCta:"Watch the trailer",oDeck:"Open the series deck",peek:"Inside the deck · tap any page",dkGs:"Open in Google Slides",
@@ -812,7 +813,7 @@ h1a:"أفكارٌ",h1b:"تتحوّل إلى صورة.",lede:"آخذ علامتك
 cta1:"شاهد الأعمال",cta2:"أرسل فكرتك في سطر",f1:"عاماً في الإنتاج",f2:"فيلماً وتصميماً بالذكاء الاصطناعي",f3:"أسواق: الإمارات · السعودية · مصر",f4:"إبداع بلغتين",
 wEye:"أفلام مختارة",wH:"كل لقطة بدأت بجملة.",wSub:"مرّر على الفيلم لتقرأ السطر الذي بدأه، واضغط لتشاهده بالصوت.",
 sEye:"محتوى قصير · ٩:١٦",sH:"صُنع ليوقف التمرير.",
-nSeries:"ست ثوانٍ",ssNew:"جديد",ssBadge:"ست ثوانٍ · دراما مصغّرة أصلية، ٤ حلقات متاحة",ssEye:"مسلسل دراما مصغّرة أصلي",ssH:"ست ثوانٍ",ssTag:"إنقاذ أخيه يعني أن ينساه.",ssP:"دراما تشويق لندنية في حلقات عمودية مدة كل منها دقيقة. طفلان من الشارع يقعان في شبكة تسوّل يديرها رجل يختبئ خلف قناع العمل الخيري. بعد حادث، يصبح أحدهما قادراً على رؤية ست ثوانٍ من المستقبل، لكنه في كل مرة ينظر فيها يفقد ذكرى من الأخ الذي يحاول إنقاذه. كتابة وتصميم وإخراج بالذكاء الاصطناعي.",ss1:"حلقة",ss3:"حلقات متاحة الآن",ssC2:"٤ حلقات منتَجة · ٤٠ حلقة مكتوبة",ssCta:"شاهد الحلقة الأولى",ssBand:["مسلسل أصلي جديد","ست ثوانٍ","أربع حلقات متاحة","لندن","٤٠ × ٦٠ ثانية"],oEye:"مسلسل دراما مصغّرة أصلي",oH:"أمنية قبل الفجر",oTag:"لكل أمنية ثمن.",oP:"تشويق رومانسي خيالي يُروى في حلقات عمودية مدة كل منها دقيقة. مصوّرة مفجوعة تتسلّل إلى الهرم الأكبر بحثاً عن جعرانٍ يُقال إنه يحقق أمنية واحدة، فتجد عالماً حيّاً وحارساً ملعوناً وحباً ثمنه حياة. من كتابتي وتصميمي وإخراجي بالذكاء الاصطناعي، بالعربية والإنجليزية.",
+nSeries:"ست ثوانٍ",ssNew:"جديد",ssBadge:"ست ثوانٍ · دراما مصغّرة أصلية، ٦ حلقات متاحة",ssEye:"مسلسل دراما مصغّرة أصلي",ssH:"ست ثوانٍ",ssTag:"إنقاذ أخيه يعني أن ينساه.",ssP:"دراما تشويق لندنية في حلقات عمودية مدة كل منها دقيقة. طفلان من الشارع يقعان في شبكة تسوّل يديرها رجل يختبئ خلف قناع العمل الخيري. بعد حادث، يصبح أحدهما قادراً على رؤية ست ثوانٍ من المستقبل، لكنه في كل مرة ينظر فيها يفقد ذكرى من الأخ الذي يحاول إنقاذه. كتابة وتصميم وإخراج بالذكاء الاصطناعي.",ss1:"حلقة",ss3:"حلقات متاحة الآن",ssC2:"٦ حلقات منتَجة · ٤٠ حلقة مكتوبة",ssCta:"شاهد الحلقة الأولى",ssBand:["مسلسل أصلي جديد","ست ثوانٍ","ست حلقات متاحة","لندن","٤٠ × ٦٠ ثانية"],oEye:"مسلسل دراما مصغّرة أصلي",oH:"أمنية قبل الفجر",oTag:"لكل أمنية ثمن.",oP:"تشويق رومانسي خيالي يُروى في حلقات عمودية مدة كل منها دقيقة. مصوّرة مفجوعة تتسلّل إلى الهرم الأكبر بحثاً عن جعرانٍ يُقال إنه يحقق أمنية واحدة، فتجد عالماً حيّاً وحارساً ملعوناً وحباً ثمنه حياة. من كتابتي وتصميمي وإخراجي بالذكاء الاصطناعي، بالعربية والإنجليزية.",
 st1:"حلقة",st2:"لكل حلقة",st3:"عمودي، للجوال أولاً",st4:"ليلة واحدة، من الغروب إلى الفجر",
 c1t:"الدور",c1:"صاحب الفكرة · كاتب · مخرج · فنان ذكاء اصطناعي",c2t:"الحالة",c2:"حلقتان منتجتان · الحلقات الثلاثون مكتوبة",oCta:"شاهد الإعلان التشويقي",oDeck:"افتح عرض المسلسل",peek:"داخل العرض · اضغط على أي صفحة",dkGs:"افتح في Google Slides",
 kEye:"صور رئيسية",kH:"صورٌ توقف الإبهام.",
@@ -833,7 +834,9 @@ const SIX=[
  {id:"ss-ep1",n:{en:"Episode 01 · 0:42",ar:"الحلقة ٠١ · ٠:٤٢"},client:{en:"Six Seconds · Episode 01",ar:"ست ثوانٍ · الحلقة ٠١"},title:{en:"The Price",ar:"الثمن"},seed:{en:"“I’m here to buy my brother back.”",ar:"«جئت لأشتري أخي.»"}},
  {id:"ss-ep2",n:{en:"Episode 02 · 0:46",ar:"الحلقة ٠٢ · ٠:٤٦"},client:{en:"Six Seconds · Episode 02",ar:"ست ثوانٍ · الحلقة ٠٢"},title:{en:"The Debt Book",ar:"دفتر الديون"},seed:{en:"“Now the other one has a reason to come back.”",ar:"«الآن صار للآخر سبب ليعود.»"}},
  {id:"ss-ep3",n:{en:"Episode 03 · 0:32",ar:"الحلقة ٠٣ · ٠:٣٢"},client:{en:"Six Seconds · Episode 03",ar:"ست ثوانٍ · الحلقة ٠٣"},title:{en:"The Officer",ar:"الشرطية"},seed:{en:"“Are you here on your own?”",ar:"«هل أنت هنا وحدك؟»"}},
- {id:"ss-ep4",n:{en:"Episode 04 · 0:38",ar:"الحلقة ٠٤ · ٠:٣٨"},client:{en:"Six Seconds · Episode 04",ar:"ست ثوانٍ · الحلقة ٠٤"},title:{en:"The Last Coin",ar:"العملة الأخيرة"},seed:{en:"“No one saw him come in.”",ar:"«لم يره أحد وهو يدخل.»"}}];
+ {id:"ss-ep4",n:{en:"Episode 04 · 0:38",ar:"الحلقة ٠٤ · ٠:٣٨"},client:{en:"Six Seconds · Episode 04",ar:"ست ثوانٍ · الحلقة ٠٤"},title:{en:"The Last Coin",ar:"العملة الأخيرة"},seed:{en:"“No one saw him come in.”",ar:"«لم يره أحد وهو يدخل.»"}},
+ {id:"ss-ep5",n:{en:"Episode 05 · 0:45",ar:"الحلقة ٠٥ · ٠:٤٥"},client:{en:"Six Seconds · Episode 05",ar:"ست ثوانٍ · الحلقة ٠٥"},title:{en:"The Second Sound",ar:"الصوت الثاني"},seed:{en:"He hears it before it happens.",ar:"يسمعه قبل أن يحدث."}},
+ {id:"ss-ep6",n:{en:"Episode 06 · 0:56",ar:"الحلقة ٠٦ · ٠:٥٦"},client:{en:"Six Seconds · Episode 06",ar:"ست ثوانٍ · الحلقة ٠٦"},title:{en:"Change It",ar:"غيِّره"},seed:{en:"“Count the drips.”",ar:"«عُدَّ القطرات.»"}}];
 let lang="en";
 try{const s=localStorage.getItem("me-lang");if(s==="ar"||s==="en")lang=s}catch(e){}
 
