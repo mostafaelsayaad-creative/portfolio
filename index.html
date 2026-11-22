@@ -4,27 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mostafa Elsayaad, creative film producer and AI creative director</title>
-<meta name="description" content="Commercials, music videos, social content, CGI and AI films produced by Mostafa Elsayaad across the UAE, Saudi Arabia, Egypt and Lebanon.">
+<meta name="description" content="TV commercials, music videos, micro-dramas, short formats, CGI and AI films produced and directed by Mostafa Elsayaad. Dubai.">
 <meta property="og:title" content="Mostafa Elsayaad, creative film producer and AI creative director">
-<meta property="og:description" content="Commercials, music videos, social content, CGI and AI films. Dubai.">
-<meta property="og:image" content="media/reel/set.jpg">
-<meta name="theme-color" content="#0C2226">
+<meta property="og:description" content="TV commercials, music videos, micro-dramas, short formats, CGI and AI films. Dubai.">
+<meta property="og:image" content="media/reel/hero.jpg">
+<meta name="theme-color" content="#060607">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300..800&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Sans:wght@400..600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=2">
 </head>
 <body>
-<a class="skip" href="#work" data-t="skip">Skip to the work</a>
+<a class="skip" href="#selected" data-t="skip">Skip to the work</a>
 
 <header class="bar">
   <a class="bar-name" href="#top">Mostafa Elsayaad</a>
   <nav class="bar-nav" aria-label="Sections">
-    <a href="#work" data-t="navWork">Work</a>
-    <a href="#callsheet" data-t="navSheet">Call sheet</a>
-    <a href="#cases" data-t="navCases">Case studies</a>
-    <a href="#bts" data-t="navBts">Behind the scenes</a>
-    <a href="ai/" data-t="navAi">AI studio</a>
+    <a href="#selected" data-t="navSel">Selected work</a>
+    <a href="#ai" data-t="navAi">AI Studio</a>
+    <a href="#films" data-t="navFilms">Films by type</a>
     <a href="#contact" data-t="navContact">Contact</a>
   </nav>
   <button class="lang" id="lang" type="button" aria-label="Switch language">العربية</button>
@@ -32,53 +30,53 @@
 
 <main id="top">
 <section class="hero" aria-label="Showreel">
-  <video id="reel" class="hero-video" muted playsinline autoplay preload="auto" poster="media/reel/set.jpg" src="media/reel/set.mp4"></video>
+  <video id="reel" class="hero-video" muted playsinline autoplay loop preload="auto" poster="media/reel/hero.jpg" src="media/reel/hero.mp4"></video>
   <div class="hero-shade"></div>
-  <div class="guides" aria-hidden="true">
-    <i class="g g-tl"></i><i class="g g-tr"></i><i class="g g-bl"></i><i class="g g-br"></i>
-    <div class="tc"><span class="tally"></span><span id="tc">00:00:00:00</span><span class="tc-reel" id="tcReel">Reel A</span></div>
-  </div>
   <div class="hero-text">
-    <h1 class="roles">
-      <button type="button" class="role is-on" data-reel="set" aria-pressed="true" data-t="roleSet">Creative film producer</button>
-      <button type="button" class="role" data-reel="ai" aria-pressed="false" data-t="roleAi">AI creative director</button>
-    </h1>
-    <p class="hero-sub" data-t="heroSub">Fourteen years producing commercials, music videos and social content in the Gulf and Egypt. I also direct films made with AI. Pick a title to switch reels.</p>
+    <h1>Mostafa Elsayaad</h1>
+    <p class="hero-roles" data-t="roles">Creative film producer and AI creative director</p>
+    <p class="hero-sub" data-t="heroSub">Fourteen years of commercials, music videos and social content across the Gulf and Egypt, and films directed with AI.</p>
   </div>
 </section>
 
-<section class="about wrap">
-  <p class="about-text" data-t="about">I started as a copywriter and creative director, then moved into production. So I read a script the way a creative does and budget it the way a producer has to. I've run sets with more than 150 crew, worked with high-end talent, and delivered for Hublot, Emaar, Skechers, Mashreq, Abbott and Nivea. I'm based in Dubai.</p>
-  <dl class="slate">
-    <div><dt data-t="slYears">Years in production</dt><dd>14</dd></div>
-    <div><dt data-t="slProjects">Projects on this site</dt><dd id="nProjects">0</dd></div>
-    <div><dt data-t="slFilms">Films you can watch</dt><dd id="nFilms">0</dd></div>
-    <div><dt data-t="slMarkets">Crew and talent in</dt><dd class="slate-small" data-t="slMarketsV">UAE, KSA, Egypt, Lebanon</dd></div>
-  </dl>
+<section class="intro wrap">
+  <p class="intro-text" data-t="about">I started as a copywriter and creative director, then moved into production. So I read a script the way a creative does and budget it the way a producer has to. I've run sets with more than 150 crew and delivered for Hublot, Emaar, Skechers, Ajmal, Mashreq and Abbott.</p>
 </section>
 
-<section class="sheet" id="callsheet">
-  <div class="wrap">
-    <div class="sheet-head">
-      <h2 data-t="sheetH">What I can put on a call sheet</h2>
-      <p data-t="sheetP">Pick a line to see the work behind it.</p>
+<section id="selected" aria-label="Selected work">
+  <div id="panels"></div>
+</section>
+
+<section class="ai" id="ai">
+  <video class="ai-bg" id="aiBg" muted playsinline loop preload="none" poster="ai/p/hero.jpg" data-src="ai/m/hero.mp4"></video>
+  <div class="ai-veil"></div>
+  <div class="wrap ai-head">
+    <h2><span data-t="aiH">AI Studio</span></h2>
+    <p class="ai-tag" data-t="aiTag">Ideas that render.</p>
+    <p class="ai-p" data-t="aiP">Where a one-line idea becomes a finished film. I direct brand commercials and my own micro-dramas with AI, and fourteen years on real sets decide what goes in the frame.</p>
+    <div class="ai-cta">
+      <a class="btn btn-ai" href="ai/" data-t="aiBtn">Enter the AI studio</a>
+      <a class="btn" href="#sec-drama" data-t="aiBtn2">See the micro-dramas</a>
     </div>
-    <div class="sheet-table" id="sheetRows" role="list"></div>
   </div>
+  <div class="marquee" id="marquee" aria-hidden="true"></div>
+  <div class="wrap sec-head">
+    <h3 data-t="aiFilmsH">Brand films made with AI</h3>
+    <p data-t="aiFilmsP">Commercials directed with AI from the first mood board to the final frame, for LYNK &amp; CO, ADCB, Rawaa Rice and Doux.</p>
+  </div>
+  <div class="rail-wrap" data-rail="ai"></div>
 </section>
 
-<section class="work wrap" id="work">
-  <h2 data-t="workH">The work</h2>
-  <div class="filters" id="filters" role="toolbar" aria-label="Filter the work"></div>
-  <div class="grid" id="grid"></div>
-  <div class="more"><button type="button" class="btn" id="showAll"></button></div>
-</section>
+<div id="films">
+  <nav class="types wrap" id="types" aria-label="Films by type"></nav>
+  <div id="sections"></div>
+</div>
 
 <section class="cases" id="cases">
   <div class="wrap">
     <h2 data-t="casesH">Two campaigns with numbers</h2>
     <div class="case">
-      <button type="button" class="case-media land" data-open="treva-home-economist-saudi-arabia" data-v="last">
+      <button type="button" class="case-media" data-open="treva-home-economist" data-v="last">
         <img loading="lazy" src="media/p/x/case-treva.jpg" alt="">
         <span class="play" data-t="playCase">Play the case film</span>
       </button>
@@ -94,7 +92,7 @@
       </div>
     </div>
     <div class="case">
-      <button type="button" class="case-media land" data-open="vatika-whatsyourflavour" data-v="0">
+      <button type="button" class="case-media" data-open="vatika-whatsyourflavour" data-v="0">
         <img loading="lazy" src="media/p/x/case-vatika.jpg" alt="">
         <span class="play" data-t="playCase">Play the case film</span>
       </button>
@@ -111,30 +109,20 @@
   </div>
 </section>
 
-<section class="bts wrap" id="bts">
-  <h2 data-t="btsH">Behind the scenes</h2>
-  <p class="lede" data-t="btsP">Some of the shoot days, before the edit.</p>
-  <div class="bts-row" id="btsRow"></div>
-</section>
-
-<section class="aiband">
-  <div class="wrap aiband-in">
-    <div class="aiband-posters" id="aiPosters"></div>
-    <div class="aiband-text">
-      <h2 data-t="aiH">The AI studio</h2>
-      <p data-t="aiP">A separate room for the AI work: brand films, three original micro-dramas, and how each one gets made, step by step.</p>
-      <a class="btn btn-solid" href="ai/" data-t="aiBtn">Open the AI studio</a>
-    </div>
+<section class="sec" id="bts">
+  <div class="wrap sec-head">
+    <h2 data-t="btsH">Behind the scenes</h2>
+    <p data-t="btsP">Some of the shoot days, before the edit.</p>
   </div>
+  <div class="rail-wrap" data-rail="bts"></div>
 </section>
 
-<section class="markets wrap">
-  <h2 data-t="mkH">Where I can put a crew on the ground</h2>
-  <div class="mk-grid">
-    <div><h3 data-t="mkUae">United Arab Emirates</h3><p class="mk-for" data-t="mkFor">Work for</p><p>Hublot, Emaar, Skechers, Mashreq, Abbott, Ajmal, HomeBox, Dubai Mallathon</p></div>
-    <div><h3 data-t="mkKsa">Saudi Arabia</h3><p class="mk-for" data-t="mkFor">Work for</p><p>Treva, Mehbaj, Doux, Dari, Noya Clinics, Derman</p></div>
-    <div><h3 data-t="mkEg">Egypt</h3><p class="mk-for" data-t="mkFor">Work for</p><p>Nivea, Mercedes-Benz Egypt, B.TECH, Molped, Président, Nogoum FM, Oxfam</p></div>
-    <div><h3 data-t="mkLb">Lebanon</h3><p class="mk-for">&nbsp;</p><p data-t="mkLbP">Crews and talent on call.</p></div>
+<section class="services wrap">
+  <h2 data-t="svH">Crew, talent and production services</h2>
+  <div class="sv-grid">
+    <div><h3 data-t="sv1H">Talent and casting</h3><p data-t="sv1P">Actors, models, presenters and voice artists from the Gulf, Egypt and Lebanon.</p></div>
+    <div><h3 data-t="sv2H">Production services</h3><p data-t="sv2P">Crew, equipment, locations and permits, with one contact from the recce to delivery.</p></div>
+    <div><h3 data-t="sv3H">Where</h3><p data-t="sv3P">United Arab Emirates, Saudi Arabia, Egypt and Lebanon.</p></div>
   </div>
 </section>
 
@@ -153,7 +141,7 @@
     <h2 data-t="ctH">Got a script, a deck, or just a shoot date?</h2>
     <p class="lede" data-t="ctP">Send whatever you have. I'll reply with how I'd make it and what it would take.</p>
     <div class="ct-links">
-      <a class="btn btn-solid" href="https://wa.me/971506479730" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-gold" href="https://wa.me/971506479730" target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn" href="mailto:mostafa.elsayaad@gmail.com" data-t="ctEmail">Email</a>
       <a class="btn" href="https://www.linkedin.com/in/mostafaelsayaad/" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="https://www.behance.net/mostafaelsayaad" target="_blank" rel="noopener">Behance</a>
@@ -178,7 +166,7 @@
   </div>
 </dialog>
 
-<script src="js/data.js"></script>
-<script src="js/app.js"></script>
+<script src="js/data.js?v=2"></script>
+<script src="js/app.js?v=2"></script>
 </body>
 </html>
