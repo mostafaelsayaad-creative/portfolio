@@ -1,1251 +1,184 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Mostafa Elsayaad — Creative Producer &amp; AI Creative Director</title>
-<meta name="description" content="Ideas that render. Campaigns, AI films, key visuals and pitch decks by Mostafa Elsayaad, creative producer and AI creative director in Dubai.">
-<meta name="theme-color" content="#0A0C17">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mostafa Elsayaad — Creative Producer &amp; AI Creative Director">
-<meta property="og:description" content="Ideas that render. Campaigns, AI films, key visuals and pitch decks by Mostafa Elsayaad, creative producer and AI creative director in Dubai.">
-<meta property="og:image" content="https://mostafaelsayaad-creative.github.io/portfolio/p/hero.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mostafa Elsayaad, creative film producer and AI creative director</title>
+<meta name="description" content="Commercials, music videos, social content, CGI and AI films produced by Mostafa Elsayaad across the UAE, Saudi Arabia, Egypt and Lebanon.">
+<meta property="og:title" content="Mostafa Elsayaad, creative film producer and AI creative director">
+<meta property="og:description" content="Commercials, music videos, social content, CGI and AI films. Dubai.">
+<meta property="og:image" content="media/reel/set.jpg">
+<meta name="theme-color" content="#0C2226">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700;12..96,800&amp;family=Instrument+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Alexandria:wght@300;500;700;800&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;display=swap">
-<style>
-[hidden]{display:none!important}
-body{margin:0}
-
-/* Layout: a darkroom at dusk — full-bleed film strips, a prompt line that "renders" each piece, ember light on midnight ink */
-:root{
-  --ink:#0A0C17;          /* midnight base */
-  --ink-2:#121527;        /* raised panels */
-  --ink-3:#1B1F36;        /* lines / chips */
-  --paper:#EEEAE3;        /* text */
-  --mute:#9A9AB2;         /* secondary text, indigo-biased grey */
-  --ember:#FF9466;        /* dusk accent */
-  --rose:#F2678E;         /* gradient partner */
-  --cursor:#B9A8FF;       /* the prompt cursor */
-  --line:rgba(185,168,255,.16);
-  --f-display:"Bricolage Grotesque","Alexandria",system-ui,sans-serif;
-  --f-body:"Instrument Sans","IBM Plex Sans Arabic",system-ui,sans-serif;
-  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
-  --gut:max(16px,env(safe-area-inset-left,0px));
-  --gutR:max(16px,env(safe-area-inset-right,0px));
-  --wrap:1320px;
-  color-scheme:dark;
-}
-html[lang="ar"]{--f-display:"Alexandria","Bricolage Grotesque",system-ui,sans-serif;--f-body:"IBM Plex Sans Arabic","Instrument Sans",system-ui,sans-serif}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;background:var(--ink)}
-body{background:var(--ink);color:var(--paper);font:400 16px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
-a{color:inherit}
-img,video{max-width:100%;display:block}
-.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--gut);padding-right:var(--gutR)}
-@media(min-width:900px){.wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}}
-.mono{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.02em}
-.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--cursor)}
-html[lang="ar"] .eyebrow{letter-spacing:0;font-family:var(--f-body);font-size:13px}
-h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;font-weight:700;letter-spacing:-.02em}
-html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3{letter-spacing:0}
-h2{font-size:clamp(34px,5.2vw,68px);line-height:1}
-p{margin:0}
-:focus-visible{outline:2px solid var(--cursor);outline-offset:3px;border-radius:4px}
-.grad{background:linear-gradient(100deg,var(--ember),var(--rose) 60%,var(--cursor));-webkit-background-clip:text;background-clip:text;color:transparent}
-
-/* NAV */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(10,12,23,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;gap:20px;height:64px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-display);font-weight:800;font-size:17px;letter-spacing:-.01em;white-space:nowrap}
-.brand i{display:inline-block;width:10px;height:18px;background:var(--cursor);animation:blink 1.1s steps(1) infinite}
-.brand small{font:500 11px var(--f-mono);color:var(--mute);letter-spacing:.08em;text-transform:uppercase}
-.links{display:flex;gap:22px;margin-inline-start:auto}
-.links a{text-decoration:none;color:var(--mute);font-size:14px;transition:color .2s}
-.links a:hover{color:var(--paper)}
-.lang{background:none;border:1px solid var(--ink-3);color:var(--paper);border-radius:99px;padding:6px 12px;font:500 13px var(--f-body);cursor:pointer}
-.lang:hover{border-color:var(--cursor)}
-.btn{display:inline-flex;align-items:center;gap:10px;border-radius:99px;padding:13px 22px;font:600 15px var(--f-body);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .2s,background .2s,border-color .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn-hot{background:linear-gradient(100deg,var(--ember),var(--rose));color:#140A10}
-.btn-ghost{border-color:rgba(238,234,227,.3);color:var(--paper);background:rgba(10,12,23,.35)}
-.btn-ghost:hover{border-color:var(--paper)}
-.nav .btn{padding:9px 16px;font-size:14px;white-space:nowrap}
-@media(max-width:480px){.nav .btn{display:none}}
-@media(max-width:860px){.links{display:none}.nav .wrap{gap:10px}.brand small{display:none}.lang{margin-inline-start:auto}}
-
-/* HERO */
-.hero{position:relative;min-height:min(860px,92vh);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
-.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3}
-.hero video{filter:blur(28px) saturate(.2) brightness(.7);transform:scale(1.08);transition:filter 1.8s cubic-bezier(.2,.7,.2,1),transform 2.4s cubic-bezier(.2,.7,.2,1)}
-.hero.rendered video{filter:blur(0) saturate(1) brightness(.78);transform:scale(1)}
-.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-2;mix-blend-mode:screen;opacity:.55;transition:opacity 1.8s}
-.hero.rendered canvas{opacity:.07}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,12,23,.55) 0%,rgba(10,12,23,0) 30%,rgba(10,12,23,.25) 55%,var(--ink) 100%)}
-.hero .wrap{width:100%;padding-block:120px 56px}
-.prompt{display:inline-flex;align-items:center;gap:12px;max-width:100%;background:rgba(10,12,23,.62);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:14px;padding:12px 16px;margin-bottom:28px}
-.prompt .tag{font:500 11px var(--f-mono);color:var(--ink);background:var(--cursor);border-radius:6px;padding:3px 7px;flex:none}
-.prompt .typed{font:400 14px var(--f-mono);color:var(--paper);min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.prompt .typed::after{content:"";display:inline-block;width:8px;height:16px;background:var(--cursor);vertical-align:-3px;margin-inline-start:2px;animation:blink 1s steps(1) infinite}
-.prompt .bar{flex:none;width:64px;height:4px;border-radius:4px;background:var(--ink-3);overflow:hidden}
-.prompt .bar b{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ember),var(--rose))}
-.hero h1{font-size:clamp(52px,11vw,168px);line-height:.86;font-weight:800;letter-spacing:-.045em;max-width:12ch}
-html[lang="ar"] .hero h1{line-height:1.15;font-size:clamp(48px,9vw,128px)}
-.hero .lede{max-width:58ch;font-size:clamp(16px,1.6vw,19px);color:#D9D5E4;margin-top:26px}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.facts{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--mute)}
-.facts span{display:flex;gap:8px;align-items:baseline}
-.facts b{font:700 20px var(--f-display);color:var(--paper)}
-@keyframes blink{50%{opacity:0}}
-
-/* MARQUEE */
-.marquee{border-block:1px solid var(--line);overflow:hidden;padding-block:20px;background:var(--ink)}
-.marquee .row{display:flex;gap:56px;width:max-content;animation:slide 48s linear infinite}
-.marquee span{font:700 clamp(18px,2.2vw,26px) var(--f-display);color:#5E6080;white-space:nowrap;letter-spacing:-.01em}
-.marquee span em{font-style:normal;color:var(--ember);margin-inline-start:56px}
-@keyframes slide{to{transform:translateX(-50%)}}
-html[dir="rtl"] .marquee .row{animation-name:slideR}
-@keyframes slideR{to{transform:translateX(50%)}}
-
-section{padding-block:clamp(72px,10vw,140px);scroll-margin-top:calc(env(safe-area-inset-top,0px) + 40px)}
-.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;margin-bottom:44px}
-.head .sub{max-width:44ch;color:var(--mute);font-size:17px}
-.head .eyebrow{display:block;margin-bottom:14px}
-
-/* FILMS */
-.films{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
-.film{grid-column:span 3;position:relative;border-radius:18px;overflow:hidden;background:var(--ink-2);cursor:pointer;aspect-ratio:16/10;border:0;padding:0;color:inherit;text-align:start;font:inherit}
-.film.xl{grid-column:span 6;aspect-ratio:21/9}
-.film.l{grid-column:span 4}
-.film.s{grid-column:span 2;aspect-ratio:auto}
-.film img,.film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1),opacity .5s}
-.film video{opacity:0}
-.film.playing video{opacity:1}
-.film:hover img{transform:scale(1.04)}
-.film .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,23,0) 35%,rgba(10,12,23,.92))}
-.film .meta{position:absolute;inset:auto 0 0 0;padding:22px;display:grid;gap:8px}
-.film .client{font:500 11.5px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ember)}
-html[lang="ar"] .film .client{letter-spacing:0;font-family:var(--f-body)}
-.film h3{font-size:clamp(22px,2.4vw,34px);line-height:1.05}
-.film .seed{font:400 13px/1.5 var(--f-mono);color:#CFCBE0;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s,opacity .5s}
-html[lang="ar"] .film .seed{font-family:var(--f-body);font-size:14px}
-.film .seed::before{content:"> ";color:var(--cursor)}
-.film:hover .seed,.film:focus-visible .seed{max-height:80px;opacity:1}
-.film .dur{position:absolute;top:16px;inset-inline-end:16px;font:500 11px var(--f-mono);background:rgba(10,12,23,.6);border:1px solid var(--line);padding:4px 8px;border-radius:99px}
-.film .play{position:absolute;top:16px;inset-inline-start:16px;width:40px;height:40px;border-radius:50%;background:rgba(238,234,227,.14);backdrop-filter:blur(8px);display:grid;place-items:center;transition:background .3s}
-.film:hover .play{background:var(--ember)}
-.film .play svg{width:14px;height:14px;fill:var(--paper)}
-.film.v{grid-column:span 2;aspect-ratio:4/5}
-.film.v h3{font-size:clamp(20px,2vw,28px)}
-@media(max-width:900px){.film,.film.l,.film.s{grid-column:span 6;aspect-ratio:16/10}.film.xl{aspect-ratio:16/10}.film.v{grid-column:span 6;aspect-ratio:4/5}.film .seed{max-height:80px;opacity:1}}
-@media(min-width:560px) and (max-width:900px){.film.v{grid-column:span 2}.film.v .seed{display:none}.film.v .meta{padding:14px}}
-
-/* WALL */
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:transparent;border:1px solid var(--ink-3);color:var(--mute);border-radius:99px;padding:8px 14px;font:500 13.5px var(--f-body);cursor:pointer;transition:all .2s}
-.chip:hover{color:var(--paper);border-color:var(--mute)}
-.chip[aria-pressed="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
-.reel{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--ink-2);cursor:pointer;border:0;padding:0;color:inherit;text-align:start;font:inherit}
-.reel img,.reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.reel video{opacity:0;transition:opacity .4s}
-.reel.playing video{opacity:1}
-.reel .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,23,0) 55%,rgba(10,12,23,.9))}
-.reel .meta{position:absolute;inset:auto 0 0;padding:14px;display:grid;gap:4px}
-.reel .client{font:500 10.5px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ember)}
-html[lang="ar"] .reel .client{letter-spacing:0;font-family:var(--f-body)}
-.reel h3{font-size:18px;line-height:1.15}
-.reel[hidden]{display:none}
-@media(max-width:480px){.wall{grid-template-columns:1fr 1fr;gap:10px}.reel h3{font-size:15px}}
-
-/* ORIGINAL */
-.orig{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,5vw,80px);align-items:center}
-.orig .vid{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:9/16;max-height:720px;margin-inline:auto;width:100%;max-width:420px;background:var(--ink-2);border:0;padding:0;cursor:pointer}
-.orig .vid video{width:100%;height:100%;object-fit:cover}
-.orig h2{font-size:clamp(40px,6vw,84px);font-style:italic;font-weight:300;letter-spacing:-.03em}
-html[lang="ar"] .orig h2{font-style:normal;font-weight:700}
-.orig p{color:#CFCBE0;font-size:18px;max-width:52ch;margin-top:22px}
-.credits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px;margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
-.credits dt{font:500 11px var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
-html[lang="ar"] .credits dt{letter-spacing:0;font-family:var(--f-body);font-size:12.5px}
-.credits dd{margin:4px 0 0;font-weight:500}
-@media(max-width:860px){.orig{grid-template-columns:1fr}}
-.orig .tagline{font:300 italic clamp(20px,2vw,26px) var(--f-display);color:var(--ember);margin-top:10px}
-html[lang="ar"] .orig .tagline{font-style:normal}
-.ostats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px}
-.ostats div{display:grid;gap:2px}
-.ostats b{font:700 clamp(26px,3vw,38px)/1 var(--f-display);color:var(--paper)}
-.ostats span{font-size:13px;color:var(--mute)}
-@media(max-width:520px){.ostats{grid-template-columns:1fr 1fr}}
-.peek{margin-top:clamp(48px,6vw,80px);display:grid;gap:16px}
-.peekrow{display:flex;gap:12px;overflow-x:auto;padding-bottom:14px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--ink-3) transparent}
-.peekrow button{flex:0 0 clamp(220px,24vw,300px);aspect-ratio:16/9;border:1px solid var(--line);border-radius:10px;overflow:hidden;padding:0;background:var(--ink-2);cursor:pointer;scroll-snap-align:start;transition:transform .3s,border-color .3s}
-.peekrow button:hover{transform:translateY(-3px);border-color:var(--ember)}
-.peekrow img{width:100%;height:100%;object-fit:cover}
-/* Six Seconds (featured original) */
-.ssbadge{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;padding:5px 14px 5px 5px;border-radius:99px;background:rgba(11,13,16,.62);border:1px solid rgba(229,72,59,.55);color:var(--paper);text-decoration:none;font:500 13.5px var(--f-body);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:border-color .25s}
-.ssbadge:hover{border-color:#E5483B}
-.ssbadge b{background:#E5483B;color:#0B0D10;border-radius:99px;padding:3px 10px;font:700 11px var(--f-mono);letter-spacing:.08em}
-html[lang="ar"] .ssbadge b{font-family:var(--f-body);letter-spacing:0}
-.ss{position:relative;overflow:hidden;background:#0B0D10;padding-top:clamp(40px,5vw,72px)}
-.ss .ssbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.2;z-index:0;pointer-events:none}
-.ss::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,var(--ink) 0%,rgba(11,13,16,.55) 30%,rgba(11,13,16,.7) 70%,var(--ink) 100%)}
-.ss>*{position:relative;z-index:1}
-.ssband{margin:0 -6vw clamp(40px,5vw,72px);transform:rotate(-2deg);background:#C8352B;border-block:3px solid #96241C;box-shadow:0 20px 50px rgba(0,0,0,.5);overflow:hidden;white-space:nowrap;padding:14px 0}
-.ssband .row{display:inline-flex;gap:56px;padding-inline-start:56px;animation:ssmq 46s linear infinite;font:800 clamp(18px,2.3vw,30px)/1 var(--f-display);letter-spacing:.16em;text-transform:uppercase;color:#F3EADB}
-html[lang="ar"] .ssband .row{letter-spacing:0;animation-name:ssmqR}
-@keyframes ssmqR{to{transform:translateX(50%)}}
-.ssband .row span::after{content:"●";margin-inline-start:56px;color:#0B0D10;font-size:.6em;vertical-align:middle}
-@keyframes ssmq{to{transform:translateX(-50%)}}
-.ssgrid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,80px);align-items:center}
-.ssvid{position:relative;display:block;border-radius:30px;overflow:hidden;aspect-ratio:9/16;width:100%;max-width:400px;margin-inline:auto;background:#14181C;border:8px solid #1C2024;box-shadow:0 30px 80px rgba(0,0,0,.6);padding:0;cursor:pointer}
-.ssvid video{width:100%;height:100%;object-fit:cover}
-.ssvid .tc{position:absolute;top:16px;inset-inline-end:18px;font:600 13px var(--f-mono);letter-spacing:.14em;color:#ECE5D8;display:flex;align-items:center;gap:8px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
-.ssvid .tc i{width:9px;height:9px;border-radius:50%;background:#E5483B;animation:ssrec 1.2s steps(2) infinite}
-@keyframes ssrec{50%{opacity:.2}}
-.ss .eyebrow{color:#E5483B;display:inline-flex;align-items:center;gap:10px}
-.ss .new{background:#E5483B;color:#0B0D10;border-radius:4px;padding:3px 8px;font-weight:700}
-.ss h2{font:800 clamp(56px,8.4vw,128px)/.88 var(--f-display);text-transform:uppercase;letter-spacing:-.01em;margin-top:16px}
-.ss .tagline{font:300 italic clamp(20px,2.1vw,28px) var(--f-display);color:#E5483B;margin-top:14px}
-html[lang="ar"] .ss .tagline{font-style:normal}
-.ss p{color:#C9CDD1;font-size:18px;max-width:54ch;margin-top:20px}
-.btn-red{background:#E5483B;color:#140A0A}
-.btn-red:hover{background:#F0604F}
-.sseps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(10px,1.6vw,20px);margin-top:clamp(48px,6vw,88px)}
-.ssep{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:1px solid rgba(236,229,216,.1);padding:0;background:#14181C;cursor:pointer;color:inherit;text-align:start;font:inherit}
-.ssep img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.ssep:hover img{transform:scale(1.05)}
-.ssep .m{position:absolute;inset:auto 0 0 0;padding:72px 16px 16px;display:grid;gap:6px;background:linear-gradient(0deg,rgba(11,13,16,.97) 35%,rgba(11,13,16,0))}
-.ssep .n{font:600 11px var(--f-mono);letter-spacing:.12em;color:#FF7A6B}
-html[lang="ar"] .ssep .n{font-family:var(--f-body);letter-spacing:0}
-.ssep h3{font-size:clamp(16px,1.6vw,22px);text-transform:uppercase}
-.ssep .pl{position:absolute;top:14px;inset-inline-start:14px;width:40px;height:40px;border-radius:50%;background:rgba(11,13,16,.6);display:grid;place-items:center;transition:background .25s}
-.ssep:hover .pl{background:#E5483B}
-.ssep .pl svg{width:14px;height:14px;fill:#ECE5D8}
-#ssPeek button:hover{border-color:#E5483B}
-/* Seven Lives */
-.sl{position:relative;overflow:hidden;background:#0B0C0E}
-.sl .slbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.24;z-index:0;pointer-events:none}
-.sl::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,var(--ink) 0%,rgba(11,12,14,.5) 28%,rgba(11,12,14,.78) 72%,var(--ink) 100%)}
-.sl>*{position:relative;z-index:1}
-.slgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,80px);align-items:center}
-.sl .eyebrow{color:#D6A84A;display:inline-flex;align-items:center;gap:10px}
-.sl .new{background:#D6A84A;color:#0B0C0E;border-radius:4px;padding:3px 8px;font-weight:700}
-.sl h2{font:500 clamp(60px,9vw,140px)/.86 "Cormorant Garamond",Georgia,serif;text-transform:uppercase;letter-spacing:.06em;margin-top:16px;color:#EEE7DA}
-html[lang="ar"] .sl h2{font:800 clamp(52px,7.6vw,112px)/1 var(--f-display);letter-spacing:0}
-.sllives{display:flex;align-items:center;gap:18px;margin-top:22px}
-.sllives .bars{display:flex;gap:9px;align-items:flex-end}
-.sllives i{width:8px;height:36px;border-radius:4px;background:#EEE7DA}
-.sllives i:last-child{background:#D6A84A;box-shadow:0 0 18px rgba(214,168,74,.9)}
-.sllives span{font:500 12px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:#B9B2A6}
-html[lang="ar"] .sllives span{font-family:var(--f-body);letter-spacing:0;font-size:13px}
-.sl .tagline{font:italic 500 clamp(24px,2.4vw,34px) "Cormorant Garamond",Georgia,serif;color:#F0CF83;margin-top:16px}
-html[lang="ar"] .sl .tagline{font:300 clamp(20px,2.1vw,28px) var(--f-display)}
-.sl p{color:#CFC8BB;font-size:18px;max-width:54ch;margin-top:20px}
-.btn-gold{background:#D6A84A;color:#14100A}
-.btn-gold:hover{background:#E8BE63}
-.slvid{position:relative;display:block;border-radius:30px;overflow:hidden;aspect-ratio:9/16;width:100%;max-width:400px;margin-inline:auto;background:#15181B;border:8px solid #1E2226;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(214,168,74,.35);padding:0;cursor:pointer}
-.slvid video{width:100%;height:100%;object-fit:cover}
-.slvid .tc{position:absolute;top:16px;inset-inline-end:18px;font:600 12px var(--f-mono);letter-spacing:.14em;color:#EEE7DA;display:flex;align-items:center;gap:8px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
-.slvid .tc i{width:12px;height:12px;border-radius:50%;border:2px solid #D6A84A;box-shadow:0 0 10px rgba(214,168,74,.9)}
-.sleps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.6vw,22px);margin-top:clamp(48px,6vw,88px)}
-.slep{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:1px solid rgba(214,168,74,.18);padding:0;background:#15181B;cursor:pointer;color:inherit;text-align:start;font:inherit}
-.slep img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.slep:hover img{transform:scale(1.05)}
-.slep .m{position:absolute;inset:auto 0 0 0;padding:80px 18px 18px;display:grid;gap:6px;background:linear-gradient(0deg,rgba(11,12,14,.97) 35%,rgba(11,12,14,0))}
-.slep .n{font:600 11px var(--f-mono);letter-spacing:.12em;color:#D6A84A}
-html[lang="ar"] .slep .n{font-family:var(--f-body);letter-spacing:0}
-.slep h3{font:500 clamp(20px,2vw,30px)/1.05 "Cormorant Garamond",Georgia,serif;text-transform:uppercase;letter-spacing:.04em;color:#EEE7DA}
-html[lang="ar"] .slep h3{font:700 clamp(17px,1.6vw,22px) var(--f-display);letter-spacing:0}
-.slep .pl{position:absolute;top:14px;inset-inline-start:14px;width:40px;height:40px;border-radius:50%;background:rgba(11,12,14,.6);border:1px solid rgba(214,168,74,.5);display:grid;place-items:center;transition:background .25s}
-.slep:hover .pl{background:#D6A84A}
-.slep .pl svg{width:14px;height:14px;fill:#EEE7DA}
-#slPeek button:hover{border-color:#D6A84A}
-@media(max-width:860px){.slgrid{grid-template-columns:1fr}.slgrid .slvid{order:-1}.sleps{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:860px){.ssgrid{grid-template-columns:1fr}.sseps{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(min-width:861px) and (max-width:1100px){.sseps{grid-template-columns:repeat(3,minmax(0,1fr))}}
-/* deck viewer */
-.dk{position:fixed;inset:0;z-index:110;background:#05060C;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:10px;padding:calc(env(safe-area-inset-top,0px) + 14px) var(--gutR) calc(env(safe-area-inset-bottom,0px) + 14px) var(--gut)}
-.dk[hidden]{display:none!important}
-.dk .top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.dk .top .r{display:flex;align-items:center;gap:10px}
-.dk .slide{display:grid;place-items:center;min-height:0;position:relative;overflow:hidden}
-.dk .slide img{max-width:100%;max-height:calc(100vh - 190px);max-height:calc(100dvh - 190px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));object-fit:contain;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
-.dk .side{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid var(--ink-3);background:rgba(10,12,23,.7);color:var(--paper);font-size:20px;cursor:pointer}
-.dk .side.l{inset-inline-start:4px}.dk .side.r{inset-inline-end:4px}
-html[dir="rtl"] .dk .side{transform:translateY(-50%) scaleX(-1)}
-.dk .strip{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin;scrollbar-color:var(--ink-3) transparent}
-.dk .strip button{flex:0 0 96px;aspect-ratio:16/9;padding:0;border:2px solid transparent;border-radius:6px;overflow:hidden;background:var(--ink-2);cursor:pointer;opacity:.55}
-.dk .strip button[aria-current="true"]{border-color:var(--ember);opacity:1}
-.dk .strip img{width:100%;height:100%;object-fit:cover}
-.dk .gs[hidden]{display:none}
-.dk .gs{font-size:13px;color:var(--mute);text-decoration:none;border:1px solid var(--ink-3);padding:8px 12px;border-radius:99px}
-.dk .gs:hover{color:var(--paper);border-color:var(--paper)}
-@media(max-width:600px){.dk .side{display:none}.dk .gs{display:none}}
-
-/* STILLS */
-.stills{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:18px;scrollbar-width:thin;scrollbar-color:var(--ink-3) transparent}
-.still{flex:none;scroll-snap-align:start;margin:0}
-.stillbtn{display:block;padding:0;border:0;background:var(--ink-2);cursor:zoom-in;border-radius:14px;overflow:hidden}
-.still img{display:block;height:clamp(300px,34vw,460px);width:auto;max-width:86vw;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-.stillbtn:hover img{transform:scale(1.035)}
-.still figcaption{width:0;min-width:100%;display:flex;justify-content:space-between;gap:10px;margin-top:10px;font-size:13.5px;color:var(--mute)}
-.still figcaption b{color:var(--paper);font-weight:600}
-.scrollhint{display:flex;gap:8px}
-.arrow{width:44px;height:44px;border-radius:50%;border:1px solid var(--ink-3);background:none;color:var(--paper);cursor:pointer;font-size:18px}
-.arrow:hover{border-color:var(--paper)}
-html[dir="rtl"] .arrow{transform:scaleX(-1)}
-
-/* SERVICES */
-.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
-.svc{padding:34px 28px 38px 0;border-bottom:1px solid var(--line);display:grid;gap:14px;align-content:start}
-html[dir="rtl"] .svc{padding:34px 0 38px 28px}
-.svc:not(:nth-child(3n+1)){padding-inline-start:28px;border-inline-start:1px solid var(--line)}
-.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--ink-2);border:1px solid var(--line);display:grid;place-items:center;color:var(--ember)}
-.svc .ic svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6}
-.svc h3{font-size:24px;line-height:1.1}
-.svc p{color:var(--mute)}
-.svc ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
-.svc li{font:500 12px var(--f-mono);border:1px solid var(--ink-3);border-radius:99px;padding:4px 10px;color:#C9C6DA}
-html[lang="ar"] .svc li{font-family:var(--f-body)}
-@media(max-width:980px){.services{grid-template-columns:1fr 1fr}.svc:not(:nth-child(3n+1)){padding-inline-start:0;border-inline-start:0}.svc:nth-child(even){padding-inline-start:24px;border-inline-start:1px solid var(--line)}}
-@media(max-width:620px){.services{grid-template-columns:1fr}.svc:nth-child(even){padding-inline-start:0;border-inline-start:0}.svc{padding-inline-end:0!important}}
-
-/* PROCESS */
-.process{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:start}
-.steps{display:grid}
-.step{all:unset;box-sizing:border-box;display:grid;grid-template-columns:52px minmax(0,1fr);gap:4px 16px;padding:22px 0;border-bottom:1px solid var(--line);cursor:pointer}
-.step:first-child{border-top:1px solid var(--line)}
-.step .n{font:500 13px var(--f-mono);color:var(--mute);padding-top:6px;grid-row:span 2}
-.step h3{font-size:clamp(22px,2.4vw,30px);color:var(--mute);transition:color .3s}
-.step p{color:var(--mute);max-height:0;overflow:hidden;opacity:0;transition:max-height .5s,opacity .4s}
-.step[aria-selected="true"] h3{color:var(--paper)}
-.step[aria-selected="true"] .n{color:var(--ember)}
-.step[aria-selected="true"] p{max-height:160px;opacity:1}
-.step:focus-visible{outline:2px solid var(--cursor);outline-offset:4px}
-.stage{position:sticky;top:96px;border-radius:20px;overflow:hidden;background:var(--ink-2);border:1px solid var(--line);aspect-ratio:16/11}
-.stage>*{position:absolute;inset:0;opacity:0;transition:opacity .6s}
-.stage>.on{opacity:1}
-.stage img,.stage video{width:100%;height:100%;object-fit:cover}
-.stage .doc{padding:clamp(20px,4vw,40px);display:flex;flex-direction:column;gap:14px;font:400 clamp(13px,1.3vw,15px)/1.7 var(--f-mono);color:#CFCBE0;background:radial-gradient(120% 90% at 100% 0%,rgba(255,148,102,.12),transparent 60%),var(--ink-2)}
-html[lang="ar"] .stage .doc{font-family:var(--f-body)}
-.stage .doc b{color:var(--paper);font-weight:500}
-.stage .doc .k{color:var(--cursor)}
-.stage .lbl{position:absolute;inset:auto auto 14px 14px;opacity:1;font:500 11px var(--f-mono);background:rgba(10,12,23,.7);padding:5px 10px;border-radius:99px;border:1px solid var(--line);height:auto;width:auto}
-html[dir="rtl"] .stage .lbl{inset:auto 14px 14px auto}
-.stage .super{position:absolute;inset:auto 0 0;padding:28px;background:linear-gradient(transparent,rgba(10,12,23,.85));font:300 italic clamp(18px,2vw,26px) var(--f-display);opacity:1;height:auto}
-@media(max-width:860px){.process{grid-template-columns:1fr}.stage{position:relative;top:0;order:-1}}
-
-/* COMPARE */
-.compare{border:1px solid var(--line);border-radius:22px;overflow:hidden}
-.crow{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr) minmax(0,1fr)}
-.crow>div{padding:20px 24px;border-top:1px solid var(--line)}
-.crow:first-child>div{border-top:0;font:500 12px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute);padding-block:16px;background:var(--ink-2)}
-html[lang="ar"] .crow:first-child>div{letter-spacing:0;font-family:var(--f-body);font-size:13px}
-.crow>div:nth-child(1){font-weight:600}
-.crow>div:nth-child(2){color:var(--mute)}
-.crow>div:nth-child(3){background:rgba(255,148,102,.06);color:var(--paper)}
-.crow:first-child>div:nth-child(3){color:var(--ember)}
-@media(max-width:700px){.crow{grid-template-columns:1fr 1fr}.crow>div:nth-child(1){grid-column:1/-1;padding-bottom:4px;border-top:1px solid var(--line)}.crow>div:nth-child(2),.crow>div:nth-child(3){border-top:0}.crow:first-child>div:nth-child(1){display:none}}
-.quote{font:300 clamp(26px,3.4vw,44px)/1.2 var(--f-display);letter-spacing:-.02em;max-width:26ch;margin-bottom:48px}
-html[lang="ar"] .quote{letter-spacing:0;line-height:1.5}
-
-/* PACKAGES */
-.packs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.pack{background:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;min-width:0}
-.pack.hot{background:linear-gradient(160deg,rgba(255,148,102,.16),rgba(242,103,142,.08) 50%,var(--ink-2));border-color:rgba(255,148,102,.45)}
-.pack .for{font:500 11.5px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--cursor)}
-html[lang="ar"] .pack .for{letter-spacing:0;font-family:var(--f-body);font-size:13px}
-.pack h3{font-size:26px}
-.pack p{color:var(--mute)}
-.pack ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:14.5px}
-.pack li{display:flex;gap:10px}
-.pack li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--ember);margin-top:9px}
-.pack .time{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font:500 13px var(--f-mono);color:var(--paper)}
-html[lang="ar"] .pack .time{font-family:var(--f-body)}
-@media(max-width:1080px){.packs{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.packs{grid-template-columns:1fr}}
-
-/* FAQ */
-.faq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:40px}
-details{border-bottom:1px solid var(--line);padding:20px 0}
-details:first-of-type{border-top:1px solid var(--line)}
-summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font:600 18px var(--f-body)}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font:300 26px/1 var(--f-display);color:var(--ember);transition:transform .3s}
-details[open] summary::after{transform:rotate(45deg)}
-details p{color:var(--mute);margin-top:12px;max-width:62ch}
-@media(max-width:860px){.faq{grid-template-columns:1fr}}
-
-/* CONTACT */
-.contact{position:relative;overflow:hidden;border-top:1px solid var(--line);background:radial-gradient(70% 60% at 85% 10%,rgba(255,148,102,.16),transparent 70%),radial-gradient(60% 50% at 0% 100%,rgba(185,168,255,.12),transparent 70%),var(--ink)}
-.contact h2{font-size:clamp(44px,8vw,120px);line-height:.9;letter-spacing:-.045em;font-weight:800}
-html[lang="ar"] .contact h2{line-height:1.2;letter-spacing:0}
-.cgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);margin-top:48px}
-form{display:grid;gap:18px}
-label{display:grid;gap:8px;font:500 13px var(--f-body);color:var(--mute)}
-input,select,textarea{width:100%;background:var(--ink-2);border:1px solid var(--ink-3);color:var(--paper);border-radius:12px;padding:13px 14px;font:400 15px var(--f-body)}
-textarea{min-height:110px;resize:vertical;font-family:var(--f-mono);font-size:14px}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--cursor)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-fieldset{border:0;padding:0;margin:0;display:grid;gap:10px}
-legend{font:500 13px var(--f-body);color:var(--mute);margin-bottom:10px}
-.out{background:var(--ink-2);border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:16px;align-content:start}
-.out pre{margin:0;white-space:pre-wrap;word-break:break-word;font:400 13.5px/1.7 var(--f-mono);color:#D9D5E4;min-height:180px}
-html[lang="ar"] .out pre{font-family:var(--f-body);font-size:14.5px}
-.mail{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding-top:16px;border-top:1px solid var(--line)}
-.mail code{font:500 15px var(--f-mono);user-select:all;color:var(--paper)}
-.small{font-size:13px;color:var(--mute)}
-@media(max-width:860px){.cgrid{grid-template-columns:1fr}.two{grid-template-columns:1fr}}
-.btn-wa{background:#25D366;color:#06210F;justify-self:start}
-.btn-wa svg,.wa-float svg{width:20px;height:20px;fill:currentColor}
-.wa-float{position:fixed;z-index:70;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);inset-inline-end:max(20px,calc(env(safe-area-inset-right,0px) + 16px));width:56px;height:56px;border-radius:50%;background:#25D366;color:#06210F;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.4);transition:transform .2s}
-.wa-float:hover{transform:scale(1.07)}
-.wa-float svg{width:28px;height:28px}
-footer{border-top:1px solid var(--line);padding-block:28px 96px;color:var(--mute);font-size:13.5px}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
-
-/* LIGHTBOX */
-.lb{position:fixed;inset:0;z-index:100;background:rgba(5,6,12,.94);display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:calc(env(safe-area-inset-top,0px) + 14px) var(--gutR) calc(env(safe-area-inset-bottom,0px) + 18px) var(--gut)}
-.lb[hidden],.reel[hidden]{display:none!important}
-.lb .top{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.lb .x{width:44px;height:44px;border-radius:50%;border:1px solid var(--ink-3);background:none;color:var(--paper);font-size:22px;cursor:pointer}
-.lb .stagebox{display:grid;place-items:center;min-height:0;padding-block:14px}
-.lb video{max-width:100%;max-height:100%;border-radius:12px;background:#000}
-.lb .stagebox video{max-height:calc(100svh - 210px)}
-.lb .cap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:14px;max-width:1100px;width:100%;margin:0 auto}
-.lb .cap h3{font-size:clamp(22px,3vw,34px)}
-.lb .cap .seed{font:400 14px var(--f-mono);color:#CFCBE0;margin-top:4px}
-html[lang="ar"] .lb .cap .seed{font-family:var(--f-body)}
-.lb .nav2{display:flex;gap:8px}
-.toast{position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);left:50%;transform:translateX(-50%);background:var(--paper);color:var(--ink);padding:10px 18px;border-radius:99px;font-weight:600;z-index:120}
-
-
-/* INTRO */
-.intro{position:relative;z-index:3;overflow:hidden;border-bottom:1px solid var(--line)}
-.introgrid{position:relative;display:grid;grid-template-columns:minmax(0,43%) minmax(0,1fr);gap:clamp(20px,2.5vw,40px);align-items:start;min-height:min(47vw,720px);padding-block:clamp(64px,7vw,104px) clamp(48px,5.5vw,84px)}
-.iart{position:absolute;z-index:0;bottom:0;inset-inline-start:10%;height:94%;width:auto;max-width:none;pointer-events:none;user-select:none}
-html[dir="rtl"] .iart{transform:scaleX(-1)}
-html[dir="rtl"] .introgrid>.iart{inset-inline-start:11.5%}
-.ihead .hi,.ihead .irole{filter:drop-shadow(0 2px 14px rgba(10,12,23,.6))}
-@media(min-width:861px){html[lang="ar"]:not(.x) .introgrid:not(.x) .hi{font-size:clamp(50px,6vw,90px)}}
-.ihead,.itext{position:relative;z-index:1}
-.ihead{display:grid;gap:18px;align-content:start}
-.itext{display:grid;gap:18px;align-content:start;padding-top:clamp(0px,2.2vw,34px)}
-.hi{font-size:clamp(60px,8.2vw,124px);line-height:.9;font-weight:800;letter-spacing:-.05em}
-.hi span{display:block}
-html[lang="ar"] .hi{line-height:1.25;letter-spacing:0;font-size:clamp(54px,7vw,104px)}
-.irole{font:500 14px var(--f-mono);letter-spacing:.06em;color:var(--cursor)}
-html[lang="ar"] .irole{font:500 16px var(--f-body);letter-spacing:0}
-.ibody{display:grid;gap:14px;max-width:62ch}
-.ibody p{color:#CFCBE0;font-size:17px}
-.ibody .ilead{color:var(--paper);font-size:clamp(20px,1.9vw,25px);line-height:1.45}
-.isign{max-width:62ch;margin-top:8px;padding-top:18px;border-top:1px solid var(--line);font:300 clamp(20px,2vw,26px)/1.35 var(--f-display);color:var(--paper);letter-spacing:-.01em}
-html[lang="ar"] .isign{letter-spacing:0}
-.isign em{font-style:italic;color:var(--ember)}
-html[lang="ar"] .isign em{font-style:normal}
-.ictas{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
-@media(max-width:860px){.introgrid{grid-template-columns:1fr;min-height:0;padding-block:28px 48px;gap:22px}.itext{padding-top:0}
-.iart{top:0;bottom:auto;inset-inline-start:auto;inset-inline-end:-10px;height:min(96vw,400px);-webkit-mask-image:linear-gradient(#000 72%,transparent);mask-image:linear-gradient(#000 72%,transparent)}
-.ihead{min-height:min(92vw,384px);align-content:end}}
-.mob .introgrid{grid-template-columns:1fr;min-height:0;padding-block:28px 44px;gap:20px}
-.mob .iart{top:0;bottom:auto;inset-inline-start:auto;inset-inline-end:-10px;height:min(96vw,400px);-webkit-mask-image:linear-gradient(#000 72%,transparent);mask-image:linear-gradient(#000 72%,transparent)}
-.mob .ihead{min-height:min(92vw,384px);align-content:end}
-.mob .ihead{gap:12px}
-.mob .itext{padding-top:0;gap:14px}
-.mob .hi{font-size:clamp(52px,15.5vw,72px)}
-.mob .ibody p{font-size:15.5px}
-.mob .ibody .ilead{font-size:18px}
-.mob .isign{font-size:20px}
-.mob .ictas .btn{flex:1;justify-content:center}
-
-/* ===== MOBILE CUT ===== */
-.mprocess,.mbar,.mquick{display:none}
-.mob .nav .btn,.mob .links,.mob .wa-float,.mob .scrollhint,.mob .process{display:none}
-.mob .nav .wrap{height:58px}
-.mob .lang{margin-inline-start:auto}
-.mob .hero{min-height:calc(100svh - 58px);align-items:flex-end}
-.mob .hero .wrap{padding-block:72px 26px}
-.mob .hero::after{background:linear-gradient(180deg,rgba(10,12,23,.5) 0%,rgba(10,12,23,0) 22%,rgba(10,12,23,.15) 45%,rgba(10,12,23,.92) 78%,var(--ink) 100%)}
-.mob .prompt{margin-bottom:18px;padding:10px 12px;gap:10px}
-.mob .prompt .typed{font-size:12px}
-.mob .prompt .bar{width:40px}
-.mob .hero h1{font-size:clamp(56px,17vw,88px);line-height:.88}
-html[lang="ar"] .mob .hero h1{font-size:clamp(46px,13vw,72px);line-height:1.15}
-.mob .hero .lede{font-size:15.5px;margin-top:16px}
-.mob .hero .ctas{margin-top:22px}
-.mob .hero .ctas .btn{flex:1;justify-content:center}
-.mob .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;margin-top:26px;font-size:13px}
-.mob .facts b{font-size:22px}
-.mob .marquee{padding-block:14px}
-.mob .marquee span{font-size:16px}
-.mob section{padding-block:60px}
-.mob h2{font-size:clamp(32px,9.6vw,44px);line-height:1.02}
-.mob .head{margin-bottom:22px;gap:14px}
-.mob .head .sub{font-size:15px}
-.mob .films,.mob .wall,.mob .packs,.mob .mprocess{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(-1*var(--gut));padding-inline:var(--gut);scroll-padding-inline:var(--gut);padding-bottom:8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.mob .films::-webkit-scrollbar,.mob .wall::-webkit-scrollbar,.mob .packs::-webkit-scrollbar,.mob .mprocess::-webkit-scrollbar,.mob #chips::-webkit-scrollbar{display:none}
-.mob .film,.mob .film.xl,.mob .film.l,.mob .film.s,.mob .film.v{flex:0 0 84vw;aspect-ratio:4/5;scroll-snap-align:start;border-radius:16px}
-.mob .film .seed{max-height:90px;opacity:1}
-.mob .film .meta{padding:18px}
-.mob .film h3{font-size:26px}
-.mob .reel{flex:0 0 60vw;scroll-snap-align:start}
-.mob #chips{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(-1*var(--gut));padding-inline:var(--gut);scrollbar-width:none;width:calc(100% + 2*var(--gut))}
-.mob #chips .chip{flex:none}
-.mob .orig{gap:24px}
-.mob .orig .vid{max-width:none;aspect-ratio:4/5;border-radius:18px}
-.mob .orig h2{font-size:44px}
-.mob .orig p{font-size:16px}
-.mob .ostats{grid-template-columns:1fr 1fr}
-.mob .orig .ctas .btn{flex:1;justify-content:center}
-.mob .peek{margin-top:36px}
-.mob .peekrow button{flex-basis:72vw}
-.mob .ssvid{max-width:320px}
-.mob .ss h2{font-size:56px}
-.mob .ss p{font-size:16px}
-.mob .ss .ctas .btn{flex:1;justify-content:center}
-.mob .slgrid{grid-template-columns:1fr}
-.mob .slgrid .slvid{order:-1;max-width:320px}
-.mob .sl h2{font-size:60px}
-.mob .sl p{font-size:16px}
-.mob .sl .ctas .btn{flex:1;justify-content:center}
-.mob .sleps{grid-template-columns:repeat(2,minmax(0,1fr))}
-.mob .still{flex-basis:auto}
-.mob .still img{height:clamp(240px,64vw,320px)}
-.mob .services{display:grid;gap:10px;border-top:0}
-.msvc{background:var(--ink-2);border:1px solid var(--line);border-radius:16px;padding:0 18px}
-.msvc summary{display:flex;align-items:center;gap:14px;padding:16px 0;font:600 17px var(--f-body)}
-.msvc summary::after{margin-inline-start:auto}
-.msvc .ic{flex:none;width:40px;height:40px;border-radius:12px;background:var(--ink);border:1px solid var(--line);display:grid;place-items:center;color:var(--ember)}
-.msvc .ic svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.6}
-.msvc p{color:var(--mute);margin:0 0 12px}
-.msvc ul{list-style:none;margin:0 0 18px;padding:0;display:flex;flex-wrap:wrap;gap:6px}
-.msvc li{font:500 12px var(--f-mono);border:1px solid var(--ink-3);border-radius:99px;padding:4px 10px;color:#C9C6DA}
-html[lang="ar"] .msvc li{font-family:var(--f-body)}
-.mstep{flex:0 0 80vw;scroll-snap-align:start;background:var(--ink-2);border:1px solid var(--line);border-radius:18px;overflow:hidden}
-.mstep img{width:100%;aspect-ratio:16/10;object-fit:cover}
-.mstep .mbody{padding:18px;display:grid;gap:8px}
-.mstep .n{font:500 12px var(--f-mono);color:var(--ember)}
-.mstep h3{font-size:22px}
-.mstep p{color:var(--mute);font-size:15px}
-.mob .quote{font-size:26px;margin-bottom:28px}
-.mob .pack{flex:0 0 84vw;scroll-snap-align:start}
-.mob .faq{gap:20px}
-.mob summary{font-size:16px}
-.mob .contact h2{font-size:clamp(46px,13.5vw,64px)}
-.mob .mquick{display:inline-flex;width:100%;justify-content:center;margin-top:28px;padding:16px 22px;font-size:16px}
-.mob .cgrid{grid-template-columns:1fr;margin-top:28px}
-.mob .two{grid-template-columns:1fr}
-.mob .out pre{min-height:0}
-.mob .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:80;gap:10px;padding:10px max(14px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));background:rgba(10,12,23,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--line)}
-.mob .mbar .btn{flex:1;justify-content:center;padding:13px 10px;font-size:15px}
-.mob .mbar .btn:hover{transform:none}
-.mob footer{padding-bottom:110px}
-.mob footer .wrap{flex-direction:column}
-.mob .lb{grid-template-rows:auto minmax(0,1fr) auto}
-.mob .lb video{max-height:68svh;border-radius:10px}
-.mob .lb .cap h3{font-size:22px}
-.mob .dk .side{display:none}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.hero video{filter:brightness(.78);transform:none}}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300..800&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Sans:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-<nav class="nav" aria-label="Main">
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="Mostafa Elsayaad, home"><i aria-hidden="true"></i><span data-t="brand">Mostafa Elsayaad</span><small data-t="role">Creative Producer &amp; AI Creative Director</small></a>
-    <div class="links">
-      <a href="#about" data-t="nAbout">About</a>
-      <a href="#work" data-t="nWork">Work</a>
-      <a href="#sixseconds" data-t="nSeries">Six Seconds</a>
-      <a href="#services" data-t="nServices">Services</a>
-      <a href="#process" data-t="nProcess">Process</a>
-      <a href="#packages" data-t="nPackages">Packages</a>
-    </div>
-    <button class="lang" id="lang" type="button" aria-label="Switch language">العربية</button>
-    <a class="btn btn-hot" href="#contact" data-t="nCta">Start a project</a>
-  </div>
-</nav>
+<a class="skip" href="#work" data-t="skip">Skip to the work</a>
 
-<header class="hero" id="top">
-  <img class="poster" src="p/hero.jpg" alt="">
-  <video id="heroVid" data-src="m/hero.mp4" data-msrc="m/herov.mp4" data-mposter="p/herov.jpg" poster="p/hero.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
-  <canvas id="grain" aria-hidden="true"></canvas>
-  <div class="wrap">
-    <a class="ssbadge" href="#sixseconds"><b data-t="ssNew">NEW</b><span data-t="ssBadge">Six Seconds · original micro-drama, 6 episodes out</span></a>
-    <div class="prompt" aria-live="polite"><span class="tag">PROMPT</span><span class="typed" id="typed">a caravan crosses the dunes at dusk, led by a silver SUV</span><span class="bar" aria-hidden="true"><b id="bar"></b></span></div>
-    <h1><span data-t="h1a">Ideas that</span> <span class="grad" data-t="h1b">render.</span></h1>
-    <p class="lede" data-t="lede">I take a brand from one sentence to finished films, key visuals and pitch decks, with fourteen years of real production behind every frame.</p>
-    <div class="ctas">
-      <a class="btn btn-hot" href="#work" data-t="cta1">See the work</a>
-      <a class="btn btn-ghost" href="#contact" data-t="cta2">Brief me in one line</a>
-    </div>
-    <div class="facts">
-      <span><b>14</b> <em style="font-style:normal" data-t="f1">years in production</em></span>
-      <span><b>40+</b> <em style="font-style:normal" data-t="f2">AI films & visuals</em></span>
-      <span><b>3</b> <em style="font-style:normal" data-t="f3">markets: UAE · KSA · Egypt</em></span>
-      <span><b>AR / EN</b> <em style="font-style:normal" data-t="f4">native creative</em></span>
-    </div>
-  </div>
+<header class="bar">
+  <a class="bar-name" href="#top">Mostafa Elsayaad</a>
+  <nav class="bar-nav" aria-label="Sections">
+    <a href="#work" data-t="navWork">Work</a>
+    <a href="#callsheet" data-t="navSheet">Call sheet</a>
+    <a href="#cases" data-t="navCases">Case studies</a>
+    <a href="#bts" data-t="navBts">Behind the scenes</a>
+    <a href="ai/" data-t="navAi">AI studio</a>
+    <a href="#contact" data-t="navContact">Contact</a>
+  </nav>
+  <button class="lang" id="lang" type="button" aria-label="Switch language">العربية</button>
 </header>
 
-<div class="marquee" aria-label="Brands">
-  <div class="row" id="marq"></div>
-</div>
-
-<section class="intro" id="about">
-  <div class="wrap introgrid">
-    <img class="iart" src="i/art.webp" alt="" width="779" height="1200" decoding="async">
-    <div class="ihead">
-      <span class="eyebrow" data-t="aEye">About</span>
-      <h2 class="hi"><span data-t="aHi1">Hi, I’m</span> <span class="grad" data-t="aHi2">Mostafa</span></h2>
-      <p class="irole" data-t="aRole">Creative Producer &amp; AI Creative Director</p>
-    </div>
-    <div class="itext">
-      <div class="ibody">
-        <p class="ilead" data-t="a1">For over 14 years, I’ve been turning ideas into campaigns, films, and branded stories and making sense of briefs that start with “we want something different.”</p>
-        <p data-t="a2">I work with brands and agencies to shape concepts, lead creative production, and bring ambitious ideas to life. AI is a big part of how I create, but the story always comes first.</p>
-        <p data-t="a3">I also help companies turn their capabilities into compelling pitches, presentations, and creative proposals, giving business development teams a clear story to sell, backed by a vision for how it can actually be made.</p>
-      </div>
-      <p class="isign"><span data-t="a4a">Based in Dubai.</span> <span data-t="a4b">I take the work seriously.</span> <em data-t="a4c">Myself, a little less.</em></p>
-      <div class="ictas"><a class="btn btn-hot" href="#contact" data-t="aCta">Work with me</a><a class="btn btn-ghost" href="#work" data-t="cta1">See the work</a></div>
-    </div>
+<main id="top">
+<section class="hero" aria-label="Showreel">
+  <video id="reel" class="hero-video" muted playsinline autoplay preload="auto" poster="media/reel/set.jpg" src="media/reel/set.mp4"></video>
+  <div class="hero-shade"></div>
+  <div class="guides" aria-hidden="true">
+    <i class="g g-tl"></i><i class="g g-tr"></i><i class="g g-bl"></i><i class="g g-br"></i>
+    <div class="tc"><span class="tally"></span><span id="tc">00:00:00:00</span><span class="tc-reel" id="tcReel">Reel A</span></div>
+  </div>
+  <div class="hero-text">
+    <h1 class="roles">
+      <button type="button" class="role is-on" data-reel="set" aria-pressed="true" data-t="roleSet">Creative film producer</button>
+      <button type="button" class="role" data-reel="ai" aria-pressed="false" data-t="roleAi">AI creative director</button>
+    </h1>
+    <p class="hero-sub" data-t="heroSub">Fourteen years producing commercials, music videos and social content in the Gulf and Egypt. I also direct films made with AI. Pick a title to switch reels.</p>
   </div>
 </section>
 
-<section id="work">
+<section class="about wrap">
+  <p class="about-text" data-t="about">I started as a copywriter and creative director, then moved into production. So I read a script the way a creative does and budget it the way a producer has to. I've run sets with more than 150 crew, worked with high-end talent, and delivered for Hublot, Emaar, Skechers, Mashreq, Abbott and Nivea. I'm based in Dubai.</p>
+  <dl class="slate">
+    <div><dt data-t="slYears">Years in production</dt><dd>14</dd></div>
+    <div><dt data-t="slProjects">Projects on this site</dt><dd id="nProjects">0</dd></div>
+    <div><dt data-t="slFilms">Films you can watch</dt><dd id="nFilms">0</dd></div>
+    <div><dt data-t="slMarkets">Crew and talent in</dt><dd class="slate-small" data-t="slMarketsV">UAE, KSA, Egypt, Lebanon</dd></div>
+  </dl>
+</section>
+
+<section class="sheet" id="callsheet">
   <div class="wrap">
-    <div class="head">
-      <div><span class="eyebrow" data-t="wEye">Selected films</span><h2 data-t="wH">Every frame began as a sentence.</h2></div>
-      <p class="sub" data-t="wSub">Hover a film to read the line that started it. Click to watch with sound.</p>
+    <div class="sheet-head">
+      <h2 data-t="sheetH">What I can put on a call sheet</h2>
+      <p data-t="sheetP">Pick a line to see the work behind it.</p>
     </div>
-    <div class="films" id="films"></div>
+    <div class="sheet-table" id="sheetRows" role="list"></div>
   </div>
 </section>
 
-<section id="sixseconds" class="ss">
-  <img class="ssbg" src="i/ss-keyart.jpg" alt="" loading="lazy" decoding="async">
-  <div class="ssband" aria-hidden="true"><div class="row" id="ssRow"></div></div>
-  <div class="wrap ssgrid">
-    <button class="ssvid" id="ssBtn" type="button" aria-label="Watch Six Seconds, episode 1">
-      <video id="ssVid" src="m/sixseconds.mp4" poster="p/sixseconds.jpg" muted loop playsinline preload="none"></video>
-      <span class="tc" aria-hidden="true"><i></i>00:00:06</span>
-    </button>
-    <div>
-      <span class="eyebrow"><span class="new" data-t="ssNew">NEW</span><span data-t="ssEye">Original micro-drama series</span></span>
-      <h2 data-t="ssH">Six Seconds</h2>
-      <p class="tagline" data-t="ssTag">Saving his brother means forgetting him.</p>
-      <p data-t="ssP">A London thriller told in one-minute vertical episodes. Two street kids fall into a begging racket run by a man posing as a charity benefactor. After an accident, one of them can see six seconds into the future, and every time he looks, he loses a memory of the brother he is trying to save. Written, designed and directed by me with AI.</p>
-      <div class="ostats">
-        <div><b>40</b><span data-t="ss1">episodes</span></div>
-        <div><b>60s</b><span data-t="st2">per episode</span></div>
-        <div><b>6</b><span data-t="ss3">episodes out now</span></div>
-        <div><b>9:16</b><span data-t="st3">vertical, mobile-first</span></div>
-      </div>
-      <dl class="credits">
-        <div><dt data-t="c1t">Role</dt><dd data-t="c1">Creator · Writer · Director · AI Artist</dd></div>
-        <div><dt data-t="c2t">Status</dt><dd data-t="ssC2">6 episodes produced · all 40 written</dd></div>
-      </dl>
-      <div class="ctas" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
-        <button class="btn btn-red" type="button" id="ssWatch" data-t="ssCta">Watch episode 1</button>
-        <button class="btn btn-ghost" type="button" id="ssDeck" data-t="oDeck">Open the series deck</button>
-      </div>
-    </div>
-  </div>
+<section class="work wrap" id="work">
+  <h2 data-t="workH">The work</h2>
+  <div class="filters" id="filters" role="toolbar" aria-label="Filter the work"></div>
+  <div class="grid" id="grid"></div>
+  <div class="more"><button type="button" class="btn" id="showAll"></button></div>
+</section>
+
+<section class="cases" id="cases">
   <div class="wrap">
-    <div class="sseps" id="ssEps"></div>
-    <div class="peek">
-      <span class="eyebrow" data-t="peek">Inside the deck · tap any page</span>
-      <div class="peekrow" id="ssPeek"></div>
-    </div>
-  </div>
-</section>
-
-<section id="short" style="padding-top:0">
-  <div class="wrap">
-    <div class="head">
-      <div><span class="eyebrow" data-t="sEye">Short form · 9:16</span><h2 data-t="sH">Made for the scroll.</h2></div>
-      <div class="chips" id="chips" role="group" aria-label="Filter"></div>
-    </div>
-    <div class="wall" id="wall"></div>
-  </div>
-</section>
-
-<section id="original" style="background:linear-gradient(180deg,var(--ink),#140F1E 40%,var(--ink))">
-  <div class="wrap orig">
-    <button class="vid" id="owBtn" type="button" aria-label="Play One Wish Before Dawn trailer">
-      <video id="owVid" src="m/onewish.mp4" poster="p/onewish.jpg" muted loop playsinline preload="none"></video>
-    </button>
-    <div>
-      <span class="eyebrow" data-t="oEye">Original micro-drama series</span>
-      <h2 style="margin-top:14px" data-t="oH">One Wish Before Dawn</h2>
-      <p class="tagline" data-t="oTag">Every wish has a price.</p>
-      <p data-t="oP">A romantic fantasy thriller told in one-minute vertical episodes. A grieving photographer slips into the Great Pyramid in search of a scarab said to grant one wish, and finds a living world, a cursed guardian and a love that costs a life. Written, designed and directed by me with AI, in English and Arabic.</p>
-      <div class="ostats">
-        <div><b>30</b><span data-t="st1">episodes</span></div>
-        <div><b>60s</b><span data-t="st2">per episode</span></div>
-        <div><b>9:16</b><span data-t="st3">vertical, mobile-first</span></div>
-        <div><b>1</b><span data-t="st4">night, sunset to dawn</span></div>
-      </div>
-      <dl class="credits">
-        <div><dt data-t="c1t">Role</dt><dd data-t="c1">Creator · Writer · Director · AI Artist</dd></div>
-        <div><dt data-t="c2t">Status</dt><dd data-t="c2">2 episodes produced · all 30 written</dd></div>
-      </dl>
-      <div class="ctas" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
-        <button class="btn btn-hot" type="button" id="deckOpen" data-t="oDeck">Open the series deck</button>
-        <button class="btn btn-ghost" type="button" id="owPlay" data-t="oCta">Watch the trailer</button>
+    <h2 data-t="casesH">Two campaigns with numbers</h2>
+    <div class="case">
+      <button type="button" class="case-media land" data-open="treva-home-economist-saudi-arabia" data-v="last">
+        <img loading="lazy" src="media/p/x/case-treva.jpg" alt="">
+        <span class="play" data-t="playCase">Play the case film</span>
+      </button>
+      <div class="case-body">
+        <h3 data-t="c1H">Treva: a rap song for the home economist</h3>
+        <p data-t="c1P">The brief was to reach homemakers in Saudi Arabia. We wrote a rap song that calls them the household's economists and shot it as a music video.</p>
+        <dl class="stats">
+          <div><dd>120%</dd><dt data-t="stSales">Increase in sales</dt></div>
+          <div><dd>11.2M</dd><dt data-t="stReach">Reach</dt></div>
+          <div><dd>12.7%</dd><dt data-t="stCtr">Click-through rate</dt></div>
+        </dl>
+        <p class="note" data-t="caseNote">Figures as reported in the campaign's case film.</p>
       </div>
     </div>
-  </div>
-  <div class="wrap">
-    <div class="peek">
-      <span class="eyebrow" data-t="peek">Inside the deck · tap any page</span>
-      <div class="peekrow" id="peekRow"></div>
-    </div>
-  </div>
-</section>
-
-<section id="stills">
-  <div class="wrap">
-    <div class="head">
-      <div><span class="eyebrow" data-t="kEye">Key visuals</span><h2 data-t="kH">Stills that stop thumbs.</h2></div>
-      <div class="scrollhint"><button class="arrow" type="button" id="prevS" aria-label="Previous">←</button><button class="arrow" type="button" id="nextS" aria-label="Next">→</button></div>
-    </div>
-    <div class="stills" id="stillsRow"></div>
-  </div>
-</section>
-
-<section id="sevenlives" class="sl">
-  <img class="slbg" src="i/sl-keyart.jpg" alt="" loading="lazy" decoding="async">
-  <div class="wrap slgrid">
-    <div>
-      <span class="eyebrow"><span class="new" data-t="ssNew">NEW</span><span data-t="slEye">Original micro-drama series</span></span>
-      <h2 data-t="slH">Seven Lives</h2>
-      <div class="sllives"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span data-t="slLives">Six lives spent. One kept.</span></div>
-      <p class="tagline" data-t="slTag">He lost his name. Not his heart.</p>
-      <p data-t="slP">A New York revenge drama told in vertical episodes of 60 to 90 seconds. The day before his wedding, a developer signs everything he owns over to his fiancée, then loses his memory in a crash on the FDR Drive and wakes up with no name. A stray tabby who can see what people can’t leads him back to the top, and pays for every rescue with one of his seven lives. Written, designed and directed by me with AI.</p>
-      <div class="ostats">
-        <div><b>40</b><span data-t="ss1">episodes</span></div>
-        <div><b>60–90s</b><span data-t="st2">per episode</span></div>
-        <div><b>4</b><span data-t="sl3">episodes out now</span></div>
-        <div><b>9:16</b><span data-t="st3">vertical, mobile-first</span></div>
-      </div>
-      <dl class="credits">
-        <div><dt data-t="c1t">Role</dt><dd data-t="c1">Creator · Writer · Director · AI Artist</dd></div>
-        <div><dt data-t="c2t">Status</dt><dd data-t="slC2">4 episodes produced · all 40 written</dd></div>
-      </dl>
-      <div class="ctas" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
-        <button class="btn btn-gold" type="button" id="slWatch" data-t="slCta">Watch episode 1</button>
-        <button class="btn btn-ghost" type="button" id="slDeck" data-t="oDeck">Open the series deck</button>
-      </div>
-    </div>
-    <button class="slvid" id="slBtn" type="button" aria-label="Watch Seven Lives, episode 1">
-      <video id="slVid" src="m/sevenlives.mp4" poster="p/sevenlives.jpg" muted loop playsinline preload="none"></video>
-      <span class="tc" aria-hidden="true"><i></i>GOLD RING</span>
-    </button>
-  </div>
-  <div class="wrap">
-    <div class="sleps" id="slEps"></div>
-    <div class="peek">
-      <span class="eyebrow" data-t="peek">Inside the deck · tap any page</span>
-      <div class="peekrow" id="slPeek"></div>
-    </div>
-  </div>
-</section>
-
-<section id="services" style="padding-top:0">
-  <div class="wrap">
-    <div class="head">
-      <div><span class="eyebrow" data-t="vEye">What I make</span><h2 data-t="vH">One director. The whole pipeline.</h2></div>
-      <p class="sub" data-t="vSub">Hire me for one piece of the chain or the full run, from the first idea to the final master in every ratio.</p>
-    </div>
-    <div class="services" id="svc"></div>
-  </div>
-</section>
-
-<section id="process" style="padding-top:0">
-  <div class="wrap">
-    <div class="head">
-      <div><span class="eyebrow" data-t="pEye">Process</span><h2 data-t="pH">From one sentence to the screen.</h2></div>
-      <p class="sub" data-t="pSub">Here is how the Rawaa film was built, step by step. Every project follows the same six stages.</p>
-    </div>
-    <div class="mprocess" id="mproc"></div>
-    <div class="process">
-      <div class="steps" id="steps" role="tablist" aria-label="Process steps"></div>
-      <div class="stage" id="stage">
-        <div class="doc on" data-s="0"></div>
-        <div class="doc" data-s="1"></div>
-        <div data-s="2"><img src="i/rsheet.jpg" alt="Grid of four Rawaa frames used as a world sheet"><span class="lbl" data-t="lbl2">World sheet · locked look</span></div>
-        <div data-s="3"><img src="i/r2.jpg" alt="Keyframe: rice pouring into a copper bowl"><span class="lbl" data-t="lbl3">Keyframe 02 / 06</span></div>
-        <div data-s="4"><video src="m/rawaa.mp4" muted loop playsinline preload="none" poster="i/r3.jpg"></video><span class="lbl" data-t="lbl4">Motion pass</span></div>
-        <div data-s="5"><img src="i/r5.jpg" alt="Final frame with Rawaa pack on the family table"><span class="super" data-t="super">The longer the grain, the longer the table.</span></div>
+    <div class="case">
+      <button type="button" class="case-media land" data-open="vatika-whatsyourflavour" data-v="0">
+        <img loading="lazy" src="media/p/x/case-vatika.jpg" alt="">
+        <span class="play" data-t="playCase">Play the case film</span>
+      </button>
+      <div class="case-body">
+        <h3 data-t="c2H">Vatika Fruitamin: #WhatsYourFlavour</h3>
+        <p data-t="c2P">A jingle built for TikTok and a set of films for the hair-mask range.</p>
+        <dl class="stats">
+          <div><dd>25%</dd><dt data-t="stSales">Increase in sales</dt></div>
+          <div><dd>15%</dd><dt data-t="stTraffic">Increase in traffic</dt></div>
+        </dl>
+        <p class="note" data-t="caseNote">Figures as reported in the campaign's case film.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="why" style="padding-top:0">
-  <div class="wrap">
-    <span class="eyebrow" data-t="yEye">Why a producer behind the prompt</span>
-    <p class="quote" style="margin-top:18px"><span data-t="q1">The machine is fast. Taste isn't automatic.</span> <span class="grad" data-t="q2">Fourteen years of sets, crews and client rooms go into every prompt.</span></p>
-    <div class="compare" id="compare"></div>
-  </div>
+<section class="bts wrap" id="bts">
+  <h2 data-t="btsH">Behind the scenes</h2>
+  <p class="lede" data-t="btsP">Some of the shoot days, before the edit.</p>
+  <div class="bts-row" id="btsRow"></div>
 </section>
 
-<section id="packages" style="padding-top:0">
-  <div class="wrap">
-    <div class="head">
-      <div><span class="eyebrow" data-t="kgEye">Ways to work together</span><h2 data-t="kgH">Pick a starting point.</h2></div>
-      <p class="sub" data-t="kgSub">Every project is quoted on the brief. These are the four ways most clients start.</p>
+<section class="aiband">
+  <div class="wrap aiband-in">
+    <div class="aiband-posters" id="aiPosters"></div>
+    <div class="aiband-text">
+      <h2 data-t="aiH">The AI studio</h2>
+      <p data-t="aiP">A separate room for the AI work: brand films, three original micro-dramas, and how each one gets made, step by step.</p>
+      <a class="btn btn-solid" href="ai/" data-t="aiBtn">Open the AI studio</a>
     </div>
-    <div class="packs" id="packs"></div>
   </div>
 </section>
 
-<section id="faq" style="padding-top:0">
-  <div class="wrap faq">
-    <div><span class="eyebrow" data-t="qEye">Questions clients ask</span><h2 style="margin-top:14px" data-t="qH">Before you brief.</h2></div>
-    <div id="faqs"></div>
+<section class="markets wrap">
+  <h2 data-t="mkH">Where I can put a crew on the ground</h2>
+  <div class="mk-grid">
+    <div><h3 data-t="mkUae">United Arab Emirates</h3><p class="mk-for" data-t="mkFor">Work for</p><p>Hublot, Emaar, Skechers, Mashreq, Abbott, Ajmal, HomeBox, Dubai Mallathon</p></div>
+    <div><h3 data-t="mkKsa">Saudi Arabia</h3><p class="mk-for" data-t="mkFor">Work for</p><p>Treva, Mehbaj, Doux, Dari, Noya Clinics, Derman</p></div>
+    <div><h3 data-t="mkEg">Egypt</h3><p class="mk-for" data-t="mkFor">Work for</p><p>Nivea, Mercedes-Benz Egypt, B.TECH, Molped, Président, Nogoum FM, Oxfam</p></div>
+    <div><h3 data-t="mkLb">Lebanon</h3><p class="mk-for">&nbsp;</p><p data-t="mkLbP">Crews and talent on call.</p></div>
+  </div>
+</section>
+
+<section class="pov wrap">
+  <div class="pov-video">
+    <video id="povVideo" controls playsinline preload="none" poster="media/p/x/pov.jpg" src="media/v/x/pov.mp4"></video>
+  </div>
+  <div class="pov-text">
+    <h2 data-t="povH">I also act. Once.</h2>
+    <p data-t="povP">A sketch from the office: what happens when you help a stranger strictly according to your job title. I'm in it. Casting directors, go easy.</p>
   </div>
 </section>
 
 <section class="contact" id="contact">
   <div class="wrap">
-    <span class="eyebrow" data-t="ctEye">Start a project</span>
-    <h2 style="margin-top:16px"><span data-t="ctH1">Have a sentence?</span><br><span class="grad" data-t="ctH2">Let's render it.</span></h2>
-    <a class="btn btn-wa mquick" href="https://wa.me/971506479730" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg><span data-t="mQuick">Chat on WhatsApp now</span></a>
-    <div class="cgrid">
-      <form id="brief" novalidate>
-        <label for="line"><span data-t="fLine">Your idea or brief, in one line</span><textarea id="line" required>A 30-second launch film for our new SUV that feels like a desert legend.</textarea></label>
-        <fieldset>
-          <legend data-t="fNeed">What do you need?</legend>
-          <div class="chips" id="needs"></div>
-        </fieldset>
-        <div class="two">
-          <label for="when"><span data-t="fWhen">Timeline</span><select id="when"></select></label>
-          <label for="co"><span data-t="fCo">Brand or agency</span><input id="co" autocomplete="organization" value=""></label>
-        </div>
-        <div class="two">
-          <label for="nm"><span data-t="fName">Your name</span><input id="nm" autocomplete="name"></label>
-          <label for="em"><span data-t="fMail">Your email or phone</span><input id="em" autocomplete="email"></label>
-        </div>
-        <div><button class="btn btn-hot" type="submit" data-t="fBuild">Build my brief</button></div>
-      </form>
-      <div class="out" aria-live="polite">
-        <span class="eyebrow" data-t="oBrief">Your brief</span>
-        <pre id="briefOut"></pre>
-        <div style="display:flex;flex-wrap:wrap;gap:10px"><button class="btn btn-ghost" type="button" id="copy" data-t="oCopy">Copy brief</button><a class="btn btn-ghost" id="mailto" href="#" data-t="oMail">Open in email</a></div>
-        <a class="btn btn-wa" id="waBrief" href="https://wa.me/971506479730" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg><span data-t="oWa">Send on WhatsApp</span></a>
-        <div class="mail"><span class="small" data-t="oSend">Send it to</span><code id="addr">mostafa.elsayaad@gmail.com</code></div>
-        <div class="mail" style="border-top:0;padding-top:0"><span class="small">WhatsApp</span><code dir="ltr">+971 50 647 9730</code></div>
-        <p class="small" data-t="oNote">I reply within one working day with questions, an approach and a quote.</p>
-      </div>
+    <h2 data-t="ctH">Got a script, a deck, or just a shoot date?</h2>
+    <p class="lede" data-t="ctP">Send whatever you have. I'll reply with how I'd make it and what it would take.</p>
+    <div class="ct-links">
+      <a class="btn btn-solid" href="https://wa.me/971506479730" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" href="mailto:mostafa.elsayaad@gmail.com" data-t="ctEmail">Email</a>
+      <a class="btn" href="https://www.linkedin.com/in/mostafaelsayaad/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://www.behance.net/mostafaelsayaad" target="_blank" rel="noopener">Behance</a>
+      <a class="btn" href="https://vimeo.com/mostafaelsayaad" target="_blank" rel="noopener">Vimeo</a>
     </div>
+    <p class="foot">Mostafa Elsayaad, Dubai. <span data-t="foot">Client names and campaigns belong to their owners.</span></p>
   </div>
 </section>
+</main>
 
-<footer><div class="wrap"><span data-t="foot1">Mostafa Elsayaad · Creative Producer &amp; AI Creative Director · Dubai, UAE</span><span data-t="foot2">All work shown was created with AI under my direction for the brands named.</span></div></footer>
+<dialog class="viewer" id="viewer" aria-labelledby="vwTitle">
+  <div class="vw-top">
+    <div class="vw-heading"><p class="vw-client" id="vwClient"></p><h2 id="vwTitle"></h2></div>
+    <button type="button" class="vw-close" id="vwClose" data-t="close">Close</button>
+  </div>
+  <div class="vw-body">
+    <div class="vw-stage" id="vwStage"></div>
+    <aside class="vw-side">
+      <div class="vw-list" id="vwList"></div>
+      <div class="vw-credits" id="vwCredits"></div>
+    </aside>
+  </div>
+</dialog>
 
-<div class="mbar"><a class="btn btn-wa" href="https://wa.me/971506479730" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg><span>WhatsApp</span></a><a class="btn btn-hot" href="#contact" data-t="nCta">Start a project</a></div>
-
-<a class="wa-float" href="https://wa.me/971506479730" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg></a>
-
-<div class="dk" id="dk" hidden role="dialog" aria-modal="true" aria-label="One Wish Before Dawn series deck">
-  <div class="top"><span class="eyebrow" id="dkIdx">01 / 34</span><div class="r"><a class="gs" href="https://docs.google.com/presentation/d/1mTpRGavv2RpFVtjkdSThhvzeegCCdZfCLZM_e4GEc9Y/view" target="_blank" rel="noopener" data-t="dkGs">Open in Google Slides</a><button class="x" type="button" id="dkX" aria-label="Close" style="width:44px;height:44px;border-radius:50%;border:1px solid var(--ink-3);background:none;color:var(--paper);font-size:22px;cursor:pointer">×</button></div></div>
-  <div class="slide"><img id="dkImg" alt="Series deck page"><button class="side l" type="button" id="dkP" aria-label="Previous page">←</button><button class="side r" type="button" id="dkN" aria-label="Next page">→</button></div>
-  <div class="strip" id="dkStrip"></div>
-</div>
-
-<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Video player">
-  <div class="top"><span class="eyebrow" id="lbIdx"></span><button class="x" type="button" id="lbX" aria-label="Close">×</button></div>
-  <div class="stagebox"><video id="lbV" controls playsinline></video></div>
-  <div class="cap"><div style="min-width:0"><span class="eyebrow" id="lbC" style="color:var(--ember)"></span><h3 id="lbT"></h3><p class="seed" id="lbS"></p></div><div class="nav2"><button class="arrow" type="button" id="lbP" aria-label="Previous">←</button><button class="arrow" type="button" id="lbN" aria-label="Next">→</button></div></div>
-</div>
-<script>
-var U=function(p){return p};
-(function(R,MOB){
-const HOST=R.body||R;if(MOB)HOST.classList.add("mob");
-const T={
-en:{nAbout:"About",aEye:"About",aHi1:"Hi, I’m",aHi2:"Mostafa",aRole:"Creative Producer & AI Creative Director",a1:"For over 14 years, I’ve been turning ideas into campaigns, films, and branded stories and making sense of briefs that start with “we want something different.”",a2:"I work with brands and agencies to shape concepts, lead creative production, and bring ambitious ideas to life. AI is a big part of how I create, but the story always comes first.",a3:"I also help companies turn their capabilities into compelling pitches, presentations, and creative proposals, giving business development teams a clear story to sell, backed by a vision for how it can actually be made.",a4a:"Based in Dubai.",a4b:"I take the work seriously.",a4c:"Myself, a little less.",aCta:"Work with me",
-brand:"Mostafa Elsayaad",role:"Creative Producer & AI Creative Director",nWork:"Work",nServices:"Services",nProcess:"Process",nPackages:"Packages",nCta:"Start a project",
-h1a:"Ideas that",h1b:"render.",lede:"I take a brand from one sentence to finished films, key visuals and pitch decks, with fourteen years of real production behind every frame.",
-cta1:"See the work",cta2:"Brief me in one line",f1:"years in production",f2:"AI films & visuals",f3:"markets: UAE · KSA · Egypt",f4:"native creative",
-wEye:"Selected films",wH:"Every frame began as a sentence.",wSub:"Hover a film to read the line that started it. Click to watch with sound.",
-sEye:"Short form · 9:16",sH:"Made for the scroll.",
-nSeries:"Six Seconds",ssNew:"NEW",ssBadge:"Six Seconds · original micro-drama, 6 episodes out",ssEye:"Original micro-drama series",ssH:"Six Seconds",ssTag:"Saving his brother means forgetting him.",ssP:"A London thriller told in one-minute vertical episodes. Two street kids fall into a begging racket run by a man posing as a charity benefactor. After an accident, one of them can see six seconds into the future, and every time he looks, he loses a memory of the brother he is trying to save. Written, designed and directed by me with AI.",ss1:"episodes",ss3:"episodes out now",ssC2:"6 episodes produced · all 40 written",ssCta:"Watch episode 1",slEye:"Original micro-drama series",slH:"Seven Lives",slLives:"Six lives spent. One kept.",slTag:"He lost his name. Not his heart.",slP:"A New York revenge drama told in vertical episodes of 60 to 90 seconds. The day before his wedding, a developer signs everything he owns over to his fiancée, then loses his memory in a crash on the FDR Drive and wakes up with no name. A stray tabby who can see what people can’t leads him back to the top, and pays for every rescue with one of his seven lives. Written, designed and directed by me with AI.",sl3:"episodes out now",slC2:"4 episodes produced · all 40 written",slCta:"Watch episode 1",ssBand:["New original series","Six Seconds","Six episodes out now","London","40 × 60 seconds"],
-oEye:"Original micro-drama series",oH:"One Wish Before Dawn",oTag:"Every wish has a price.",oP:"A romantic fantasy thriller told in one-minute vertical episodes. A grieving photographer slips into the Great Pyramid in search of a scarab said to grant one wish, and finds a living world, a cursed guardian and a love that costs a life. Written, designed and directed by me with AI, in English and Arabic.",
-st1:"episodes",st2:"per episode",st3:"vertical, mobile-first",st4:"night, sunset to dawn",
-c1t:"Role",c1:"Creator · Writer · Director · AI Artist",c2t:"Status",c2:"2 episodes produced · all 30 written",oCta:"Watch the trailer",oDeck:"Open the series deck",peek:"Inside the deck · tap any page",dkGs:"Open in Google Slides",
-kEye:"Key visuals",kH:"Stills that stop thumbs.",
-vEye:"What I make",vH:"One director. The whole pipeline.",vSub:"Hire me for one piece of the chain or the full run, from the first idea to the final master in every ratio.",
-pEye:"Process",pH:"From one sentence to the screen.",pSub:"Here is how the Rawaa film was built, step by step. Every project follows the same six stages.",
-lbl2:"World sheet · locked look",lbl3:"Keyframe 02 / 06",lbl4:"Motion pass",super:"The longer the grain, the longer the table.",
-yEye:"Why a producer behind the prompt",q1:"The machine is fast. Taste isn't automatic.",q2:"Fourteen years of sets, crews and client rooms go into every prompt.",
-kgEye:"Ways to work together",kgH:"Pick a starting point.",kgSub:"Every project is quoted on the brief. These are the four ways most clients start.",
-qEye:"Questions clients ask",qH:"Before you brief.",
-ctEye:"Start a project",ctH1:"Have a sentence?",ctH2:"Let's render it.",fLine:"Your idea or brief, in one line",fNeed:"What do you need?",fWhen:"Timeline",fCo:"Brand or agency",fName:"Your name",fMail:"Your email or phone",fBuild:"Build my brief",
-oBrief:"Your brief",oCopy:"Copy brief",oMail:"Open in email",oWa:"Send on WhatsApp",mQuick:"Chat on WhatsApp now",oSend:"Send it to",oNote:"I reply within one working day with questions, an approach and a quote.",
-foot1:"Mostafa Elsayaad · Creative Producer & AI Creative Director · Dubai, UAE",foot2:"All work shown was created with AI under my direction for the brands named.",
-all:"All",copied:"Brief copied",copyFail:"Select the text and copy it",langBtn:"العربية",watch:"Watch",
-briefHead:"NEW BRIEF",bLine:"Idea",bNeed:"Needs",bWhen:"Timeline",bCo:"Brand",bFrom:"From",tbd:"to discuss"},
-ar:{nAbout:"من أنا",aEye:"من أنا",aHi1:"أهلاً، أنا",aHi2:"مصطفى",aRole:"منتج إبداعي ومخرج إبداعي بالذكاء الاصطناعي",a1:"منذ أكثر من أربعة عشر عاماً وأنا أحوّل الأفكار إلى حملات وأفلام وقصص للعلامات التجارية، وأفكّ شيفرة الموجزات التي تبدأ بعبارة «نريد شيئاً مختلفاً».",a2:"أعمل مع العلامات التجارية والوكالات على صياغة الأفكار وقيادة الإنتاج الإبداعي وتحويل الطموحات الكبيرة إلى أعمال حقيقية. الذكاء الاصطناعي جزء أساسي من طريقتي في الإبداع، لكن القصة تأتي دائماً أولاً.",a3:"وأساعد الشركات أيضاً على تحويل قدراتها إلى عروض منافسة وعروض تقديمية ومقترحات إبداعية مقنعة، تمنح فرق تطوير الأعمال قصة واضحة تبيعها، ورؤية عملية لكيفية تنفيذها فعلاً.",a4a:"مقيم في دبي.",a4b:"آخذ العمل بجدية.",a4c:"ونفسي… أقل قليلاً.",aCta:"لنعمل معاً",
-brand:"مصطفى الصياد",role:"منتج إبداعي ومخرج إبداعي بالذكاء الاصطناعي",nWork:"الأعمال",nServices:"الخدمات",nProcess:"المنهج",nPackages:"الباقات",nCta:"ابدأ مشروعك",
-h1a:"أفكارٌ",h1b:"تتحوّل إلى صورة.",lede:"آخذ علامتك التجارية من جملة واحدة إلى أفلام مكتملة وصور رئيسية وعروض تقديمية، ومعي أربعة عشر عاماً من الإنتاج الحقيقي خلف كل لقطة.",
-cta1:"شاهد الأعمال",cta2:"أرسل فكرتك في سطر",f1:"عاماً في الإنتاج",f2:"فيلماً وتصميماً بالذكاء الاصطناعي",f3:"أسواق: الإمارات · السعودية · مصر",f4:"إبداع بلغتين",
-wEye:"أفلام مختارة",wH:"كل لقطة بدأت بجملة.",wSub:"مرّر على الفيلم لتقرأ السطر الذي بدأه، واضغط لتشاهده بالصوت.",
-sEye:"محتوى قصير · ٩:١٦",sH:"صُنع ليوقف التمرير.",
-nSeries:"ست ثوانٍ",ssNew:"جديد",ssBadge:"ست ثوانٍ · دراما مصغّرة أصلية، ٦ حلقات متاحة",ssEye:"مسلسل دراما مصغّرة أصلي",ssH:"ست ثوانٍ",ssTag:"إنقاذ أخيه يعني أن ينساه.",ssP:"دراما تشويق لندنية في حلقات عمودية مدة كل منها دقيقة. طفلان من الشارع يقعان في شبكة تسوّل يديرها رجل يختبئ خلف قناع العمل الخيري. بعد حادث، يصبح أحدهما قادراً على رؤية ست ثوانٍ من المستقبل، لكنه في كل مرة ينظر فيها يفقد ذكرى من الأخ الذي يحاول إنقاذه. كتابة وتصميم وإخراج بالذكاء الاصطناعي.",ss1:"حلقة",ss3:"حلقات متاحة الآن",ssC2:"٦ حلقات منتَجة · ٤٠ حلقة مكتوبة",ssCta:"شاهد الحلقة الأولى",slEye:"مسلسل دراما مصغّرة أصلي",slH:"سبع أرواح",slLives:"ستّ أرواح أُنفقت، وبقيت واحدة.",slTag:"فقد اسمه، ولم يفقد قلبه.",slP:"دراما انتقام نيويوركية في حلقات عمودية تتراوح مدة كل منها بين ٦٠ و٩٠ ثانية. قبل زفافه بيوم، يتنازل رجل أعمال عن كل ما يملك لخطيبته، ثم يفقد ذاكرته في حادث على طريق FDR ويستيقظ بلا اسم. قطٌّ شارد يرى ما لا يراه البشر يعيده إلى القمة، ويدفع ثمن كل إنقاذ روحاً من أرواحه السبع. كتابة وتصميم وإخراج بالذكاء الاصطناعي.",sl3:"حلقات متاحة الآن",slC2:"٤ حلقات منتَجة · ٤٠ حلقة مكتوبة",slCta:"شاهد الحلقة الأولى",ssBand:["مسلسل أصلي جديد","ست ثوانٍ","ست حلقات متاحة","لندن","٤٠ × ٦٠ ثانية"],oEye:"مسلسل دراما مصغّرة أصلي",oH:"أمنية قبل الفجر",oTag:"لكل أمنية ثمن.",oP:"تشويق رومانسي خيالي يُروى في حلقات عمودية مدة كل منها دقيقة. مصوّرة مفجوعة تتسلّل إلى الهرم الأكبر بحثاً عن جعرانٍ يُقال إنه يحقق أمنية واحدة، فتجد عالماً حيّاً وحارساً ملعوناً وحباً ثمنه حياة. من كتابتي وتصميمي وإخراجي بالذكاء الاصطناعي، بالعربية والإنجليزية.",
-st1:"حلقة",st2:"لكل حلقة",st3:"عمودي، للجوال أولاً",st4:"ليلة واحدة، من الغروب إلى الفجر",
-c1t:"الدور",c1:"صاحب الفكرة · كاتب · مخرج · فنان ذكاء اصطناعي",c2t:"الحالة",c2:"حلقتان منتجتان · الحلقات الثلاثون مكتوبة",oCta:"شاهد الإعلان التشويقي",oDeck:"افتح عرض المسلسل",peek:"داخل العرض · اضغط على أي صفحة",dkGs:"افتح في Google Slides",
-kEye:"صور رئيسية",kH:"صورٌ توقف الإبهام.",
-vEye:"ماذا أصنع",vH:"مخرج واحد. السلسلة كاملة.",vSub:"استعن بي في حلقة واحدة من السلسلة أو في المشروع كاملاً، من الفكرة الأولى حتى النسخة النهائية بكل المقاسات.",
-pEye:"المنهج",pH:"من جملة واحدة إلى الشاشة.",pSub:"هكذا صُنع فيلم «رواء» خطوة بخطوة. وكل مشروع يمرّ بالمراحل الست نفسها.",
-lbl2:"لوحة العالم · مظهر ثابت",lbl3:"إطار رئيسي ٠٢ / ٠٦",lbl4:"مرحلة الحركة",super:"كلما طالت الحبّة، طالت المائدة.",
-yEye:"لماذا منتجٌ خلف الأمر النصي",q1:"الآلة سريعة، لكن الذوق لا يأتي تلقائياً.",q2:"أربعة عشر عاماً من مواقع التصوير وفرق العمل وغرف العملاء تدخل في كل أمر نصي.",
-kgEye:"طرق العمل معاً",kgH:"اختر نقطة البداية.",kgSub:"يُسعَّر كل مشروع بحسب الموجز. هذه الطرق الأربع التي يبدأ بها معظم العملاء.",
-qEye:"أسئلة يطرحها العملاء",qH:"قبل أن ترسل الموجز.",
-ctEye:"ابدأ مشروعك",ctH1:"لديك جملة؟",ctH2:"دعنا نحوّلها إلى صورة.",fLine:"فكرتك أو موجزك في سطر واحد",fNeed:"ماذا تحتاج؟",fWhen:"الإطار الزمني",fCo:"العلامة التجارية أو الوكالة",fName:"اسمك",fMail:"بريدك أو هاتفك",fBuild:"أنشئ موجزي",
-oBrief:"موجزك",oCopy:"انسخ الموجز",oMail:"افتح في البريد",oWa:"أرسل عبر واتساب",mQuick:"تواصل عبر واتساب الآن",oSend:"أرسله إلى",oNote:"أردّ خلال يوم عمل واحد بأسئلة ومقاربة وعرض سعر.",
-foot1:"مصطفى الصياد · منتج إبداعي ومخرج إبداعي بالذكاء الاصطناعي · دبي، الإمارات",foot2:"جميع الأعمال المعروضة صُنعت بالذكاء الاصطناعي تحت إخراجي للعلامات المذكورة.",
-all:"الكل",copied:"تم نسخ الموجز",copyFail:"حدّد النص وانسخه",langBtn:"English",watch:"شاهد",
-briefHead:"موجز جديد",bLine:"الفكرة",bNeed:"الاحتياج",bWhen:"الإطار الزمني",bCo:"العلامة",bFrom:"من",tbd:"للنقاش"}
-};
-const L=o=>o[lang]||o.en;
-const SIX=[
- {id:"ss-ep1",n:{en:"Episode 01 · 0:42",ar:"الحلقة ٠١ · ٠:٤٢"},client:{en:"Six Seconds · Episode 01",ar:"ست ثوانٍ · الحلقة ٠١"},title:{en:"The Price",ar:"الثمن"},seed:{en:"“I’m here to buy my brother back.”",ar:"«جئت لأشتري أخي.»"}},
- {id:"ss-ep2",n:{en:"Episode 02 · 0:46",ar:"الحلقة ٠٢ · ٠:٤٦"},client:{en:"Six Seconds · Episode 02",ar:"ست ثوانٍ · الحلقة ٠٢"},title:{en:"The Debt Book",ar:"دفتر الديون"},seed:{en:"“Now the other one has a reason to come back.”",ar:"«الآن صار للآخر سبب ليعود.»"}},
- {id:"ss-ep3",n:{en:"Episode 03 · 0:32",ar:"الحلقة ٠٣ · ٠:٣٢"},client:{en:"Six Seconds · Episode 03",ar:"ست ثوانٍ · الحلقة ٠٣"},title:{en:"The Officer",ar:"الشرطية"},seed:{en:"“Are you here on your own?”",ar:"«هل أنت هنا وحدك؟»"}},
- {id:"ss-ep4",n:{en:"Episode 04 · 0:38",ar:"الحلقة ٠٤ · ٠:٣٨"},client:{en:"Six Seconds · Episode 04",ar:"ست ثوانٍ · الحلقة ٠٤"},title:{en:"The Last Coin",ar:"العملة الأخيرة"},seed:{en:"“No one saw him come in.”",ar:"«لم يره أحد وهو يدخل.»"}},
- {id:"ss-ep5",n:{en:"Episode 05 · 0:45",ar:"الحلقة ٠٥ · ٠:٤٥"},client:{en:"Six Seconds · Episode 05",ar:"ست ثوانٍ · الحلقة ٠٥"},title:{en:"The Second Sound",ar:"الصوت الثاني"},seed:{en:"He hears it before it happens.",ar:"يسمعه قبل أن يحدث."}},
- {id:"ss-ep6",n:{en:"Episode 06 · 0:56",ar:"الحلقة ٠٦ · ٠:٥٦"},client:{en:"Six Seconds · Episode 06",ar:"ست ثوانٍ · الحلقة ٠٦"},title:{en:"Change It",ar:"غيِّره"},seed:{en:"“Count the drips.”",ar:"«عُدَّ القطرات.»"}}];
-let lang="en";
-try{const s=localStorage.getItem("me-lang");if(s==="ar"||s==="en")lang=s}catch(e){}
-
-const SEVEN=[
- {id:"sl-ep1",n:{en:"Episode 01 · 1:39",ar:"الحلقة ٠١ · ١:٣٩"},client:{en:"Seven Lives · Episode 01",ar:"سبع أرواح · الحلقة ٠١"},title:{en:"The Signature",ar:"التوقيع"},seed:{en:"“The sidewalk you left me on… is still warm.”",ar:"«الرصيف الذي تركتِني عليه… ما زال دافئاً.»"}},
- {id:"sl-ep2",n:{en:"Episode 02 · 1:01",ar:"الحلقة ٠٢ · ١:٠١"},client:{en:"Seven Lives · Episode 02",ar:"سبع أرواح · الحلقة ٠٢"},title:{en:"The FDR",ar:"طريق FDR"},seed:{en:"“Sorry, partner. Nobody’s going to know who you are.”",ar:"«آسف يا شريكي. لن يعرف أحد من تكون.»"}},
- {id:"sl-ep3",n:{en:"Episode 03 · 0:56",ar:"الحلقة ٠٣ · ٠:٥٦"},client:{en:"Seven Lives · Episode 03",ar:"سبع أرواح · الحلقة ٠٣"},title:{en:"Unknown Male",ar:"مجهول الهوية"},seed:{en:"“No. Wrong bed.”",ar:"«لا. سرير خطأ.»"}},
- {id:"sl-ep4",n:{en:"Episode 04 · 0:43",ar:"الحلقة ٠٤ · ٠:٤٣"},client:{en:"Seven Lives · Episode 04",ar:"سبع أرواح · الحلقة ٠٤"},title:{en:"No Name",ar:"بلا اسم"},seed:{en:"“Why does her face hurt?”",ar:"«لماذا يؤلمني وجهها؟»"}}];
-const PROMPTS={en:["a caravan crosses the dunes at dusk, led by a silver SUV","grain falls in slow motion into a copper bowl, a family table waits","a whole city looks up as the anthem begins","a photographer follows a scarab into the Great Pyramid at sunset","a saddle-maker's hands, then a gallop along the Dubai shoreline"],
-ar:["قافلة تعبر الكثبان عند الغروب، وفي مقدمتها سيارة فضية","حبّات الأرز تتساقط ببطء في وعاء نحاسي، ومائدة عائلية تنتظر","مدينة بأكملها ترفع رأسها مع أول نغمة من النشيد","مصوّرة تتبع جعراناً إلى داخل الهرم الأكبر عند الغروب","يدا صانع السروج، ثم عَدْوٌ على شاطئ دبي"]};
-
-const BRANDS=["LYNK & CO","Galadari","JAECOO","OMODA","iCAUR","ADCB","Skechers","Sorbonne University Abu Dhabi","Dubai Mallathon","Rawaa","Doux","TDesign"];
-
-const FILMS=[
-{id:"qafila169",cls:"xl",dur:"0:30",client:{en:"LYNK & CO 900 · Galadari",ar:"لينك آند كو 900 · قلداري"},title:{en:"Qafila",ar:"قافلة"},seed:{en:"What if the desert's oldest travellers met its newest one?",ar:"ماذا لو التقى أقدم مسافري الصحراء بأحدثهم؟"},type:{en:"Hybrid 2D animation × CG automotive",ar:"رسوم ثنائية الأبعاد مع سيارة واقعية"}},
-{id:"mainchar",cls:"v",dur:"0:18",client:{en:"LYNK & CO 900",ar:"لينك آند كو 900"},title:{en:"Main Character",ar:"البطل الرئيسي"},seed:{en:"Every world has a main character.",ar:"لكل عالمٍ بطلٌ رئيسي."}},
-{id:"mission",cls:"v",dur:"0:29",client:{en:"iCAUR · Galadari",ar:"آي كار · قلداري"},title:{en:"Mission Complete",ar:"اكتملت المهمة"},seed:{en:"Pick your car, cross Dubai, park at the Frame.",ar:"اختر سيارتك، اعبر دبي، وتوقّف عند البرواز."}},
-{id:"familyhall",cls:"v",dur:"0:24",client:{en:"TDesign · Interior film",ar:"TDesign · فيلم تصميم داخلي"},title:{en:"Family Hall",ar:"صالة العائلة"},seed:{en:"A walk through the family hall, from daylight to dusk.",ar:"جولة في صالة العائلة، من ضوء النهار إلى المساء."}},
-{id:"rawaa",cls:"l",dur:"0:20",client:{en:"Rawaa Rice",ar:"أرز رواء"},title:{en:"The Longer Table",ar:"المائدة الأطول"},seed:{en:"The longer the grain, the longer the table.",ar:"كلما طالت الحبّة، طالت المائدة."}},
-{id:"suadwomen",cls:"s",dur:"0:35",client:{en:"Sorbonne University Abu Dhabi",ar:"جامعة السوربون أبوظبي"},title:{en:"Weaving Tomorrow",ar:"ينسجن الغد"},seed:{en:"Women, weaving tomorrow forward.",ar:"نساءٌ ينسجن الغد إلى الأمام."}},
-{id:"anthem",cls:"",dur:"1:34",client:{en:"UAE National Anthem Film",ar:"فيلم النشيد الوطني الإماراتي"},title:{en:"One Anthem",ar:"نشيدٌ واحد"},seed:{en:"A whole nation, from every walk of life, looks up at the same moment.",ar:"وطن بأكمله، من كل الدروب، يرفع رأسه في اللحظة نفسها."}},
-{id:"adcb",cls:"",dur:"1:08",client:{en:"ADCB · Eid",ar:"بنك أبوظبي التجاري · العيد"},title:{en:"Eid in the Details",ar:"العيد في التفاصيل"},seed:{en:"Eid lives in small gestures: a ghutra straightened, a date shared, a city lit.",ar:"العيد يسكن الإيماءات الصغيرة: غترة تُعدَّل، وتمرة تُقسَم، ومدينة تُضاء."}},
-{id:"doux",cls:"v",dur:"0:44",client:{en:"Doux · Chicken",ar:"دو · دجاج"},title:{en:"A Day in Doux",ar:"يومٌ مع دو"},seed:{en:"What if the chicken lived the life it's cooked for?",ar:"ماذا لو عاشت الدجاجة الحياة التي تُطهى لأجلها؟"}},
-{id:"rarespawn",cls:"v",dur:"0:20",client:{en:"Automotive · Gaming hook",ar:"سيارات · فكرة ألعاب"},title:{en:"Rare in the Game",ar:"نادرة في اللعبة"},seed:{en:"Rare in the game, real on the road.",ar:"نادرة في اللعبة، حقيقية على الطريق."}},
-{id:"horses",cls:"v",dur:"0:27",client:{en:"Equestrian heritage",ar:"إرث الفروسية"},title:{en:"Heritage in Motion",ar:"إرثٌ يجري"},seed:{en:"From the saddle-maker's hands to a gallop on the shoreline.",ar:"من يدي صانع السروج إلى عَدْوٍ على الشاطئ."}},
-{id:"skechers",cls:"",dur:"0:55",client:{en:"Skechers · Back to School",ar:"سكيتشرز · العودة إلى المدارس"},title:{en:"Step Into the Story",ar:"خطوة إلى الحكاية"},seed:{en:"Every step into school is a step into a story.",ar:"كل خطوة إلى المدرسة خطوة إلى حكاية."}},
-{id:"ladies",cls:"",dur:"0:17",client:{en:"Dubai Mallathon · Ladies Track",ar:"دبي مولثون · مسار السيدات"},title:{en:"The Wall Becomes a Start Line",ar:"الجدار يصبح خط البداية"},seed:{en:"She pushes the wall, and the mall opens into a track of light.",ar:"تدفع الجدار، فينفتح المول على مسار من الضوء."}}
-];
-
-const REELS=[
-{id:"reel900",cat:"auto",client:{en:"LYNK & CO 900",ar:"لينك آند كو 900"},title:{en:"6 AM to 10 PM",ar:"من ٦ صباحاً إلى ١٠ مساءً"},seed:{en:"One car, one day, every version of you.",ar:"سيارة واحدة، يوم واحد، وكل نسخة منك."}},
-{id:"v900",cat:"auto",client:{en:"LYNK & CO 900 · Galadari",ar:"لينك آند كو 900 · قلداري"},title:{en:"Above the Rest",ar:"فوق الجميع"},seed:{en:"Beyond the expected, above the rest.",ar:"أبعد من المتوقع، فوق الجميع."}},
-{id:"gameplay",cat:"auto",client:{en:"iCAUR",ar:"آي كار"},title:{en:"Choose Your Driver",ar:"اختر سائقك"},seed:{en:"Turn the test drive into a game the viewer plays.",ar:"حوّل تجربة القيادة إلى لعبة يلعبها المشاهد."}},
-{id:"reev",cat:"auto",client:{en:"iCAUR · Explainer",ar:"آي كار · شرح تقني"},title:{en:"What Is REEV?",ar:"ما هي تقنية REEV؟"},seed:{en:"Explain the engine without losing the thrill.",ar:"اشرح المحرك من دون أن تفقد الإثارة."}},
-{id:"sf17",cat:"auto",client:{en:"iCAUR",ar:"آي كار"},title:{en:"Built for the Unpaved",ar:"صُنعت لما بعد الطريق"},seed:{en:"No limits ahead.",ar:"لا حدود أمامك."}},
-{id:"post7",cat:"auto",client:{en:"iCAUR",ar:"آي كار"},title:{en:"Not All Electric Is the Same",ar:"ليست كل الكهرباء سواء"},seed:{en:"One road, one drone, one claim.",ar:"طريق واحد، كاميرا واحدة، وعد واحد."}},
-{id:"couple",cat:"sport",client:{en:"Dubai Mallathon",ar:"دبي مولثون"},title:{en:"Tomorrow We Race",ar:"غداً نركض"},seed:{en:"Plant the flag at the top of the city.",ar:"اغرس الراية في قمة المدينة."}},
-{id:"mallathontt",cat:"sport",client:{en:"Dubai Mallathon",ar:"دبي مولثون"},title:{en:"Six Malls, One Run",ar:"ستة مولات، سباق واحد"},seed:{en:"Giant mascots, real runners, one city moving.",ar:"مجسّمات عملاقة، وعدّاؤون حقيقيون، ومدينة تتحرك."}},
-{id:"mallteaser5",cat:"sport",client:{en:"Dubai Mallathon · Teaser",ar:"دبي مولثون · تشويق"},title:{en:"5:00 AM",ar:"الخامسة فجراً"},seed:{en:"The alarm is the starting gun.",ar:"المنبّه هو طلقة البداية."}},
-{id:"hf0421",cat:"heritage",client:{en:"Equestrian heritage",ar:"إرث الفروسية"},title:{en:"The Stable at Dawn",ar:"الإسطبل عند الفجر"},seed:{en:"The quiet hour before the ride.",ar:"الساعة الهادئة قبل الركوب."}},
-{id:"suadasmr",cat:"edu",client:{en:"Sorbonne University Abu Dhabi",ar:"جامعة السوربون أبوظبي"},title:{en:"Campus ASMR",ar:"أصوات الحرم الجامعي"},seed:{en:"Let the campus be heard before it is seen.",ar:"دع الحرم يُسمَع قبل أن يُرى."}},
-{id:"suadorient",cat:"edu",client:{en:"Sorbonne University Abu Dhabi",ar:"جامعة السوربون أبوظبي"},title:{en:"Orientation Day",ar:"يوم التعريف"},seed:{en:"To welcome. To draft your future. To push.",ar:"لنرحّب. لنكتب مستقبلك. لندفعك."}}
-];
-const CATS=[["all",{en:"All",ar:"الكل"}],["auto",{en:"Automotive",ar:"سيارات"}],["sport",{en:"Sport & events",ar:"رياضة وفعاليات"}],["edu",{en:"Education",ar:"تعليم"}],["heritage",{en:"Heritage",ar:"تراث"}]];
-
-const STILLS=[
-["n07",{en:"LYNK & CO 900",ar:"لينك آند كو 900"},{en:"Mountain pass",ar:"الممر الجبلي"},1600,904],
-["n09",{en:"LYNK & CO 900",ar:"لينك آند كو 900"},{en:"Golden hour",ar:"الساعة الذهبية"},1600,904],
-["n10",{en:"LYNK & CO 900",ar:"لينك آند كو 900"},{en:"Blue hour",ar:"الساعة الزرقاء"},1600,904],
-["n11",{en:"LYNK & CO 900",ar:"لينك آند كو 900"},{en:"Where the road ends",ar:"حيث ينتهي الطريق"},1600,904],
-["n05",{en:"LYNK & CO 900",ar:"لينك آند كو 900"},{en:"The drive",ar:"الرحلة"},1600,904],
-["n06",{en:"LYNK & CO 900",ar:"لينك آند كو 900"},{en:"Closer",ar:"أقرب"},1600,904],
-["n08",{en:"LYNK & CO 900",ar:"لينك آند كو 900"},{en:"Comfort, touched",ar:"راحة بلمسة"},1600,904],
-["n12",{en:"Skechers · Aero Burst",ar:"سكيتشرز · Aero Burst"},{en:"Lift-off",ar:"انطلاق"},1067,1600],
-["n15",{en:"Skechers · Aero Burst",ar:"سكيتشرز · Aero Burst"},{en:"Ride the road",ar:"اركب الطريق"},1600,1067],
-["n13",{en:"Skechers · Aero Burst",ar:"سكيتشرز · Aero Burst"},{en:"Every stride",ar:"كل خطوة"},1600,1067],
-["n14",{en:"Skechers · Aero Burst",ar:"سكيتشرز · Aero Burst"},{en:"Above the road",ar:"فوق الطريق"},1600,1067],
-["n16",{en:"Skechers · Aero Burst",ar:"سكيتشرز · Aero Burst"},{en:"Light as air",ar:"خفيف كالهواء"},1067,1600],
-["n17",{en:"Skechers · Aero Burst",ar:"سكيتشرز · Aero Burst"},{en:"Carbon infused",ar:"مدعّم بالكربون"},1067,1600],
-["n03",{en:"Skechers · Back to School",ar:"سكيتشرز · العودة إلى المدارس"},{en:"High five",ar:"كفّ بكفّ"},1600,1195],
-["n01",{en:"Skechers · Back to School",ar:"سكيتشرز · العودة إلى المدارس"},{en:"Art class",ar:"حصة الرسم"},1600,900],
-["n02",{en:"Skechers · Back to School",ar:"سكيتشرز · العودة إلى المدارس"},{en:"First day",ar:"اليوم الأول"},1600,900],
-["n04",{en:"Skechers · Back to School",ar:"سكيتشرز · العودة إلى المدارس"},{en:"Locker talk",ar:"حديث الخزائن"},1600,1195],
-["n18",{en:"Skechers · Back to School",ar:"سكيتشرز · العودة إلى المدارس"},{en:"Back to play",ar:"عودة إلى اللعب"},1477,1065],
-["trend",{en:"LYNK & CO 900",ar:"لينك آند كو 900"},{en:"The back-seat view",ar:"من المقعد الخلفي"},900,1126],
-["img06",{en:"OMODA C7",ar:"أومودا C7"},{en:"Nothing wasted",ar:"لا شيء يُهدَر"},900,1126],
-["oj09",{en:"JAECOO",ar:"جايكو"},{en:"Waves of energy",ar:"موجات من الطاقة"},900,1126],
-["post2",{en:"iCAUR 03T",ar:"آي كار 03T"},{en:"City & beyond",ar:"المدينة وما بعدها"},900,1126],
-["img3",{en:"LYNK & CO 01",ar:"لينك آند كو 01"},{en:"Serve in style",ar:"أرسل بأناقة"},900,1126],
-["img5",{en:"LYNK & CO 06",ar:"لينك آند كو 06"},{en:"Bold color",ar:"لون جريء"},900,1126],
-["post14",{en:"JAECOO",ar:"جايكو"},{en:"Designed in",ar:"التصميم في الأساس"},900,1126],
-["img7",{en:"Dubai Mallathon",ar:"دبي مولثون"},{en:"Run for your flag",ar:"اركض لعَلَمك"},900,1126],
-["p1",{en:"Dubai Mallathon",ar:"دبي مولثون"},{en:"6 AM in Dubai",ar:"السادسة صباحاً في دبي"},900,1200],
-["raceday",{en:"Dubai Mallathon",ar:"دبي مولثون"},{en:"It's race day",ar:"إنه يوم السباق"},900,1124],
-["showup",{en:"Dubai Mallathon",ar:"دبي مولثون"},{en:"Show up anyway",ar:"احضر على أي حال"},900,1126],
-["sixam",{en:"Dubai Mallathon",ar:"دبي مولثون"},{en:"Every pair has a story",ar:"لكل حذاء حكاية"},900,1134],
-["img2",{en:"Dubai Mallathon",ar:"دبي مولثون"},{en:"It's back",ar:"عاد من جديد"},900,1126]
-];
-
-const ICONS={
-idea:'<svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.8V16h5v-.3c0-.7.4-1.4 1-1.8A6 6 0 0 0 12 3z"/></svg>',
-flow:'<svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 6h9M6.3 8.2l4.4 7.6M17.7 8.2l-4.4 7.6"/></svg>',
-kv:'<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 9"/></svg>',
-film:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M17 10l4-2.5v9L17 14"/></svg>',
-deck:'<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8M7 12l3-3 2 2 4-4"/></svg>',
-story:'<svg viewBox="0 0 24 24"><path d="M4 5c3-1.5 5.5-1.5 8 0v15c-2.5-1.5-5-1.5-8 0zM20 5c-3-1.5-5.5-1.5-8 0v15c2.5-1.5 5-1.5 8 0z"/></svg>'};
-const SERVICES=[
-["idea",{en:"Ideas & Strategy",ar:"الأفكار والاستراتيجية"},{en:"Insight, the big idea and the campaign platform, with scripts, taglines and supers written in Arabic and English.",ar:"البصيرة والفكرة الكبرى ومنصة الحملة، مع نصوص وشعارات وعبارات مكتوبة بالعربية والإنجليزية."},{en:["Insight","Big idea","Scripts","Taglines"],ar:["البصيرة","الفكرة الكبرى","السيناريو","الشعار"]}],
-["flow",{en:"AI Workflows",ar:"منظومات العمل بالذكاء الاصطناعي"},{en:"Custom pipelines that keep characters, products and locations consistent, plus prompt systems your team can reuse.",ar:"منظومات مصمّمة تحافظ على ثبات الشخصيات والمنتجات والمواقع، وأنظمة أوامر نصية يعيد فريقك استخدامها."},{en:["Model selection","Consistency","Prompt systems","Training"],ar:["اختيار النماذج","الثبات البصري","أنظمة الأوامر","التدريب"]}],
-["kv",{en:"Key Visuals & Design",ar:"الصور الرئيسية والتصميم"},{en:"Campaign key visuals, product scenes, social posts and outdoor, art-directed and delivered in every ratio.",ar:"صور الحملات الرئيسية ومشاهد المنتجات ومنشورات التواصل واللوحات الخارجية، بإخراج فني وبكل المقاسات."},{en:["Campaign KVs","Product","Social","OOH"],ar:["صور الحملة","المنتجات","التواصل","الإعلانات الخارجية"]}],
-["film",{en:"AI Films & Commercials",ar:"أفلام وإعلانات بالذكاء الاصطناعي"},{en:"TVCs, brand films, hybrid animation and social cut-downs, directed shot by shot, then edited, scored and graded.",ar:"إعلانات تلفزيونية وأفلام للعلامات ورسوم هجينة ونسخ قصيرة، مُخرجة لقطة بلقطة، ثم مونتاج وموسيقى وتلوين."},{en:["TVC","Brand film","Animation","Cut-downs"],ar:["إعلان تلفزيوني","فيلم علامة","رسوم متحركة","نسخ قصيرة"]}],
-["deck",{en:"Presentations & Treatments",ar:"العروض والمعالجات الإخراجية"},{en:"Pitch decks, director's treatments, storyboards and mood films that help an agency win the room.",ar:"عروض تقديمية ومعالجات إخراجية ولوحات قصصية وأفلام مزاج تساعد الوكالة على الفوز في غرفة الاجتماع."},{en:["Pitch decks","Treatments","Storyboards","Mood films"],ar:["عروض المنافسة","المعالجات","اللوحات القصصية","أفلام المزاج"]}],
-["story",{en:"Original Stories",ar:"قصص أصلية"},{en:"Micro-dramas, trailers and branded series built as IP that audiences follow episode after episode.",ar:"دراما مصغّرة وإعلانات تشويقية ومسلسلات للعلامات تُبنى كملكية فكرية يتابعها الجمهور حلقة بعد حلقة."},{en:["Micro-drama","Series","Trailers","Characters"],ar:["دراما مصغّرة","مسلسلات","إعلانات تشويقية","شخصيات"]}]
-];
-
-const STEPS=[
-[{en:"Brief & insight",ar:"الموجز والبصيرة"},{en:"I read the brief like a producer and find the human truth the film should stand on.",ar:"أقرأ الموجز بعين المنتج وأبحث عن الحقيقة الإنسانية التي يقف عليها الفيلم."}],
-[{en:"Idea & script",ar:"الفكرة والسيناريو"},{en:"One line becomes a script, shot list and supers, approved before anything is generated.",ar:"يتحوّل السطر الواحد إلى سيناريو وقائمة لقطات وعبارات، تُعتمد قبل توليد أي صورة."}],
-[{en:"World sheets",ar:"لوحات العالم"},{en:"Characters, locations, product and light are designed and locked so every frame belongs to the same world.",ar:"تُصمَّم الشخصيات والمواقع والمنتج والإضاءة وتُثبَّت، لتنتمي كل لقطة إلى العالم نفسه."}],
-[{en:"Keyframes",ar:"الإطارات الرئيسية"},{en:"Every shot is built as a still first. You approve the film as a storyboard before motion starts.",ar:"تُبنى كل لقطة كصورة ثابتة أولاً، وتعتمد الفيلم كلوحة قصصية قبل أن تبدأ الحركة."}],
-[{en:"Motion",ar:"الحركة"},{en:"Camera moves, performance and transitions are directed shot by shot across the best video models.",ar:"تُدار حركة الكاميرا والأداء والانتقالات لقطةً بلقطة عبر أفضل نماذج الفيديو."}],
-[{en:"Finish",ar:"التشطيب"},{en:"Edit, sound design, voice, music and grade, then masters and cut-downs in every ratio you need.",ar:"مونتاج وتصميم صوت وتعليق وموسيقى وتلوين، ثم النسخ النهائية والقصيرة بكل المقاسات."}]
-];
-const DOCS={
-en:['<span class="k">BRIEF</span><b>Rawaa long-grain rice</b><span>Launch a premium rice to Gulf families.</span><span class="k">INSIGHT</span><span>In our homes, the table is never set for one. Good rice is the reason people stay seated a little longer.</span><span class="k">ROLE OF FILM</span><span>Make the grain the hero, and the family the reward.</span>',
-'<span class="k">LINE</span><b>"The longer the grain, the longer the table."</b><span class="k">SHOT LIST</span><span>01 · Macro: single grains fall through light</span><span>02 · Rice pours into a copper bowl</span><span>03 · Grandmother carries the platter outside</span><span>04 · Three generations reach for the same dish</span><span>05 · Pack shot on the table · super</span>'],
-ar:['<span class="k">الموجز</span><b>أرز رواء طويل الحبّة</b><span>إطلاق أرز فاخر للعائلات الخليجية.</span><span class="k">البصيرة</span><span>في بيوتنا، لا تُفرَش المائدة لشخص واحد. والأرز الطيّب هو ما يُبقي الجميع جالسين وقتاً أطول.</span><span class="k">دور الفيلم</span><span>أن تكون الحبّة هي البطل، والعائلة هي المكافأة.</span>',
-'<span class="k">السطر</span><b>«كلما طالت الحبّة، طالت المائدة.»</b><span class="k">قائمة اللقطات</span><span>٠١ · لقطة مقرّبة: حبّات تتساقط عبر الضوء</span><span>٠٢ · الأرز ينسكب في وعاء نحاسي</span><span>٠٣ · الجدّة تحمل الطبق إلى الخارج</span><span>٠٤ · ثلاثة أجيال تمدّ أيديها إلى الطبق نفسه</span><span>٠٥ · لقطة المنتج على المائدة · العبارة</span>']};
-
-const COMPARE=[
-[{en:"",ar:""},{en:"Traditional shoot",ar:"التصوير التقليدي"},{en:"AI-led, with me",ar:"بالذكاء الاصطناعي، معي"}],
-[{en:"Locations",ar:"المواقع"},{en:"Permits, travel, weather and recce days",ar:"تصاريح وسفر وطقس وأيام معاينة"},{en:"Any world, from the dunes to orbit, built on screen",ar:"أي عالم، من الكثبان إلى المدار، يُبنى على الشاشة"}],
-[{en:"Changes",ar:"التعديلات"},{en:"A new idea after the shoot means a reshoot",ar:"أي فكرة جديدة بعد التصوير تعني إعادة التصوير"},{en:"Change a shot, not a schedule",ar:"عدّل لقطة، لا جدولاً كاملاً"}],
-[{en:"Cast & continuity",ar:"الممثلون والاستمرارية"},{en:"Casting, call sheets, wardrobe on the day",ar:"اختيار الممثلين وجداول الاستدعاء والأزياء يوم التصوير"},{en:"Characters and products locked across every frame",ar:"شخصيات ومنتجات ثابتة في كل لقطة"}],
-[{en:"Formats",ar:"المقاسات"},{en:"Re-framed in the edit, often compromised",ar:"يُعاد تأطيرها في المونتاج، وغالباً على حساب الصورة"},{en:"16:9, 9:16 and 4:5 planned from the first frame",ar:"١٦:٩ و٩:١٦ و٤:٥ مخطّطة منذ اللقطة الأولى"}],
-[{en:"What stays",ar:"ما يبقى ثابتاً"},{en:"Taste, story and a director's eye",ar:"الذوق والقصة وعين المخرج"},{en:"The same: idea first, craft always",ar:"كما هو: الفكرة أولاً، والحِرفة دائماً"}]
-];
-
-const PACKS=[
-{hot:false,for:{en:"For agencies",ar:"للوكالات"},t:{en:"Pitch Sprint",ar:"سباق المنافسة"},d:{en:"Walk into the pitch with the idea already alive on screen.",ar:"ادخل المنافسة والفكرة حيّة على الشاشة."},li:{en:["Concept & key message","3–5 key visuals","20–30s mood film","Treatment deck"],ar:["الفكرة والرسالة الرئيسية","٣ إلى ٥ صور رئيسية","فيلم مزاج من ٢٠ إلى ٣٠ ثانية","عرض المعالجة الإخراجية"]},time:{en:"Typically 5–7 working days",ar:"عادةً من ٥ إلى ٧ أيام عمل"}},
-{hot:true,for:{en:"For brands",ar:"للعلامات التجارية"},t:{en:"AI Commercial",ar:"إعلان بالذكاء الاصطناعي"},d:{en:"A finished 15–60 second film, from script to master.",ar:"فيلم مكتمل من ١٥ إلى ٦٠ ثانية، من السيناريو حتى النسخة النهائية."},li:{en:["Script & storyboard","World sheets & keyframes","Motion, edit, sound, grade","Masters + social cut-downs"],ar:["السيناريو واللوحة القصصية","لوحات العالم والإطارات الرئيسية","حركة ومونتاج وصوت وتلوين","نسخ نهائية ونسخ قصيرة"]},time:{en:"Typically 2–4 weeks",ar:"عادةً من أسبوعين إلى ٤ أسابيع"}},
-{hot:false,for:{en:"For always-on",ar:"للمحتوى المستمر"},t:{en:"Content Engine",ar:"محرّك المحتوى"},d:{en:"A monthly flow of reels and key visuals in one consistent look.",ar:"تدفّق شهري من المقاطع والصور الرئيسية بهوية بصرية واحدة."},li:{en:["Monthly content plan","Reels & KVs","Arabic & English copy","All platform ratios"],ar:["خطة محتوى شهرية","مقاطع وصور رئيسية","نصوص بالعربية والإنجليزية","كل مقاسات المنصات"]},time:{en:"Monthly retainer",ar:"اشتراك شهري"}},
-{hot:false,for:{en:"For in-house teams",ar:"للفرق الداخلية"},t:{en:"Workflow Setup",ar:"تأسيس منظومة العمل"},d:{en:"I build the pipeline, then hand it over so your team can run it.",ar:"أبني المنظومة ثم أسلّمها لفريقك ليديرها بنفسه."},li:{en:["Tool & model stack","Brand prompt library","Consistency method","Team training"],ar:["الأدوات والنماذج","مكتبة أوامر خاصة بعلامتك","منهج الثبات البصري","تدريب الفريق"]},time:{en:"Typically 1–2 weeks",ar:"عادةً من أسبوع إلى أسبوعين"}}
-];
-
-const FAQS=[
-[{en:"Who owns the final work?",ar:"لمن تعود ملكية العمل النهائي؟"},{en:"You do. Final files are delivered to you with usage rights for your campaign. I use commercially licensed tools, and I keep the prompts and project files on record for every job.",ar:"لك. تُسلَّم الملفات النهائية مع حقوق الاستخدام لحملتك. أعمل بأدوات مرخّصة تجارياً، وأحتفظ بالأوامر النصية وملفات المشروع لكل عمل."}],
-[{en:"Can characters and products stay consistent?",ar:"هل تبقى الشخصيات والمنتجات ثابتة؟"},{en:"Yes. That is what world sheets are for. Each character, location and product is designed once and locked, then every keyframe is built from those references.",ar:"نعم، ولهذا وُجدت لوحات العالم. تُصمَّم كل شخصية وموقع ومنتج مرة واحدة وتُثبَّت، ثم تُبنى كل لقطة من هذه المراجع."}],
-[{en:"Do you write and direct in Arabic?",ar:"هل تكتب وتُخرج بالعربية؟"},{en:"Yes. Scripts, voice-over and supers are written natively in Arabic (MSA or Gulf) and English, not translated.",ar:"نعم. تُكتب النصوص والتعليق الصوتي والعبارات بالعربية الفصحى أو الخليجية وبالإنجليزية مباشرة، لا ترجمةً."}],
-[{en:"How do approvals and revisions work?",ar:"كيف تتم الموافقات والتعديلات؟"},{en:"You approve at three gates: script, keyframes, and the first cut. Because motion starts only after keyframes are signed off, late surprises are rare.",ar:"توافق عند ثلاث محطات: السيناريو، ثم الإطارات الرئيسية، ثم النسخة الأولى. ولأن الحركة لا تبدأ إلا بعد اعتماد الإطارات، تقلّ المفاجآت المتأخرة."}],
-[{en:"Is AI content safe for my brand?",ar:"هل محتوى الذكاء الاصطناعي آمن لعلامتي؟"},{en:"I don't use real people's likenesses without consent, I check every frame for artefacts and logo accuracy, and I follow your brand guidelines and local content rules.",ar:"لا أستخدم ملامح أشخاص حقيقيين دون موافقتهم، وأراجع كل لقطة بحثاً عن العيوب ودقة الشعارات، وألتزم بإرشادات علامتك والأنظمة المحلية للمحتوى."}],
-[{en:"Do you work with agencies?",ar:"هل تعمل مع الوكالات؟"},{en:"Often. I can work white-label inside your team, from a pitch sprint to a full production, and present alongside you to the client.",ar:"كثيراً. أستطيع العمل ضمن فريقك باسم وكالتك، من سباق المنافسة إلى الإنتاج الكامل، وأقدّم العمل معك أمام العميل."}]
-];
-
-const NEEDS=[["idea",{en:"Idea & script",ar:"فكرة وسيناريو"}],["kv",{en:"Key visuals",ar:"صور رئيسية"}],["film",{en:"AI film / TVC",ar:"فيلم / إعلان"}],["social",{en:"Social content",ar:"محتوى تواصل"}],["deck",{en:"Pitch deck / treatment",ar:"عرض / معالجة"}],["flow",{en:"Workflow setup",ar:"تأسيس منظومة"}]];
-const WHENS=[{en:"This week (pitch)",ar:"هذا الأسبوع (منافسة)"},{en:"2–4 weeks",ar:"من أسبوعين إلى ٤ أسابيع"},{en:"Next month or later",ar:"الشهر القادم أو بعده"},{en:"Ongoing / monthly",ar:"مستمر / شهري"}];
-let need=new Set(["film"]);
-
-const $=s=>R.querySelector(s);
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const playSVG='<svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z"/></svg>';
-let cat="all",stepI=0;
-const hoverCapable=matchMedia("(hover:hover) and (pointer:fine)").matches;
-const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
-
-function render(){
-  document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";
-  R.querySelectorAll("[data-t]").forEach(el=>{const v=T[lang][el.dataset.t];if(v!=null)el.textContent=v});
-  $("#lang").textContent=T[lang].langBtn;
-  const b=BRANDS.map(x=>`<span>${esc(x)}<em>✦</em></span>`).join("");$("#marq").innerHTML=b+b;
-  const sb=T[lang].ssBand.map(x=>`<span>${esc(x)}</span>`).join("");$("#ssRow").innerHTML=sb+sb+sb+sb;
-  $("#slEps").innerHTML=SEVEN.map((e,i)=>`<button class="slep" type="button" data-i="${i}" aria-label="${esc(L(e.client))}: ${esc(L(e.title))}"><img src="p/${e.id}.jpg" alt="" loading="lazy"><span class="pl">${playSVG}</span><span class="m"><span class="n">${esc(L(e.n))}</span><h3>${esc(L(e.title))}</h3></span></button>`).join("");
-  $("#ssEps").innerHTML=SIX.map((e,i)=>`<button class="ssep" type="button" data-i="${i}" aria-label="${esc(L(e.client))}: ${esc(L(e.title))}"><img src="p/${e.id}.jpg" alt="" loading="lazy"><span class="pl">${playSVG}</span><span class="m"><span class="n">${esc(L(e.n))}</span><h3>${esc(L(e.title))}</h3></span></button>`).join("");
-  $("#films").innerHTML=FILMS.map((f,i)=>`<button class="film ${f.cls}" type="button" data-i="${i}" data-kind="film"><img src="p/${f.id}.jpg" alt="" loading="lazy"><video data-src="m/${f.id}.mp4" muted loop playsinline preload="none"></video><span class="shade"></span><span class="play">${playSVG}</span><span class="dur">${f.dur}</span><span class="meta"><span class="client">${esc(L(f.client))}</span><h3>${esc(L(f.title))}</h3><span class="seed">${esc(L(f.seed))}</span></span></button>`).join("");
-  $("#chips").innerHTML=CATS.map(([k,v])=>`<button class="chip" type="button" data-cat="${k}" aria-pressed="${k===cat}">${esc(L(v))}</button>`).join("");
-  $("#wall").innerHTML=REELS.map((r,i)=>`<button class="reel" type="button" data-i="${i}" data-kind="reel" data-cat="${r.cat}" ${cat!=="all"&&r.cat!==cat?"hidden":""}><img src="p/${r.id}.jpg" alt="" loading="lazy"><video data-src="m/${r.id}.mp4" muted loop playsinline preload="none"></video><span class="shade"></span><span class="meta"><span class="client">${esc(L(r.client))}</span><h3>${esc(L(r.title))}</h3></span></button>`).join("");
-  $("#stillsRow").innerHTML=STILLS.map(([id,c,t,w,h],k)=>`<figure class="still"><button type="button" class="stillbtn" data-k="${k}" aria-label="${esc(L(c))}: ${esc(L(t))}"><img src="i/${id}.jpg" width="${w}" height="${h}" alt="${esc(L(c))}: ${esc(L(t))}" loading="lazy"></button><figcaption><b>${esc(L(t))}</b><span>${esc(L(c))}</span></figcaption></figure>`).join("");
-  $("#svc").innerHTML=MOB?SERVICES.map(([ic,t,d,tags],i)=>`<details class="msvc"${i===0?" open":""}><summary><span class="ic">${ICONS[ic]}</span><b>${esc(L(t))}</b></summary><p>${esc(L(d))}</p><ul>${L(tags).map(x=>`<li>${esc(x)}</li>`).join("")}</ul></details>`).join(""):SERVICES.map(([ic,t,d,tags])=>`<div class="svc"><div class="ic">${ICONS[ic]}</div><h3>${esc(L(t))}</h3><p>${esc(L(d))}</p><ul>${L(tags).map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("");
-  $("#steps").innerHTML=STEPS.map(([t,d],i)=>`<button class="step" type="button" role="tab" data-s="${i}" aria-selected="${i===stepI}"><span class="n">0${i+1}</span><h3>${esc(L(t))}</h3><p>${esc(L(d))}</p></button>`).join("");
-  if(MOB){const IM=["i/r1.jpg","i/r4.jpg","i/rsheet.jpg","i/r2.jpg","i/r3.jpg","i/r5.jpg"];$("#mproc").innerHTML=STEPS.map(([t,d],i)=>`<div class="mstep"><img src="${U(IM[i])}" alt="" loading="lazy"><div class="mbody"><span class="n">0${i+1} / 06</span><h3>${esc(L(t))}</h3><p>${esc(L(d))}</p></div></div>`).join("")}
-  R.querySelectorAll('#stage .doc').forEach((d,i)=>d.innerHTML=DOCS[lang][i]);
-  $("#compare").innerHTML=COMPARE.map(r=>`<div class="crow">${r.map(c=>`<div>${esc(L(c))}</div>`).join("")}</div>`).join("");
-  $("#packs").innerHTML=PACKS.map(p=>`<div class="pack ${p.hot?"hot":""}"><span class="for">${esc(L(p.for))}</span><h3>${esc(L(p.t))}</h3><p>${esc(L(p.d))}</p><ul>${L(p.li).map(x=>`<li>${esc(x)}</li>`).join("")}</ul><span class="time">${esc(L(p.time))}</span></div>`).join("");
-  $("#faqs").innerHTML=FAQS.map(([q,a])=>`<details><summary>${esc(L(q))}</summary><p>${esc(L(a))}</p></details>`).join("");
-  $("#needs").innerHTML=NEEDS.map(([k,v])=>`<button class="chip" type="button" data-need="${k}" aria-pressed="${need.has(k)}">${esc(L(v))}</button>`).join("");
-  const w=$("#when"),wi=w.selectedIndex<0?1:w.selectedIndex;w.innerHTML=WHENS.map(x=>`<option>${esc(L(x))}</option>`).join("");w.selectedIndex=wi;
-  setStep(stepI);bindPreviews();buildBrief();
-}
-
-/* hover previews */
-function bindPreviews(){
-  R.querySelectorAll(".film,.reel").forEach(card=>{
-    const v=card.querySelector("video");
-    const start=()=>{if(!hoverCapable||reduce)return;if(!v.src)v.src=v.dataset.src;v.currentTime=0;v.play().then(()=>card.classList.add("playing")).catch(()=>{})};
-    const stop=()=>{card.classList.remove("playing");try{v.pause()}catch(e){}};
-    card.addEventListener("mouseenter",start);card.addEventListener("mouseleave",stop);
-    card.addEventListener("click",()=>{stop();openLB(card.dataset.kind,+card.dataset.i)});
-  });
-  if(MOB&&!reduce&&"IntersectionObserver" in window){if(mio)mio.disconnect();
-    mio=new IntersectionObserver(es=>es.forEach(en=>{const c=en.target,v=c.querySelector("video");if(!v)return;
-      if(en.isIntersecting&&en.intersectionRatio>.8){if(!v.src)v.src=v.dataset.src;v.play().then(()=>c.classList.add("playing")).catch(()=>{})}
-      else{c.classList.remove("playing");try{v.pause()}catch(e){}}}),{threshold:[0,.8,1]});
-    R.querySelectorAll(".film,.reel").forEach(c=>mio.observe(c))}
-}
-let mio=null;
-
-/* lightbox */
-let lbList=[],lbI=0;
-function openLB(kind,i){
-  lbList=kind==="film"?FILMS:kind==="reel"?REELS.filter(r=>cat==="all"||r.cat===cat):kind==="six"?SIX:kind==="seven"?SEVEN:[{id:"onewish",client:{en:"Original micro-drama · Trailer",ar:"دراما مصغّرة أصلية · الإعلان"},title:{en:"One Wish Before Dawn",ar:"أمنية قبل الفجر"},seed:{en:"One night. One wish. One love that costs a life.",ar:"ليلة واحدة. أمنية واحدة. وحبٌّ ثمنه حياة."}}];
-  if(kind==="reel"){const id=REELS[i].id;i=lbList.findIndex(r=>r.id===id)}
-  lbI=i;$("#lb").hidden=false;document.body.style.overflow="hidden";showLB();$("#lbX").focus();
-}
-function showLB(){
-  const it=lbList[lbI],v=$("#lbV");v.src=`m/${it.id}.mp4`;v.poster=`p/${it.id}.jpg`;v.muted=false;
-  v.play().catch(()=>{});
-  $("#lbC").textContent=L(it.client);$("#lbT").textContent=L(it.title);$("#lbS").textContent="> "+L(it.seed);
-  $("#lbIdx").textContent=`${String(lbI+1).padStart(2,"0")} / ${String(lbList.length).padStart(2,"0")}`;
-  $("#lbP").hidden=$("#lbN").hidden=lbList.length<2;
-}
-function closeLB(){const v=$("#lbV");v.pause();v.removeAttribute("src");v.load();$("#lb").hidden=true;document.body.style.overflow=""}
-$("#lbX").onclick=closeLB;
-$("#lbN").onclick=()=>{lbI=(lbI+1)%lbList.length;showLB()};
-$("#lbP").onclick=()=>{lbI=(lbI-1+lbList.length)%lbList.length;showLB()};
-document.addEventListener("keydown",e=>{if($("#lb").hidden)return;if(e.key==="Escape")closeLB();if(e.key==="ArrowRight")$(lang==="ar"?"#lbP":"#lbN").click();if(e.key==="ArrowLeft")$(lang==="ar"?"#lbN":"#lbP").click()});
-$("#lb").addEventListener("click",e=>{if(e.target.classList.contains("stagebox"))closeLB()});
-
-/* chips */
-$("#chips").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;cat=b.dataset.cat;
-  R.querySelectorAll("#chips .chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.cat===cat));
-  R.querySelectorAll("#wall .reel").forEach(r=>r.hidden=cat!=="all"&&r.dataset.cat!==cat)});
-
-/* stills arrows */
-const row=$("#stillsRow");const step=d=>row.scrollBy({left:d*row.clientWidth*.8*(lang==="ar"?-1:1),behavior:"smooth"});
-$("#nextS").onclick=()=>step(1);$("#prevS").onclick=()=>step(-1);
-
-/* process */
-function setStep(i){stepI=i;
-  R.querySelectorAll("#steps .step").forEach(s=>s.setAttribute("aria-selected",+s.dataset.s===i));
-  R.querySelectorAll("#stage>[data-s]").forEach(s=>{const on=+s.dataset.s===i;s.classList.toggle("on",on);const v=s.querySelector("video");if(v){if(on&&!reduce){v.play().catch(()=>{})}else v.pause()}});
-}
-$("#steps").addEventListener("click",e=>{const b=e.target.closest(".step");if(b){setStep(+b.dataset.s);stopAuto()}});
-let auto=null;function stopAuto(){if(auto){clearInterval(auto);auto=null}}
-const pio=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting&&!auto&&!reduce){auto=setInterval(()=>setStep((stepI+1)%6),4200)}else if(!en.isIntersecting)stopAuto()}),{threshold:.4});
-if(!MOB)pio.observe($("#process"));
-
-/* One Wish */
-const owV=$("#owVid");
-const owIO=new IntersectionObserver(es=>es.forEach(en=>{if(reduce)return;if(en.isIntersecting){owV.play().catch(()=>{})}else owV.pause()}),{threshold:.3});owIO.observe(owV);
-$("#owBtn").onclick=$("#owPlay").onclick=()=>{owV.pause();openLB("orig",0)};
-
-/* Six Seconds */
-const ssV=$("#ssVid");
-const ssIO=new IntersectionObserver(es=>es.forEach(en=>{if(reduce)return;if(en.isIntersecting){ssV.play().catch(()=>{})}else ssV.pause()}),{threshold:.3});ssIO.observe(ssV);
-$("#ssBtn").onclick=$("#ssWatch").onclick=()=>{ssV.pause();openLB("six",0)};
-$("#ssEps").addEventListener("click",e=>{const b=e.target.closest(".ssep");if(b){ssV.pause();openLB("six",+b.dataset.i)}});
-
-/* Seven Lives */
-const slV=$("#slVid");
-const slIO=new IntersectionObserver(es=>es.forEach(en=>{if(reduce)return;if(en.isIntersecting){slV.play().catch(()=>{})}else slV.pause()}),{threshold:.3});slIO.observe(slV);
-$("#slBtn").onclick=$("#slWatch").onclick=()=>{slV.pause();openLB("seven",0)};
-$("#slEps").addEventListener("click",e=>{const b=e.target.closest(".slep");if(b){slV.pause();openLB("seven",+b.dataset.i)}});
-
-
-/* series deck */
-const dk=$("#dk"),dkImg=$("#dkImg");let dkI=0,dkLast=null;
-const pad=n=>String(n).padStart(2,"0");
-const DECK=Array.from({length:34},(_,i)=>`d/s-${pad(i+1)}.jpg`);
-const STILL_SRC=STILLS.map(s=>`i/${s[0]}.jpg`);
-const SSDECK=Array.from({length:29},(_,i)=>`d/ss-${pad(i+1)}.jpg`);
-let SRC=null;
-function dkFill(list){if(SRC===list)return;SRC=list;
-  $("#dkStrip").innerHTML=SRC.map((u,i)=>`<button type="button" data-k="${i}" aria-label="${i+1}"><img src="${u}" alt="" loading="lazy"></button>`).join("");
-  const g=R.querySelector("#dk .gs");if(g)g.hidden=SRC!==DECK;
-  R.querySelectorAll("#dk .strip button").forEach(b=>b.classList.toggle("wide",SRC!==STILL_SRC))}
-dkFill(DECK);
-$("#peekRow").innerHTML=[0,1,4,6,7,12,14,21,30,31].map(i=>`<button type="button" data-k="${i}" aria-label="Open deck at page ${i+1}"><img src="${DECK[i]}" alt="" loading="lazy"></button>`).join("");
-function dkShow(i){const n=SRC.length;dkI=(i+n)%n;dkImg.src=SRC[dkI];$("#dkIdx").textContent=`${pad(dkI+1)} / ${pad(n)}`;
-  R.querySelectorAll("#dkStrip button").forEach(b=>{const on=+b.dataset.k===dkI;b.setAttribute("aria-current",on);if(on)b.scrollIntoView({block:"nearest",inline:"center"})});
-  [dkI+1,dkI+2].forEach(k=>{if(k<n){const im=new Image();im.src=SRC[k]}})}
-function dkOpen(i,list){dkLast=document.activeElement;owV.pause();ssV.pause();slV.pause();dkFill(list||DECK);dk.hidden=false;document.body.style.overflow="hidden";dkShow(i||0);$("#dkX").focus()}
-$("#stillsRow").addEventListener("click",e=>{const b=e.target.closest(".stillbtn");if(b)dkOpen(+b.dataset.k,STILL_SRC)});
-function dkClose(){dk.hidden=true;document.body.style.overflow="";dkLast&&dkLast.focus&&dkLast.focus()}
-$("#deckOpen").onclick=()=>dkOpen(0,DECK);
-$("#peekRow").addEventListener("click",e=>{const b=e.target.closest("button");if(b)dkOpen(+b.dataset.k,DECK)});
-$("#ssPeek").innerHTML=[0,3,6,8,10,11,12,15,18,26].map(i=>`<button type="button" data-k="${i}" aria-label="Open Six Seconds deck at page ${i+1}"><img src="${SSDECK[i]}" alt="" loading="lazy"></button>`).join("");
-$("#ssPeek").addEventListener("click",e=>{const b=e.target.closest("button");if(b)dkOpen(+b.dataset.k,SSDECK)});
-$("#ssDeck").onclick=()=>dkOpen(0,SSDECK);
-const SLDECK=Array.from({length:35},(_,i)=>`d/sl-${pad(i+1)}.jpg`);
-$("#slPeek").innerHTML=[0,2,8,10,13,14,15,17,18,30].map(i=>`<button type="button" data-k="${i}" aria-label="Open Seven Lives deck at page ${i+1}"><img src="${SLDECK[i]}" alt="" loading="lazy"></button>`).join("");
-$("#slPeek").addEventListener("click",e=>{const b=e.target.closest("button");if(b)dkOpen(+b.dataset.k,SLDECK)});
-$("#slDeck").onclick=()=>dkOpen(0,SLDECK);
-$("#dkStrip").addEventListener("click",e=>{const b=e.target.closest("button");if(b)dkShow(+b.dataset.k)});
-$("#dkX").onclick=dkClose;$("#dkN").onclick=()=>dkShow(dkI+1);$("#dkP").onclick=()=>dkShow(dkI-1);
-document.addEventListener("keydown",e=>{if(dk.hidden)return;const fwd=lang==="ar"?"ArrowLeft":"ArrowRight",back=lang==="ar"?"ArrowRight":"ArrowLeft";
-  if(e.key==="Escape")dkClose();if(e.key===fwd||e.key===" ")dkShow(dkI+1);if(e.key===back)dkShow(dkI-1)});
-let tx=null;dkImg.addEventListener("touchstart",e=>{tx=e.touches[0].clientX},{passive:true});
-dkImg.addEventListener("touchend",e=>{if(tx==null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>40)dkShow(dkI+((d<0)!==(lang==="ar")?1:-1));tx=null});
-dkImg.addEventListener("click",()=>dkShow(dkI+1));
-
-/* brief builder */
-function buildBrief(){
-  const t=T[lang],needs=NEEDS.filter(([k])=>need.has(k)).map(([,v])=>L(v)).join(" · ")||t.tbd;
-  const txt=`${t.briefHead}\n\n${t.bLine}: ${$("#line").value.trim()||t.tbd}\n${t.bNeed}: ${needs}\n${t.bWhen}: ${$("#when").selectedOptions[0]?.textContent||t.tbd}\n${t.bCo}: ${$("#co").value.trim()||t.tbd}\n${t.bFrom}: ${[$("#nm").value.trim(),$("#em").value.trim()].filter(Boolean).join(" · ")||t.tbd}`;
-  $("#briefOut").textContent=txt;
-  $("#waBrief").href="https://wa.me/971506479730?text="+encodeURIComponent(txt);
-  $("#mailto").href=`mailto:${$("#addr").textContent}?subject=${encodeURIComponent(t.briefHead+" · "+($("#co").value.trim()||"AI project"))}&body=${encodeURIComponent(txt)}`;
-  return txt;
-}
-$("#needs").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;const k=b.dataset.need;need.has(k)?need.delete(k):need.add(k);b.setAttribute("aria-pressed",need.has(k));buildBrief()});
-["#line","#co","#nm","#em"].forEach(s=>$(s).addEventListener("input",buildBrief));$("#when").addEventListener("change",buildBrief);
-$("#brief").addEventListener("submit",e=>{e.preventDefault();buildBrief();$("#briefOut").scrollIntoView({behavior:"smooth",block:"center"});$("#copy").focus()});
-function toast(m){const d=document.createElement("div");d.className="toast";d.textContent=m;document.body.appendChild(d);setTimeout(()=>d.remove(),2200)}
-$("#copy").onclick=()=>{const txt=buildBrief();const sel=()=>{const r=document.createRange();r.selectNodeContents($("#briefOut"));const s=getSelection();s.removeAllRanges();s.addRange(r);toast(T[lang].copyFail)};
-  try{navigator.clipboard.writeText(txt).then(()=>toast(T[lang].copied),sel)}catch(err){sel()}};
-
-/* language */
-$("#lang").onclick=()=>{lang=lang==="en"?"ar":"en";try{localStorage.setItem("me-lang",lang)}catch(e){}render();typeIdx=0;};
-
-/* hero: typed prompt -> render */
-const hero=$(".hero"),hv=$("#heroVid"),typed=$("#typed"),bar=$("#bar");
-let typeIdx=0;
-async function typeLoop(){
-  if(reduce){hero.classList.add("rendered");bar.style.width="100%";return}
-  const sleep=ms=>new Promise(r=>setTimeout(r,ms));
-  let first=true;
-  while(true){
-    const lines=PROMPTS[lang],line=lines[typeIdx%lines.length];
-    typed.textContent="";bar.style.transition="none";bar.style.width="0";
-    if(!first)hero.classList.remove("rendered");
-    for(let i=1;i<=line.length;i++){typed.textContent=line.slice(0,i);await sleep(24)}
-    await sleep(250);bar.style.transition="width 1.3s cubic-bezier(.4,.1,.2,1)";bar.style.width="100%";
-    await sleep(500);hero.classList.add("rendered");
-    first=false;await sleep(4600);typeIdx++;
-  }
-}
-/* film grain */
-const cv=$("#grain"),cx=cv.getContext("2d");
-function grain(){const w=cv.width=200,h=cv.height=120,img=cx.createImageData(w,h);
-  (function f(){for(let i=0;i<img.data.length;i+=4){const n=Math.random()*255;img.data[i]=n;img.data[i+1]=n*.95;img.data[i+2]=n*1.05;img.data[i+3]=255}cx.putImageData(img,0,0);if(!reduce)setTimeout(()=>requestAnimationFrame(f),70)})()}
-grain();
-if(MOB){hv.poster=hv.dataset.mposter;const pi=R.querySelector(".hero .poster");if(pi)pi.src=hv.dataset.mposter}
-hv.src=MOB?hv.dataset.msrc:hv.dataset.src;hv.preload="auto";hv.play().catch(()=>{});
-R.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;const h=a.getAttribute("href");if(!h||h.length<2)return;const t=R.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:"smooth"})}});
-render();typeLoop();
-})(document,matchMedia("(max-width:640px)").matches);
-</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
