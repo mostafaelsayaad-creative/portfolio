@@ -13,7 +13,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700;12..96,800&amp;family=Instrument+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Alexandria:wght@300;500;700;800&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700;12..96,800&amp;family=Instrument+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Alexandria:wght@300;500;700;800&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;display=swap">
 <style>
 [hidden]{display:none!important}
 body{margin:0}
@@ -225,6 +225,45 @@ html[lang="ar"] .ssep .n{font-family:var(--f-body);letter-spacing:0}
 .ssep:hover .pl{background:#E5483B}
 .ssep .pl svg{width:14px;height:14px;fill:#ECE5D8}
 #ssPeek button:hover{border-color:#E5483B}
+/* Seven Lives */
+.sl{position:relative;overflow:hidden;background:#0B0C0E}
+.sl .slbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.24;z-index:0;pointer-events:none}
+.sl::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,var(--ink) 0%,rgba(11,12,14,.5) 28%,rgba(11,12,14,.78) 72%,var(--ink) 100%)}
+.sl>*{position:relative;z-index:1}
+.slgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,80px);align-items:center}
+.sl .eyebrow{color:#D6A84A;display:inline-flex;align-items:center;gap:10px}
+.sl .new{background:#D6A84A;color:#0B0C0E;border-radius:4px;padding:3px 8px;font-weight:700}
+.sl h2{font:500 clamp(60px,9vw,140px)/.86 "Cormorant Garamond",Georgia,serif;text-transform:uppercase;letter-spacing:.06em;margin-top:16px;color:#EEE7DA}
+html[lang="ar"] .sl h2{font:800 clamp(52px,7.6vw,112px)/1 var(--f-display);letter-spacing:0}
+.sllives{display:flex;align-items:center;gap:18px;margin-top:22px}
+.sllives .bars{display:flex;gap:9px;align-items:flex-end}
+.sllives i{width:8px;height:36px;border-radius:4px;background:#EEE7DA}
+.sllives i:last-child{background:#D6A84A;box-shadow:0 0 18px rgba(214,168,74,.9)}
+.sllives span{font:500 12px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:#B9B2A6}
+html[lang="ar"] .sllives span{font-family:var(--f-body);letter-spacing:0;font-size:13px}
+.sl .tagline{font:italic 500 clamp(24px,2.4vw,34px) "Cormorant Garamond",Georgia,serif;color:#F0CF83;margin-top:16px}
+html[lang="ar"] .sl .tagline{font:300 clamp(20px,2.1vw,28px) var(--f-display)}
+.sl p{color:#CFC8BB;font-size:18px;max-width:54ch;margin-top:20px}
+.btn-gold{background:#D6A84A;color:#14100A}
+.btn-gold:hover{background:#E8BE63}
+.slvid{position:relative;display:block;border-radius:30px;overflow:hidden;aspect-ratio:9/16;width:100%;max-width:400px;margin-inline:auto;background:#15181B;border:8px solid #1E2226;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(214,168,74,.35);padding:0;cursor:pointer}
+.slvid video{width:100%;height:100%;object-fit:cover}
+.slvid .tc{position:absolute;top:16px;inset-inline-end:18px;font:600 12px var(--f-mono);letter-spacing:.14em;color:#EEE7DA;display:flex;align-items:center;gap:8px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.slvid .tc i{width:12px;height:12px;border-radius:50%;border:2px solid #D6A84A;box-shadow:0 0 10px rgba(214,168,74,.9)}
+.sleps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.6vw,22px);margin-top:clamp(48px,6vw,88px)}
+.slep{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:1px solid rgba(214,168,74,.18);padding:0;background:#15181B;cursor:pointer;color:inherit;text-align:start;font:inherit}
+.slep img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.slep:hover img{transform:scale(1.05)}
+.slep .m{position:absolute;inset:auto 0 0 0;padding:80px 18px 18px;display:grid;gap:6px;background:linear-gradient(0deg,rgba(11,12,14,.97) 35%,rgba(11,12,14,0))}
+.slep .n{font:600 11px var(--f-mono);letter-spacing:.12em;color:#D6A84A}
+html[lang="ar"] .slep .n{font-family:var(--f-body);letter-spacing:0}
+.slep h3{font:500 clamp(20px,2vw,30px)/1.05 "Cormorant Garamond",Georgia,serif;text-transform:uppercase;letter-spacing:.04em;color:#EEE7DA}
+html[lang="ar"] .slep h3{font:700 clamp(17px,1.6vw,22px) var(--f-display);letter-spacing:0}
+.slep .pl{position:absolute;top:14px;inset-inline-start:14px;width:40px;height:40px;border-radius:50%;background:rgba(11,12,14,.6);border:1px solid rgba(214,168,74,.5);display:grid;place-items:center;transition:background .25s}
+.slep:hover .pl{background:#D6A84A}
+.slep .pl svg{width:14px;height:14px;fill:#EEE7DA}
+#slPeek button:hover{border-color:#D6A84A}
+@media(max-width:860px){.slgrid{grid-template-columns:1fr}.slgrid .slvid{order:-1}.sleps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:860px){.ssgrid{grid-template-columns:1fr}.sseps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:861px) and (max-width:1100px){.sseps{grid-template-columns:repeat(3,minmax(0,1fr))}}
 /* deck viewer */
@@ -467,6 +506,12 @@ html[lang="ar"] .mob .hero h1{font-size:clamp(46px,13vw,72px);line-height:1.15}
 .mob .ss h2{font-size:56px}
 .mob .ss p{font-size:16px}
 .mob .ss .ctas .btn{flex:1;justify-content:center}
+.mob .slgrid{grid-template-columns:1fr}
+.mob .slgrid .slvid{order:-1;max-width:320px}
+.mob .sl h2{font-size:60px}
+.mob .sl p{font-size:16px}
+.mob .sl .ctas .btn{flex:1;justify-content:center}
+.mob .sleps{grid-template-columns:repeat(2,minmax(0,1fr))}
 .mob .still{flex-basis:auto}
 .mob .still img{height:clamp(240px,64vw,320px)}
 .mob .services{display:grid;gap:10px;border-top:0}
@@ -672,6 +717,44 @@ html[lang="ar"] .msvc li{font-family:var(--f-body)}
   </div>
 </section>
 
+<section id="sevenlives" class="sl">
+  <img class="slbg" src="i/sl-keyart.jpg" alt="" loading="lazy" decoding="async">
+  <div class="wrap slgrid">
+    <div>
+      <span class="eyebrow"><span class="new" data-t="ssNew">NEW</span><span data-t="slEye">Original micro-drama series</span></span>
+      <h2 data-t="slH">Seven Lives</h2>
+      <div class="sllives"><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span data-t="slLives">Six lives spent. One kept.</span></div>
+      <p class="tagline" data-t="slTag">He lost his name. Not his heart.</p>
+      <p data-t="slP">A New York revenge drama told in vertical episodes of 60 to 90 seconds. The day before his wedding, a developer signs everything he owns over to his fiancée, then loses his memory in a crash on the FDR Drive and wakes up with no name. A stray tabby who can see what people can’t leads him back to the top, and pays for every rescue with one of his seven lives. Written, designed and directed by me with AI.</p>
+      <div class="ostats">
+        <div><b>40</b><span data-t="ss1">episodes</span></div>
+        <div><b>60–90s</b><span data-t="st2">per episode</span></div>
+        <div><b>4</b><span data-t="sl3">episodes out now</span></div>
+        <div><b>9:16</b><span data-t="st3">vertical, mobile-first</span></div>
+      </div>
+      <dl class="credits">
+        <div><dt data-t="c1t">Role</dt><dd data-t="c1">Creator · Writer · Director · AI Artist</dd></div>
+        <div><dt data-t="c2t">Status</dt><dd data-t="slC2">4 episodes produced · all 40 written</dd></div>
+      </dl>
+      <div class="ctas" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+        <button class="btn btn-gold" type="button" id="slWatch" data-t="slCta">Watch episode 1</button>
+        <button class="btn btn-ghost" type="button" id="slDeck" data-t="oDeck">Open the series deck</button>
+      </div>
+    </div>
+    <button class="slvid" id="slBtn" type="button" aria-label="Watch Seven Lives, episode 1">
+      <video id="slVid" src="m/sevenlives.mp4" poster="p/sevenlives.jpg" muted loop playsinline preload="none"></video>
+      <span class="tc" aria-hidden="true"><i></i>GOLD RING</span>
+    </button>
+  </div>
+  <div class="wrap">
+    <div class="sleps" id="slEps"></div>
+    <div class="peek">
+      <span class="eyebrow" data-t="peek">Inside the deck · tap any page</span>
+      <div class="peekrow" id="slPeek"></div>
+    </div>
+  </div>
+</section>
+
 <section id="services" style="padding-top:0">
   <div class="wrap">
     <div class="head">
@@ -791,7 +874,7 @@ h1a:"Ideas that",h1b:"render.",lede:"I take a brand from one sentence to finishe
 cta1:"See the work",cta2:"Brief me in one line",f1:"years in production",f2:"AI films & visuals",f3:"markets: UAE · KSA · Egypt",f4:"native creative",
 wEye:"Selected films",wH:"Every frame began as a sentence.",wSub:"Hover a film to read the line that started it. Click to watch with sound.",
 sEye:"Short form · 9:16",sH:"Made for the scroll.",
-nSeries:"Six Seconds",ssNew:"NEW",ssBadge:"Six Seconds · original micro-drama, 6 episodes out",ssEye:"Original micro-drama series",ssH:"Six Seconds",ssTag:"Saving his brother means forgetting him.",ssP:"A London thriller told in one-minute vertical episodes. Two street kids fall into a begging racket run by a man posing as a charity benefactor. After an accident, one of them can see six seconds into the future, and every time he looks, he loses a memory of the brother he is trying to save. Written, designed and directed by me with AI.",ss1:"episodes",ss3:"episodes out now",ssC2:"6 episodes produced · all 40 written",ssCta:"Watch episode 1",ssBand:["New original series","Six Seconds","Six episodes out now","London","40 × 60 seconds"],
+nSeries:"Six Seconds",ssNew:"NEW",ssBadge:"Six Seconds · original micro-drama, 6 episodes out",ssEye:"Original micro-drama series",ssH:"Six Seconds",ssTag:"Saving his brother means forgetting him.",ssP:"A London thriller told in one-minute vertical episodes. Two street kids fall into a begging racket run by a man posing as a charity benefactor. After an accident, one of them can see six seconds into the future, and every time he looks, he loses a memory of the brother he is trying to save. Written, designed and directed by me with AI.",ss1:"episodes",ss3:"episodes out now",ssC2:"6 episodes produced · all 40 written",ssCta:"Watch episode 1",slEye:"Original micro-drama series",slH:"Seven Lives",slLives:"Six lives spent. One kept.",slTag:"He lost his name. Not his heart.",slP:"A New York revenge drama told in vertical episodes of 60 to 90 seconds. The day before his wedding, a developer signs everything he owns over to his fiancée, then loses his memory in a crash on the FDR Drive and wakes up with no name. A stray tabby who can see what people can’t leads him back to the top, and pays for every rescue with one of his seven lives. Written, designed and directed by me with AI.",sl3:"episodes out now",slC2:"4 episodes produced · all 40 written",slCta:"Watch episode 1",ssBand:["New original series","Six Seconds","Six episodes out now","London","40 × 60 seconds"],
 oEye:"Original micro-drama series",oH:"One Wish Before Dawn",oTag:"Every wish has a price.",oP:"A romantic fantasy thriller told in one-minute vertical episodes. A grieving photographer slips into the Great Pyramid in search of a scarab said to grant one wish, and finds a living world, a cursed guardian and a love that costs a life. Written, designed and directed by me with AI, in English and Arabic.",
 st1:"episodes",st2:"per episode",st3:"vertical, mobile-first",st4:"night, sunset to dawn",
 c1t:"Role",c1:"Creator · Writer · Director · AI Artist",c2t:"Status",c2:"2 episodes produced · all 30 written",oCta:"Watch the trailer",oDeck:"Open the series deck",peek:"Inside the deck · tap any page",dkGs:"Open in Google Slides",
@@ -813,7 +896,7 @@ h1a:"أفكارٌ",h1b:"تتحوّل إلى صورة.",lede:"آخذ علامتك
 cta1:"شاهد الأعمال",cta2:"أرسل فكرتك في سطر",f1:"عاماً في الإنتاج",f2:"فيلماً وتصميماً بالذكاء الاصطناعي",f3:"أسواق: الإمارات · السعودية · مصر",f4:"إبداع بلغتين",
 wEye:"أفلام مختارة",wH:"كل لقطة بدأت بجملة.",wSub:"مرّر على الفيلم لتقرأ السطر الذي بدأه، واضغط لتشاهده بالصوت.",
 sEye:"محتوى قصير · ٩:١٦",sH:"صُنع ليوقف التمرير.",
-nSeries:"ست ثوانٍ",ssNew:"جديد",ssBadge:"ست ثوانٍ · دراما مصغّرة أصلية، ٦ حلقات متاحة",ssEye:"مسلسل دراما مصغّرة أصلي",ssH:"ست ثوانٍ",ssTag:"إنقاذ أخيه يعني أن ينساه.",ssP:"دراما تشويق لندنية في حلقات عمودية مدة كل منها دقيقة. طفلان من الشارع يقعان في شبكة تسوّل يديرها رجل يختبئ خلف قناع العمل الخيري. بعد حادث، يصبح أحدهما قادراً على رؤية ست ثوانٍ من المستقبل، لكنه في كل مرة ينظر فيها يفقد ذكرى من الأخ الذي يحاول إنقاذه. كتابة وتصميم وإخراج بالذكاء الاصطناعي.",ss1:"حلقة",ss3:"حلقات متاحة الآن",ssC2:"٦ حلقات منتَجة · ٤٠ حلقة مكتوبة",ssCta:"شاهد الحلقة الأولى",ssBand:["مسلسل أصلي جديد","ست ثوانٍ","ست حلقات متاحة","لندن","٤٠ × ٦٠ ثانية"],oEye:"مسلسل دراما مصغّرة أصلي",oH:"أمنية قبل الفجر",oTag:"لكل أمنية ثمن.",oP:"تشويق رومانسي خيالي يُروى في حلقات عمودية مدة كل منها دقيقة. مصوّرة مفجوعة تتسلّل إلى الهرم الأكبر بحثاً عن جعرانٍ يُقال إنه يحقق أمنية واحدة، فتجد عالماً حيّاً وحارساً ملعوناً وحباً ثمنه حياة. من كتابتي وتصميمي وإخراجي بالذكاء الاصطناعي، بالعربية والإنجليزية.",
+nSeries:"ست ثوانٍ",ssNew:"جديد",ssBadge:"ست ثوانٍ · دراما مصغّرة أصلية، ٦ حلقات متاحة",ssEye:"مسلسل دراما مصغّرة أصلي",ssH:"ست ثوانٍ",ssTag:"إنقاذ أخيه يعني أن ينساه.",ssP:"دراما تشويق لندنية في حلقات عمودية مدة كل منها دقيقة. طفلان من الشارع يقعان في شبكة تسوّل يديرها رجل يختبئ خلف قناع العمل الخيري. بعد حادث، يصبح أحدهما قادراً على رؤية ست ثوانٍ من المستقبل، لكنه في كل مرة ينظر فيها يفقد ذكرى من الأخ الذي يحاول إنقاذه. كتابة وتصميم وإخراج بالذكاء الاصطناعي.",ss1:"حلقة",ss3:"حلقات متاحة الآن",ssC2:"٦ حلقات منتَجة · ٤٠ حلقة مكتوبة",ssCta:"شاهد الحلقة الأولى",slEye:"مسلسل دراما مصغّرة أصلي",slH:"سبع أرواح",slLives:"ستّ أرواح أُنفقت، وبقيت واحدة.",slTag:"فقد اسمه، ولم يفقد قلبه.",slP:"دراما انتقام نيويوركية في حلقات عمودية تتراوح مدة كل منها بين ٦٠ و٩٠ ثانية. قبل زفافه بيوم، يتنازل رجل أعمال عن كل ما يملك لخطيبته، ثم يفقد ذاكرته في حادث على طريق FDR ويستيقظ بلا اسم. قطٌّ شارد يرى ما لا يراه البشر يعيده إلى القمة، ويدفع ثمن كل إنقاذ روحاً من أرواحه السبع. كتابة وتصميم وإخراج بالذكاء الاصطناعي.",sl3:"حلقات متاحة الآن",slC2:"٤ حلقات منتَجة · ٤٠ حلقة مكتوبة",slCta:"شاهد الحلقة الأولى",ssBand:["مسلسل أصلي جديد","ست ثوانٍ","ست حلقات متاحة","لندن","٤٠ × ٦٠ ثانية"],oEye:"مسلسل دراما مصغّرة أصلي",oH:"أمنية قبل الفجر",oTag:"لكل أمنية ثمن.",oP:"تشويق رومانسي خيالي يُروى في حلقات عمودية مدة كل منها دقيقة. مصوّرة مفجوعة تتسلّل إلى الهرم الأكبر بحثاً عن جعرانٍ يُقال إنه يحقق أمنية واحدة، فتجد عالماً حيّاً وحارساً ملعوناً وحباً ثمنه حياة. من كتابتي وتصميمي وإخراجي بالذكاء الاصطناعي، بالعربية والإنجليزية.",
 st1:"حلقة",st2:"لكل حلقة",st3:"عمودي، للجوال أولاً",st4:"ليلة واحدة، من الغروب إلى الفجر",
 c1t:"الدور",c1:"صاحب الفكرة · كاتب · مخرج · فنان ذكاء اصطناعي",c2t:"الحالة",c2:"حلقتان منتجتان · الحلقات الثلاثون مكتوبة",oCta:"شاهد الإعلان التشويقي",oDeck:"افتح عرض المسلسل",peek:"داخل العرض · اضغط على أي صفحة",dkGs:"افتح في Google Slides",
 kEye:"صور رئيسية",kH:"صورٌ توقف الإبهام.",
@@ -840,6 +923,11 @@ const SIX=[
 let lang="en";
 try{const s=localStorage.getItem("me-lang");if(s==="ar"||s==="en")lang=s}catch(e){}
 
+const SEVEN=[
+ {id:"sl-ep1",n:{en:"Episode 01 · 1:39",ar:"الحلقة ٠١ · ١:٣٩"},client:{en:"Seven Lives · Episode 01",ar:"سبع أرواح · الحلقة ٠١"},title:{en:"The Signature",ar:"التوقيع"},seed:{en:"“The sidewalk you left me on… is still warm.”",ar:"«الرصيف الذي تركتِني عليه… ما زال دافئاً.»"}},
+ {id:"sl-ep2",n:{en:"Episode 02 · 1:01",ar:"الحلقة ٠٢ · ١:٠١"},client:{en:"Seven Lives · Episode 02",ar:"سبع أرواح · الحلقة ٠٢"},title:{en:"The FDR",ar:"طريق FDR"},seed:{en:"“Sorry, partner. Nobody’s going to know who you are.”",ar:"«آسف يا شريكي. لن يعرف أحد من تكون.»"}},
+ {id:"sl-ep3",n:{en:"Episode 03 · 0:56",ar:"الحلقة ٠٣ · ٠:٥٦"},client:{en:"Seven Lives · Episode 03",ar:"سبع أرواح · الحلقة ٠٣"},title:{en:"Unknown Male",ar:"مجهول الهوية"},seed:{en:"“No. Wrong bed.”",ar:"«لا. سرير خطأ.»"}},
+ {id:"sl-ep4",n:{en:"Episode 04 · 0:43",ar:"الحلقة ٠٤ · ٠:٤٣"},client:{en:"Seven Lives · Episode 04",ar:"سبع أرواح · الحلقة ٠٤"},title:{en:"No Name",ar:"بلا اسم"},seed:{en:"“Why does her face hurt?”",ar:"«لماذا يؤلمني وجهها؟»"}}];
 const PROMPTS={en:["a caravan crosses the dunes at dusk, led by a silver SUV","grain falls in slow motion into a copper bowl, a family table waits","a whole city looks up as the anthem begins","a photographer follows a scarab into the Great Pyramid at sunset","a saddle-maker's hands, then a gallop along the Dubai shoreline"],
 ar:["قافلة تعبر الكثبان عند الغروب، وفي مقدمتها سيارة فضية","حبّات الأرز تتساقط ببطء في وعاء نحاسي، ومائدة عائلية تنتظر","مدينة بأكملها ترفع رأسها مع أول نغمة من النشيد","مصوّرة تتبع جعراناً إلى داخل الهرم الأكبر عند الغروب","يدا صانع السروج، ثم عَدْوٌ على شاطئ دبي"]};
 
@@ -983,6 +1071,7 @@ function render(){
   $("#lang").textContent=T[lang].langBtn;
   const b=BRANDS.map(x=>`<span>${esc(x)}<em>✦</em></span>`).join("");$("#marq").innerHTML=b+b;
   const sb=T[lang].ssBand.map(x=>`<span>${esc(x)}</span>`).join("");$("#ssRow").innerHTML=sb+sb+sb+sb;
+  $("#slEps").innerHTML=SEVEN.map((e,i)=>`<button class="slep" type="button" data-i="${i}" aria-label="${esc(L(e.client))}: ${esc(L(e.title))}"><img src="p/${e.id}.jpg" alt="" loading="lazy"><span class="pl">${playSVG}</span><span class="m"><span class="n">${esc(L(e.n))}</span><h3>${esc(L(e.title))}</h3></span></button>`).join("");
   $("#ssEps").innerHTML=SIX.map((e,i)=>`<button class="ssep" type="button" data-i="${i}" aria-label="${esc(L(e.client))}: ${esc(L(e.title))}"><img src="p/${e.id}.jpg" alt="" loading="lazy"><span class="pl">${playSVG}</span><span class="m"><span class="n">${esc(L(e.n))}</span><h3>${esc(L(e.title))}</h3></span></button>`).join("");
   $("#films").innerHTML=FILMS.map((f,i)=>`<button class="film ${f.cls}" type="button" data-i="${i}" data-kind="film"><img src="p/${f.id}.jpg" alt="" loading="lazy"><video data-src="m/${f.id}.mp4" muted loop playsinline preload="none"></video><span class="shade"></span><span class="play">${playSVG}</span><span class="dur">${f.dur}</span><span class="meta"><span class="client">${esc(L(f.client))}</span><h3>${esc(L(f.title))}</h3><span class="seed">${esc(L(f.seed))}</span></span></button>`).join("");
   $("#chips").innerHTML=CATS.map(([k,v])=>`<button class="chip" type="button" data-cat="${k}" aria-pressed="${k===cat}">${esc(L(v))}</button>`).join("");
@@ -1020,7 +1109,7 @@ let mio=null;
 /* lightbox */
 let lbList=[],lbI=0;
 function openLB(kind,i){
-  lbList=kind==="film"?FILMS:kind==="reel"?REELS.filter(r=>cat==="all"||r.cat===cat):kind==="six"?SIX:[{id:"onewish",client:{en:"Original micro-drama · Trailer",ar:"دراما مصغّرة أصلية · الإعلان"},title:{en:"One Wish Before Dawn",ar:"أمنية قبل الفجر"},seed:{en:"One night. One wish. One love that costs a life.",ar:"ليلة واحدة. أمنية واحدة. وحبٌّ ثمنه حياة."}}];
+  lbList=kind==="film"?FILMS:kind==="reel"?REELS.filter(r=>cat==="all"||r.cat===cat):kind==="six"?SIX:kind==="seven"?SEVEN:[{id:"onewish",client:{en:"Original micro-drama · Trailer",ar:"دراما مصغّرة أصلية · الإعلان"},title:{en:"One Wish Before Dawn",ar:"أمنية قبل الفجر"},seed:{en:"One night. One wish. One love that costs a life.",ar:"ليلة واحدة. أمنية واحدة. وحبٌّ ثمنه حياة."}}];
   if(kind==="reel"){const id=REELS[i].id;i=lbList.findIndex(r=>r.id===id)}
   lbI=i;$("#lb").hidden=false;document.body.style.overflow="hidden";showLB();$("#lbX").focus();
 }
@@ -1068,6 +1157,12 @@ const ssIO=new IntersectionObserver(es=>es.forEach(en=>{if(reduce)return;if(en.i
 $("#ssBtn").onclick=$("#ssWatch").onclick=()=>{ssV.pause();openLB("six",0)};
 $("#ssEps").addEventListener("click",e=>{const b=e.target.closest(".ssep");if(b){ssV.pause();openLB("six",+b.dataset.i)}});
 
+/* Seven Lives */
+const slV=$("#slVid");
+const slIO=new IntersectionObserver(es=>es.forEach(en=>{if(reduce)return;if(en.isIntersecting){slV.play().catch(()=>{})}else slV.pause()}),{threshold:.3});slIO.observe(slV);
+$("#slBtn").onclick=$("#slWatch").onclick=()=>{slV.pause();openLB("seven",0)};
+$("#slEps").addEventListener("click",e=>{const b=e.target.closest(".slep");if(b){slV.pause();openLB("seven",+b.dataset.i)}});
+
 
 /* series deck */
 const dk=$("#dk"),dkImg=$("#dkImg");let dkI=0,dkLast=null;
@@ -1085,7 +1180,7 @@ $("#peekRow").innerHTML=[0,1,4,6,7,12,14,21,30,31].map(i=>`<button type="button"
 function dkShow(i){const n=SRC.length;dkI=(i+n)%n;dkImg.src=SRC[dkI];$("#dkIdx").textContent=`${pad(dkI+1)} / ${pad(n)}`;
   R.querySelectorAll("#dkStrip button").forEach(b=>{const on=+b.dataset.k===dkI;b.setAttribute("aria-current",on);if(on)b.scrollIntoView({block:"nearest",inline:"center"})});
   [dkI+1,dkI+2].forEach(k=>{if(k<n){const im=new Image();im.src=SRC[k]}})}
-function dkOpen(i,list){dkLast=document.activeElement;owV.pause();ssV.pause();dkFill(list||DECK);dk.hidden=false;document.body.style.overflow="hidden";dkShow(i||0);$("#dkX").focus()}
+function dkOpen(i,list){dkLast=document.activeElement;owV.pause();ssV.pause();slV.pause();dkFill(list||DECK);dk.hidden=false;document.body.style.overflow="hidden";dkShow(i||0);$("#dkX").focus()}
 $("#stillsRow").addEventListener("click",e=>{const b=e.target.closest(".stillbtn");if(b)dkOpen(+b.dataset.k,STILL_SRC)});
 function dkClose(){dk.hidden=true;document.body.style.overflow="";dkLast&&dkLast.focus&&dkLast.focus()}
 $("#deckOpen").onclick=()=>dkOpen(0,DECK);
@@ -1093,6 +1188,10 @@ $("#peekRow").addEventListener("click",e=>{const b=e.target.closest("button");if
 $("#ssPeek").innerHTML=[0,3,6,8,10,11,12,15,18,26].map(i=>`<button type="button" data-k="${i}" aria-label="Open Six Seconds deck at page ${i+1}"><img src="${SSDECK[i]}" alt="" loading="lazy"></button>`).join("");
 $("#ssPeek").addEventListener("click",e=>{const b=e.target.closest("button");if(b)dkOpen(+b.dataset.k,SSDECK)});
 $("#ssDeck").onclick=()=>dkOpen(0,SSDECK);
+const SLDECK=Array.from({length:35},(_,i)=>`d/sl-${pad(i+1)}.jpg`);
+$("#slPeek").innerHTML=[0,2,8,10,13,14,15,17,18,30].map(i=>`<button type="button" data-k="${i}" aria-label="Open Seven Lives deck at page ${i+1}"><img src="${SLDECK[i]}" alt="" loading="lazy"></button>`).join("");
+$("#slPeek").addEventListener("click",e=>{const b=e.target.closest("button");if(b)dkOpen(+b.dataset.k,SLDECK)});
+$("#slDeck").onclick=()=>dkOpen(0,SLDECK);
 $("#dkStrip").addEventListener("click",e=>{const b=e.target.closest("button");if(b)dkShow(+b.dataset.k)});
 $("#dkX").onclick=dkClose;$("#dkN").onclick=()=>dkShow(dkI+1);$("#dkP").onclick=()=>dkShow(dkI-1);
 document.addEventListener("keydown",e=>{if(dk.hidden)return;const fwd=lang==="ar"?"ArrowLeft":"ArrowRight",back=lang==="ar"?"ArrowRight":"ArrowLeft";
