@@ -4,93 +4,107 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var el = function (tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  var SVG = '<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1l10 6-10 6z"/></svg>';
 
   var T = {
     en: {
-      skip: 'Skip to the work', navSel: 'Selected work', navAi: 'AI Studio', navFilms: 'Films by type', navContact: 'Contact',
-      roles: 'Creative film producer and AI creative director',
+      skip: 'Skip to the work', navSel: 'Selected work', navAi: 'AI Studio', navFilms: 'Films by type', navCases: 'Case studies', navCta: 'Start a project',
+      roles: 'Creative film producer & AI creative director',
       heroSub: 'Fourteen years of commercials, music videos and social content across the Gulf and Egypt, and films directed with AI.',
-      about: "I started as a copywriter and creative director, then moved into production. So I read a script the way a creative does and budget it the way a producer has to. I've run sets with more than 150 crew and delivered for Hublot, Emaar, Skechers, Ajmal, Mashreq and Abbott.",
-      watch: 'Watch the film',
-      aiH: 'AI Studio', aiTag: 'Ideas that render.',
+      heroBtn1: 'See the work', heroBtn2: 'Visit the AI Studio',
+      f1: 'years in production', f2: 'projects', f3: 'films to watch', f4b: '4 markets', f4: 'UAE, KSA, Egypt, Lebanon',
+      selE: 'Selected work', selH: 'Seven projects to start with', selP: 'Hover a film to see it move. Click to watch it with sound.',
+      aiE: 'AI Studio', aiH1: 'Ideas that', aiH2: 'render.',
       aiP: 'Where a one-line idea becomes a finished film. I direct brand commercials and my own micro-dramas with AI, and fourteen years on real sets decide what goes in the frame.',
-      aiBtn: 'Enter the AI studio', aiBtn2: 'See the micro-dramas',
+      aiBtn: 'Enter the AI Studio', aiBtn2: 'See the micro-dramas',
       aiFilmsH: 'Brand films made with AI', aiFilmsP: 'Commercials directed with AI from the first mood board to the final frame, for LYNK & CO, ADCB, Rawaa Rice and Doux.',
+      nProj: function (n) { return n + (n === 1 ? ' project' : ' projects'); },
       films: function (n) { return n + (n === 1 ? ' film' : ' films'); }, photos: function (n) { return n + (n === 1 ? ' photo' : ' photos'); },
-      episodes: function (n) { return n + (n === 1 ? ' episode' : ' episodes') + ' to watch'; },
-      casesH: 'Two campaigns with numbers', playCase: 'Play the case film',
+      episodes: function (n) { return n + (n === 1 ? ' episode' : ' episodes'); },
+      showAll: function (n) { return 'Show all ' + n; },
+      casesE: 'Case studies', casesH: 'Two campaigns with numbers', playCase: 'Play the case film',
       c1H: 'Treva: a rap song for the home economist',
       c1P: "The brief was to reach homemakers in Saudi Arabia. We wrote a rap song that calls them the household's economists and shot it as a music video.",
       c2H: 'Vatika Fruitamin: #WhatsYourFlavour', c2P: 'A jingle built for TikTok and a set of films for the hair-mask range.',
       stSales: 'Increase in sales', stReach: 'Reach', stCtr: 'Click-through rate', stTraffic: 'Increase in traffic',
       caseNote: "Figures as reported in the campaign's case film.",
-      btsH: 'Behind the scenes', btsP: 'Some of the shoot days, before the edit.',
-      svH: 'Crew, talent and production services',
+      btsE: 'On set', btsH: 'Behind the scenes', btsP: 'Some of the shoot days, before the edit.',
+      svE: 'Beyond the film', svH: 'Crew, talent and production services',
       sv1H: 'Talent and casting', sv1P: 'Actors, models, presenters and voice artists from the Gulf, Egypt and Lebanon.',
       sv2H: 'Production services', sv2P: 'Crew, equipment, locations and permits, with one contact from the recce to delivery.',
       sv3H: 'Where', sv3P: 'United Arab Emirates, Saudi Arabia, Egypt and Lebanon.',
-      povH: 'I also act. Once.', povP: "A sketch from the office: what happens when you help a stranger strictly according to your job title. I'm in it. Casting directors, go easy.",
-      ctH: 'Got a script, a deck, or just a shoot date?', ctP: "Send whatever you have. I'll reply with how I'd make it and what it would take.", ctEmail: 'Email',
+      povE: 'Off duty', povH: 'I also act. Once.', povP: "A sketch from the office: what happens when you help a stranger strictly according to your job title. I'm in it. Casting directors, go easy.",
+      ctE: 'Contact', ctH1: 'Got a script, a deck, or just', ctH2: 'a shoot date?', ctP: "Send whatever you have. I'll reply with how I'd make it and what it would take.", ctEmail: 'Email',
       foot: 'Client names and campaigns belong to their owners.',
-      close: 'Close', behance: 'See this project on Behance', film: 'Film', photo: 'Photo', lang: 'العربية', prev: 'Scroll back', next: 'Scroll forward'
+      close: 'Close', behance: 'See this project on Behance', film: 'Film', photo: 'Photo', lang: 'العربية'
     },
     ar: {
-      skip: 'انتقل إلى الأعمال', navSel: 'أعمال مختارة', navAi: 'استوديو الذكاء الاصطناعي', navFilms: 'الأفلام حسب النوع', navContact: 'تواصل',
+      skip: 'انتقل إلى الأعمال', navSel: 'أعمال مختارة', navAi: 'استوديو الذكاء الاصطناعي', navFilms: 'الأفلام حسب النوع', navCases: 'دراسات حالة', navCta: 'ابدأ مشروعًا',
       roles: 'منتج أفلام إبداعي ومخرج إبداعي بالذكاء الاصطناعي',
       heroSub: 'أربعة عشر عامًا من الإعلانات والأغاني المصوّرة ومحتوى السوشيال ميديا في الخليج ومصر، وأفلام أخرجتها بالذكاء الاصطناعي.',
-      about: 'بدأت كاتبًا إعلانيًا ومديرًا إبداعيًا، ثم انتقلت إلى الإنتاج. لذلك أقرأ النص بعين المبدع وأضع ميزانيته بحساب المنتج. أدرت مواقع تصوير فيها أكثر من 150 فردًا، وسلّمت أعمالًا لهوبلو وإعمار وسكيتشرز وأجمل والمشرق وأبوت.',
-      watch: 'شاهد الفيلم',
-      aiH: 'استوديو الذكاء الاصطناعي', aiTag: 'أفكار تتحول إلى صورة.',
+      heroBtn1: 'شاهد الأعمال', heroBtn2: 'زر استوديو الذكاء الاصطناعي',
+      f1: 'عامًا في الإنتاج', f2: 'مشروعًا', f3: 'فيلمًا للمشاهدة', f4b: '4 أسواق', f4: 'الإمارات، السعودية، مصر، لبنان',
+      selE: 'أعمال مختارة', selH: 'سبعة مشاريع للبداية', selP: 'مرّر على الفيلم ليتحرك، واضغط لتشاهده بالصوت.',
+      aiE: 'استوديو الذكاء الاصطناعي', aiH1: 'أفكار تتحول', aiH2: 'إلى صورة.',
       aiP: 'هنا تتحول فكرة من سطر واحد إلى فيلم كامل. أُخرج إعلانات العلامات ومسلسلاتي القصيرة بالذكاء الاصطناعي، وأربعة عشر عامًا في مواقع التصوير الحقيقية تحدد ما يدخل الكادر.',
       aiBtn: 'ادخل استوديو الذكاء الاصطناعي', aiBtn2: 'شاهد الدراما القصيرة',
       aiFilmsH: 'أفلام علامات صُنعت بالذكاء الاصطناعي', aiFilmsP: 'إعلانات أخرجتها بالذكاء الاصطناعي من أول لوحة إلهام حتى آخر لقطة، للينك آند كو وبنك أبوظبي التجاري وأرز رواء ودو.',
+      nProj: function (n) { return n + ' مشروع'; },
       films: function (n) { return n + ' فيلم'; }, photos: function (n) { return n + ' صورة'; },
-      episodes: function (n) { return n + ' حلقات للمشاهدة'; },
-      casesH: 'حملتان بالأرقام', playCase: 'شاهد فيلم الحملة',
+      episodes: function (n) { return n + ' حلقات'; },
+      showAll: function (n) { return 'اعرض الكل (' + n + ')'; },
+      casesE: 'دراسات حالة', casesH: 'حملتان بالأرقام', playCase: 'شاهد فيلم الحملة',
       c1H: 'تريفا: أغنية راب لاقتصادية المنزل',
       c1P: 'كان المطلوب الوصول إلى ربّات البيوت في السعودية. كتبنا أغنية راب تسمّيهنّ «اقتصاديات المنزل»، وصوّرناها فيديو كليب.',
       c2H: 'فاتيكا فروتامين: ‎#WhatsYourFlavour', c2P: 'جِنغل صُمّم لتيك توك مع مجموعة أفلام لسلسلة أقنعة الشعر.',
       stSales: 'زيادة في المبيعات', stReach: 'وصول', stCtr: 'نسبة النقر', stTraffic: 'زيادة في الزيارات',
       caseNote: 'الأرقام كما وردت في فيلم الحملة.',
-      btsH: 'كواليس التصوير', btsP: 'أيام من مواقع التصوير، قبل المونتاج.',
-      svH: 'الطواقم والمواهب وخدمات الإنتاج',
+      btsE: 'في موقع التصوير', btsH: 'كواليس التصوير', btsP: 'أيام من مواقع التصوير، قبل المونتاج.',
+      svE: 'أبعد من الفيلم', svH: 'الطواقم والمواهب وخدمات الإنتاج',
       sv1H: 'المواهب والكاستينغ', sv1P: 'ممثلون وعارضون ومقدّمون ومعلّقون صوتيون من الخليج ومصر ولبنان.',
       sv2H: 'خدمات الإنتاج', sv2P: 'طواقم ومعدات ومواقع تصوير وتصاريح، مع جهة اتصال واحدة من المعاينة حتى التسليم.',
       sv3H: 'أين', sv3P: 'الإمارات والسعودية ومصر ولبنان.',
-      povH: 'وأمثّل أيضًا. مرة واحدة.', povP: 'اسكتش من المكتب: ماذا يحدث حين تساعد غريبًا بحسب مسمّاك الوظيفي فقط. أنا أحد الممثلين. رفقًا بي يا مديري الكاستينغ.',
-      ctH: 'عندك نص أو عرض أو حتى موعد تصوير فقط؟', ctP: 'أرسل ما لديك، وسأرد عليك بطريقة تنفيذه وما يحتاجه.', ctEmail: 'البريد الإلكتروني',
+      povE: 'خارج الدوام', povH: 'وأمثّل أيضًا. مرة واحدة.', povP: 'اسكتش من المكتب: ماذا يحدث حين تساعد غريبًا بحسب مسمّاك الوظيفي فقط. أنا أحد الممثلين. رفقًا بي يا مديري الكاستينغ.',
+      ctE: 'تواصل', ctH1: 'عندك نص أو عرض أو حتى', ctH2: 'موعد تصوير فقط؟', ctP: 'أرسل ما لديك، وسأرد عليك بطريقة تنفيذه وما يحتاجه.', ctEmail: 'البريد الإلكتروني',
       foot: 'أسماء العملاء والحملات ملك لأصحابها.',
-      close: 'إغلاق', behance: 'شاهد المشروع على Behance', film: 'فيلم', photo: 'صورة', lang: 'English', prev: 'السابق', next: 'التالي'
+      close: 'إغلاق', behance: 'شاهد المشروع على Behance', film: 'فيلم', photo: 'صورة', lang: 'English'
     }
   };
   var VT_AR = { 'Hero film': 'الفيلم الرئيسي', 'Behind the scenes': 'الكواليس', 'Case film': 'فيلم الحملة', 'CEO interview': 'لقاء الرئيس التنفيذي', 'Film': 'الفيلم', 'Trailer': 'الإعلان التشويقي', 'TV commercial': 'الإعلان التلفزيوني' };
-
-  // Sections by content type, in page order. kind decides the card shape.
+  // One line under each selected project (shown on hover).
+  var SEED = {
+    'ajmal-perfumes-untold-stories': ['Hero film, behind the scenes and a CEO interview for the Untold Stories campaign.', 'الفيلم الرئيسي والكواليس ولقاء الرئيس التنفيذي لحملة Untold Stories.'],
+    'hublot-x-seddiqi-75th-anniversary': ['From concept to delivery in one week, for the 75th anniversary.', 'من الفكرة إلى التسليم في أسبوع واحد، للذكرى الخامسة والسبعين.'],
+    'skechers-back-to-school': ['The Back to school TVC and the 2025 campaign, with behind the scenes.', 'إعلان العودة إلى المدارس وحملة 2025، مع الكواليس.'],
+    'treva-home-economist': ['A rap song for Saudi homemakers, shot as a music video.', 'أغنية راب لربّات البيوت في السعودية، صُوّرت فيديو كليب.'],
+    'ghamran-camp-documentary': ['A documentary from the Ghamran desert camp.', 'فيلم وثائقي من مخيم غمران الصحراوي.'],
+    'emaar-new-year-s-eve-film': ["The visitor film for New Year's Eve in Downtown Dubai.", 'فيلم الزوّار لليلة رأس السنة في وسط مدينة دبي.'],
+    'rawaa-rice-the-longer-table': ['The longer the grain, the longer the table. Made with AI.', 'كلما طالت الحبّة، طالت المائدة. صُنع بالذكاء الاصطناعي.']
+  };
   var SECS = [
-    { id: 'tvc', kind: 'wide', tag: ['TV commercial', 'إعلان تلفزيوني'],
+    { id: 'tvc', kind: 'wide',
       en: ['TV commercials', 'Hero films for TV and digital. I take them from the script through casting, the shoot and post to the final master.'],
       ar: ['الإعلانات التلفزيونية', 'أفلام رئيسية للتلفزيون والمنصات الرقمية. أتولّاها من النص إلى الكاستينغ والتصوير والمونتاج حتى النسخة النهائية.'] },
-    { id: 'music', kind: 'wide', tag: ['Music video', 'فيديو كليب'],
+    { id: 'music', kind: 'wide',
       en: ['Music videos', 'Songs written for a brand and shot as a proper music video, like the Treva rap for Saudi homemakers.'],
       ar: ['الأغاني المصوّرة', 'أغانٍ تُكتب للعلامة وتُصوَّر فيديو كليب كاملًا، مثل أغنية الراب التي كتبناها لتريفا في السعودية.'] },
-    { id: 'drama', kind: 'drama', tag: ['Micro-drama', 'دراما قصيرة'],
+    { id: 'drama', kind: 'drama',
       en: ['Micro-drama', 'Three original vertical series that I write and direct, made with AI. Each episode runs about a minute.'],
       ar: ['الدراما القصيرة', 'ثلاثة مسلسلات عمودية أصلية أكتبها وأخرجها، مصنوعة بالذكاء الاصطناعي. مدة الحلقة نحو دقيقة.'] },
-    { id: 'social', kind: 'tall', tag: ['Short formats', 'محتوى قصير'],
+    { id: 'social', kind: 'tall',
       en: ['Short formats', 'Reels, TikToks and daily event coverage. At Dubai Mallathon my team filmed six malls and delivered new content every day.'],
       ar: ['المحتوى القصير', 'ريلز وتيك توك وتغطيات يومية للفعاليات. في دبي مولاثون صوّر فريقي في ستة مولات وسلّم محتوى جديدًا كل يوم.'] },
-    { id: 'cgi', kind: 'wide', tag: ['CGI', 'CGI'],
+    { id: 'cgi', kind: 'wide',
       en: ['CGI', 'Product films and city-scale scenes built in 3D, for Hublot, Emaar and Dubai Silicon Oasis.'],
       ar: ['أفلام CGI', 'أفلام منتجات ومشاهد بحجم المدينة تُبنى بالأبعاد الثلاثية، لهوبلو وإعمار وواحة دبي للسيليكون.'] },
-    { id: 'doc', kind: 'wide', tag: ['Documentary', 'وثائقي'],
+    { id: 'doc', kind: 'wide',
       en: ['Documentaries and event films', "Real people and real places: the Ghamran desert camp, the runners of Dubai Mallathon, Emaar's New Year's Eve."],
       ar: ['الأفلام الوثائقية وأفلام الفعاليات', 'ناس حقيقيون وأماكن حقيقية: مخيم غمران الصحراوي، وعدّاؤو دبي مولاثون، وليلة رأس السنة مع إعمار.'] },
-    { id: 'photo', kind: 'photo', tag: ['Photography', 'تصوير فوتوغرافي'],
+    { id: 'photo', kind: 'photo',
       en: ['Photography', 'Food, product and campaign key visuals, shot alongside the films or on their own.'],
       ar: ['التصوير الفوتوغرافي', 'تصوير الطعام والمنتجات والصور الرئيسية للحملات، مع الأفلام أو في جلسات مستقلة.'] }
   ];
-  var TAG = { ai: ['AI film', 'فيلم بالذكاء الاصطناعي'] };
-  SECS.forEach(function (s) { TAG[s.id] = s.tag; });
+  var CLIENTS = ['Hublot', 'Emaar', 'Skechers', 'Ajmal Perfumes', 'Mashreq', 'Abbott', 'Treva', 'HomeBox', 'LYNK & CO', 'ADCB', 'Nivea', 'Mercedes-Benz Egypt', 'Dubai Mallathon', 'Saudi German Health', 'Talabat', 'OSN+', 'Dabur', 'Doux', 'Rawaa Rice', 'Oxfam'];
 
   var lang = 'en';
   try { lang = localStorage.getItem('lang') || 'en'; } catch (e) {}
@@ -103,7 +117,6 @@
   P.forEach(function (p) { byId[p.id] = p; });
   var inCat = function (c) { return P.filter(function (p) { return p.cats.indexOf(c) > -1; }); };
   var fmt = function (s) { return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); };
-  var sep = function () { return lang === 'ar' ? '، ' : ', '; };
   var vTitle = function (p, v, i) {
     var name = v.t || (p.videos.length === 1 ? 'Film' : '');
     if (!name) return t('film') + ' ' + (i + 1);
@@ -112,118 +125,116 @@
   };
   var play = function (v) { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); };
 
-  /* ---------- hero ---------- */
+  /* ---------- hero, marquee, facts ---------- */
   var reel = $('#reel');
   if (reduce) { reel.removeAttribute('autoplay'); reel.pause(); }
-  var bar = $('.bar');
-  window.addEventListener('scroll', function () { bar.classList.toggle('is-solid', window.scrollY > window.innerHeight * 0.7); }, { passive: true });
+  $('#nProjects').textContent = P.length;
+  $('#nFilms').textContent = P.reduce(function (a, p) { return a + p.videos.length; }, 0);
+  CLIENTS.concat(CLIENTS).forEach(function (c) { $('#clients').append(el('span', '', c)); });
 
-  /* ---------- selected panels ---------- */
-  var panelIO = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) {
-    es.forEach(function (e) {
-      var v = e.target.querySelector('video'); if (!v) return;
-      if (e.isIntersecting && e.intersectionRatio > 0.55 && !reduce) {
-        if (!v.src) v.src = v.getAttribute('data-src');
-        play(v);
-      } else { v.pause(); }
-    });
-  }, { threshold: [0, 0.55, 1] }) : null;
-  function renderPanels() {
-    var box = $('#panels'); box.textContent = '';
-    var list = P.filter(function (p) { return p.feat; });
-    list.forEach(function (p, i) {
-      var b = el('button', 'panel'); b.type = 'button';
-      var img = el('img'); img.alt = ''; img.loading = i ? 'lazy' : 'eager'; img.src = p.still;
-      var v = el('video'); v.muted = true; v.loop = true; v.playsInline = true; v.preload = 'none'; v.setAttribute('data-src', p.loop);
-      v.addEventListener('playing', function () { v.classList.add('is-live'); });
-      var n = el('span', 'panel-n'); n.append(String(i + 1), el('small', '', ' / ' + list.length));
-      var tx = el('span', 'panel-text');
-      var tags = p.cats.map(function (c) { return TAG[c] ? TAG[c][L()] : ''; }).filter(Boolean).join(sep());
-      tx.append(el('span', 'panel-client', p.client), el('span', 'panel-title', p.title), el('span', 'panel-tags', tags), el('span', 'panel-watch', t('watch')));
-      b.append(img, v, el('span', 'panel-shade'), n, tx);
-      b.addEventListener('click', function () { openProject(p.id, 0); });
-      box.append(b);
-      if (panelIO) panelIO.observe(b);
-    });
-  }
-
-  /* ---------- cards and rails ---------- */
-  function preview(target, media, v) {
+  /* ---------- cards ---------- */
+  function hoverPlay(card, src, start) {
+    if (!canHover || reduce || !src) return;
     var vid, timer;
-    target.addEventListener('pointerenter', function () {
+    card.addEventListener('pointerenter', function () {
       timer = setTimeout(function () {
-        vid = el('video'); vid.muted = true; vid.loop = true; vid.playsInline = true; vid.src = v.src + '#t=' + Math.min(4, Math.floor(v.d / 4));
-        media.append(vid);
-        vid.addEventListener('playing', function () { vid.classList.add('is-live'); });
+        vid = el('video'); vid.muted = true; vid.loop = true; vid.playsInline = true; vid.src = src + (start ? '#t=' + start : '');
+        card.insertBefore(vid, card.children[1]);
+        vid.addEventListener('playing', function () { card.classList.add('playing'); });
         play(vid);
-      }, 180);
+      }, 160);
     });
-    target.addEventListener('pointerleave', function () { clearTimeout(timer); if (vid) { vid.pause(); vid.removeAttribute('src'); vid.load(); vid.remove(); vid = null; } });
+    card.addEventListener('pointerleave', function () {
+      clearTimeout(timer); card.classList.remove('playing');
+      if (vid) { vid.pause(); vid.removeAttribute('src'); vid.load(); vid.remove(); vid = null; }
+    });
   }
-  function card(p, kind, vi) {
-    var b = el('button', 'card'); b.type = 'button';
-    var m = el('span', 'card-media');
-    var v = p.videos[vi || 0], src = p.still || p.cover;
-    if (kind === 'tall' || kind === 'drama') {
-      var vert = p.videos.filter(function (x) { return x.h > x.w; })[0]; v = vert || v; if (v) src = v.poster;
-    } else if (kind === 'photo' && p.images.length) { src = p.images[0].th; v = null; }
-    else if (kind === 'bts' || kind === 'ai') { src = v.poster; }
-    var img = el('img'); img.loading = 'lazy'; img.alt = ''; img.src = src; m.append(img);
-    b.append(m, el('span', 'card-client', p.client));
-    if (kind !== 'bts') b.append(el('span', 'card-title', p.title));
-    if (kind === 'drama') {
-      if (p.line) b.append(el('span', 'card-line', p.line));
-      b.append(el('span', 'card-meta', t('episodes')(Math.max(1, p.videos.length - 1))));
-    } else if (kind !== 'bts') {
-      var meta = [];
-      if (p.videos.length && kind !== 'photo') meta.push(t('films')(p.videos.length));
-      if (p.images.length && (kind === 'photo' || !p.videos.length)) meta.push(t('photos')(p.images.length));
-      b.append(el('span', 'card-meta', meta.join(sep())));
-    }
-    b.addEventListener('click', function () {
-      if (kind === 'photo' && p.images.length) openProject(p.id, 0, true); else openProject(p.id, vi != null ? vi : (v ? p.videos.indexOf(v) : 0));
-    });
-    if (canHover && !reduce && v) preview(b, m, v);
+  // o: {cls, img, client, title, seed, dur, hover, start, go}
+  function tile(base, o) {
+    var b = el('button', base + (o.cls ? ' ' + o.cls : '')); b.type = 'button';
+    var img = el('img'); img.loading = 'lazy'; img.alt = ''; img.src = o.img;
+    b.append(img, el('span', 'shade'));
+    if (base === 'film') { var pl = el('span', 'play'); pl.innerHTML = SVG; b.append(pl); if (o.dur) b.append(el('span', 'dur', o.dur)); }
+    var m = el('span', 'meta');
+    m.append(el('span', 'client', o.client), el('h3', '', o.title));
+    if (o.seed) m.append(el('span', base === 'film' ? 'seed' : 'line', o.seed));
+    b.append(m);
+    b.addEventListener('click', o.go);
+    hoverPlay(b, o.hover, o.start);
     return b;
   }
-  function rail(host, cards, kind) {
-    host.textContent = '';
-    var r = el('div', 'rail k-' + (kind === 'bts' || kind === 'ai' ? 'wide' : kind));
-    cards.forEach(function (c) { r.append(c); });
-    host.append(r);
-    var mk = function (cls, dir, label) {
-      var b = el('button', 'rail-btn ' + cls, dir < 0 ? '←' : '→'); b.type = 'button'; b.setAttribute('aria-label', label);
-      b.addEventListener('click', function () { r.scrollBy({ left: dir * r.clientWidth * 0.8, behavior: reduce ? 'auto' : 'smooth' }); });
-      return b;
-    };
-    host.append(mk('prev', -1, t('prev')), mk('next', 1, t('next')));
+  function count(p) { return p.videos.length ? t('films')(p.videos.length) : t('photos')(p.images.length); }
+  function wide(p, cls, seed) {
+    var v = p.videos[0];
+    return tile('film', { cls: cls, img: p.still || p.cover, client: p.client, title: p.title, seed: seed || '', dur: count(p),
+      hover: p.loop || (v && v.src), start: p.loop || !v ? 0 : Math.min(4, Math.floor(v.d / 4)), go: function () { openProject(p.id, 0); } });
+  }
+  function tall(p, kind) {
+    var v = p.videos.filter(function (x) { return x.h > x.w; })[0] || p.videos[0];
+    if (kind === 'photo') return tile('reel', { img: p.images[0].th, client: p.client, title: p.title, seed: t('photos')(p.images.length), go: function () { openProject(p.id, 0, true); } });
+    var seed = kind === 'drama' ? (p.line || '') : count(p);
+    return tile('reel', { img: v.poster, client: kind === 'drama' ? t('episodes')(Math.max(1, p.videos.length - 1)) : p.client, title: kind === 'drama' ? p.client : p.title, seed: seed,
+      hover: v.src, start: Math.min(4, Math.floor(v.d / 4)), go: function () { openProject(p.id, p.videos.indexOf(v)); } });
+  }
+  function withMore(host, cards, limit) {
+    cards.forEach(function (c, i) { if (i >= limit) c.classList.add('is-extra'); host.append(c); });
+    if (cards.length <= limit) return null;
+    var more = el('div', 'more'), b = el('button', 'btn btn-ghost', t('showAll')(cards.length)); b.type = 'button';
+    b.addEventListener('click', function () { host.classList.add('open'); more.remove(); });
+    more.append(b); return more;
+  }
+
+  function renderSelected() {
+    var box = $('#selected'); box.textContent = '';
+    var shape = ['xl', 'm', 'm', 'l', 's', 'm', 'm'];
+    P.filter(function (p) { return p.feat; }).forEach(function (p, i) { box.append(wide(p, shape[i] || 'm', SEED[p.id] ? SEED[p.id][L()] : '')); });
   }
   function renderSections() {
-    var box = $('#sections'), nav = $('#types'); box.textContent = ''; nav.textContent = '';
+    var box = $('#sections'); box.textContent = '';
     SECS.forEach(function (s) {
       var list = inCat(s.id); if (s.id === 'photo') list = list.filter(function (p) { return p.images.length; });
       if (!list.length) return;
-      var a = el('a', '', s[lang][0]); a.href = '#sec-' + s.id; a.append(el('small', '', list.length)); nav.append(a);
-      var sec = el('section', 'sec sec-' + s.id); sec.id = 'sec-' + s.id;
-      var head = el('div', 'wrap sec-head'); head.append(el('h2', '', s[lang][0]), el('p', '', s[lang][1]));
-      var host = el('div', 'rail-wrap');
-      sec.append(head, host); box.append(sec);
-      rail(host, list.map(function (p) { return card(p, s.kind); }), s.kind);
+      var sec = el('section', 'sec'); sec.id = 'sec-' + s.id;
+      var wrap = el('div', 'wrap'), head = el('div', 'head'), left = el('div');
+      left.append(el('span', 'eyebrow', t('nProj')(list.length)), el('h2', '', s[lang][0]));
+      head.append(left, el('p', 'sub', s[lang][1]));
+      var grid, more;
+      if (s.kind === 'wide') {
+        grid = el('div', 'films even');
+        more = withMore(grid, list.map(function (p, i) { return wide(p, i < 2 ? 'm' : ''); }), 8);
+      } else {
+        grid = el('div', 'wall' + (s.kind === 'drama' ? ' drama' : s.kind === 'photo' ? ' photo' : ''));
+        more = withMore(grid, list.map(function (p) { return tall(p, s.kind); }), 12);
+      }
+      wrap.append(head, grid); if (more) wrap.append(more);
+      sec.append(wrap); box.append(sec);
     });
-    rail($('[data-rail=ai]'), inCat('ai').map(function (p) { return card(p, 'ai'); }), 'ai');
-    var bts = [];
-    P.forEach(function (p) { p.videos.forEach(function (v, i) { if (v.t === 'Behind the scenes') bts.push(card(p, 'bts', i)); }); });
-    rail($('[data-rail=bts]'), bts, 'bts');
+    // AI films
+    var ai = inCat('ai'), ab = $('#aiFilms'); ab.textContent = '';
+    $('#aiCount').textContent = t('nProj')(ai.length);
+    ai.forEach(function (p, i) {
+      var v = p.videos[0];
+      ab.append(tile('film', { cls: i === 0 ? 'l' : i === 1 ? 's' : i < 4 ? 'm' : '', img: p.still || v.poster, client: p.client, title: p.title, dur: count(p),
+        hover: p.loop || v.src, start: p.loop ? 0 : Math.min(4, Math.floor(v.d / 4)), go: function () { openProject(p.id, 0); } }));
+    });
+    // behind the scenes
+    var bb = $('#btsFilms'); bb.textContent = '';
+    P.forEach(function (p) {
+      p.videos.forEach(function (v, i) {
+        if (v.t !== 'Behind the scenes') return;
+        bb.append(tile('film', { cls: 'm', img: v.poster, client: t('btsH'), title: p.client, dur: fmt(v.d), hover: v.src, start: Math.min(6, Math.floor(v.d / 4)), go: function () { openProject(p.id, i); } }));
+      });
+    });
   }
 
   /* ---------- AI studio visuals ---------- */
   (function () {
-    var mq = $('#marquee'); if (!STILLS.length) return;
+    var box = $('#stills'); if (!STILLS.length) return;
     var half = Math.ceil(STILLS.length / 2);
     [STILLS.slice(0, half), STILLS.slice(half)].forEach(function (set) {
-      var row = el('div', 'mq-row');
+      var row = el('div', 'row');
       set.concat(set).forEach(function (src) { var i = el('img'); i.loading = 'lazy'; i.alt = ''; i.src = src; row.append(i); });
-      mq.append(row);
+      box.append(row);
     });
     var bg = $('#aiBg');
     if ('IntersectionObserver' in window && !reduce) new IntersectionObserver(function (es) {
@@ -294,7 +305,7 @@
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     $$('[data-t]').forEach(function (n) { var v = t(n.getAttribute('data-t')); if (typeof v === 'string') n.textContent = v; });
     $('#lang').textContent = t('lang');
-    renderPanels(); renderSections();
+    renderSelected(); renderSections();
   }
   $('#lang').addEventListener('click', function () {
     lang = lang === 'en' ? 'ar' : 'en';
