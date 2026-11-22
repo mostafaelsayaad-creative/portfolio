@@ -128,8 +128,6 @@
   /* ---------- hero, marquee, facts ---------- */
   var reel = $('#reel');
   if (reduce) { reel.removeAttribute('autoplay'); reel.pause(); }
-  $('#nProjects').textContent = P.length;
-  $('#nFilms').textContent = P.reduce(function (a, p) { return a + p.videos.length; }, 0);
   CLIENTS.concat(CLIENTS).forEach(function (c) { $('#clients').append(el('span', '', c)); });
 
   /* ---------- cards ---------- */
@@ -194,7 +192,7 @@
     SECS.forEach(function (s) {
       var list = inCat(s.id); if (s.id === 'photo') list = list.filter(function (p) { return p.images.length; });
       if (!list.length) return;
-      var sec = el('section', 'sec'); sec.id = 'sec-' + s.id;
+      var sec = el('section', 'sec' + (s.id === 'drama' ? ' ai-skin' : '')); sec.id = 'sec-' + s.id;
       var wrap = el('div', 'wrap'), head = el('div', 'head'), left = el('div');
       left.append(el('span', 'eyebrow', t('nProj')(list.length)), el('h2', '', s[lang][0]));
       head.append(left, el('p', 'sub', s[lang][1]));
