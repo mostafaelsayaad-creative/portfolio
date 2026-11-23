@@ -67,7 +67,7 @@ P = [
 ]
 # Home-page panels, in this order: project id -> key of media/reel/f-<key>.mp4 and .jpg
 FEATURED = [("ajmal-perfumes-untold-stories", "ajmal"), ("hublot-x-seddiqi-big-bang-75th-titanium", "titanium"),
-            ("skechers-back-to-school-2025", "skechers25"), ("treva-home-economist", "treva"),
+            ("skechers-back-to-school-2025", "skechers2025"), ("treva-home-economist", "treva"),
             ("ghamran-camp-documentary", "ghamran"), ("emaar-new-year-s-eve-film", "emaar"),
             ("rawaa-rice-the-longer-table", "rawaa")]
 VT = {(1, "01"): "Hero film", (1, "02"): "Behind the scenes", (1, "04"): "CEO interview",
@@ -149,6 +149,7 @@ extra("three59-just-one-tweak", "THREE59", "Just One Tweak", "music",
       [("v/x/just-one-tweak.mp4", "Music video")], ["Song written and directed by Mostafa Elsayaad", "Agency: THREE59"], 7)
 extra("saudi-german-health", "Saudi German Health", "Mental health film", "tvc",
       [("v/x/sgh-film.mp4", "Film"), ("v/x/sgh-bts.mp4", "Behind the scenes")], ["Produced with THREE59."], 6)
+out[[p["id"] for p in out].index("saudi-german-health")]["cover"] = "media/c/sgh.webp"
 extra("vatika-whatsyourflavour", "Vatika Fruitamin", "#WhatsYourFlavour on TikTok", "",
       [("v/x/case-vatika.mp4", "Case film")], [], 12)
 
