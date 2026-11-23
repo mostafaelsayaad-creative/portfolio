@@ -179,7 +179,7 @@
     'skechers-back-to-school': 'https://www.adsoftheworld.com/campaigns/back-to-school-a490c419-e4b3-4a18-a45f-2a95e914b4c7',
     'treva-home-economist': 'https://www.adsoftheworld.com/campaigns/treva-s-new-product-launch'
   };
-  var CLIENTS = ['Hublot', 'Emaar', 'Skechers', 'Ajmal Perfumes', 'Mashreq', 'Abbott', 'Treva', 'HomeBox', 'LYNK & CO', 'ADCB', 'Nivea', 'Mercedes-Benz Egypt', 'Dubai Mallathon', 'Saudi German Health', 'Talabat', 'OSN+', 'Dabur', 'Doux', 'Rawaa Rice', 'Oxfam'];
+  var CLIENTS = [["hublot.webp", "Hublot", 37], ["emaar.webp", "Emaar", 29], ["skechers.webp", "Skechers", 21], ["ajmal.webp", "Ajmal Perfumes", 54], ["mashreq.webp", "Mashreq", 25], ["abbott.webp", "Abbott", 31], ["treva.webp", "Treva", 40], ["homebox.webp", "Home Box", 47], ["lynk.webp", "LYNK & CO", 26], ["adcb.webp", "ADCB", 33], ["nivea.webp", "NIVEA", 47], ["mercedes.webp", "Mercedes-Benz", 47], ["sgh.webp", "Saudi German Health", 44], ["talabat.webp", "talabat", 30], ["osnplus.webp", "OSN+", 42], ["dabur.webp", "Dabur", 46], ["doux.webp", "Doux", 39], ["oxfam.webp", "Oxfam", 49]];  // [file in media/logos, brand, display height px]
 
   var lang = 'en';
   try { lang = localStorage.getItem('lang') || 'en'; } catch (e) {}
@@ -203,7 +203,10 @@
   /* ---------- hero, marquee, facts ---------- */
   var reel = $('#reel');
   if (reduce) { reel.removeAttribute('autoplay'); reel.pause(); }
-  CLIENTS.concat(CLIENTS).forEach(function (c) { $('#clients').append(el('span', '', c)); });
+  CLIENTS.concat(CLIENTS).forEach(function (c) {
+    var i = el('img'); i.src = 'media/logos/' + c[0]; i.alt = c[1]; i.title = c[1]; i.style.height = c[2] + 'px'; i.decoding = 'async';
+    $('#clients').append(i);
+  });
 
   /* ---------- cards ---------- */
   function hoverPlay(card, src, start) {
