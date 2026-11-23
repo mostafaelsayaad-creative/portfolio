@@ -8,6 +8,41 @@
 
   var T = {
     en: {
+      navServices: "Services",
+      navPress: "Press",
+      prE: "In the press",
+      prH: "Featured in Campaign Middle East and Ads of the World",
+      prP: "Three of the campaigns I produced, as the trade press and the Clio Network's archive covered them.",
+      pr1D: "28 Nov 2025",
+      pr1H: "Doux Chicken's AI-powered campaign in Saudi Arabia",
+      pr2D: "Aug 2024",
+      pr2H: "Skechers Back to school, shown on screens across the UAE and Saudi Arabia",
+      pr3D: "Nov 2024",
+      pr3H: "Treva's She Knows Best, a song in the Najdi dialect",
+      prGo: "Read the feature",
+      svH: "I also build what sits behind the films",
+      svP: "The teams and systems that get work delivered on time, and the proposals that win it in the first place.",
+      f1E: "For agencies and production houses",
+      f1H: "Production teams and traffic systems",
+      f1P: "I set up video production departments for advertising agencies and production houses: who does what, how a brief travels from the first call to the final master, and how each job is priced, tracked and checked. At the centre is a traffic system the whole team works from.",
+      f1L1: "Seven stages from brief to archive, with three quality gates",
+      f1L2: "One live tracker for every job, owner, deadline and piece of kit",
+      f1L3: "Budgets built before the idea is sold, in lean, hybrid and full versions",
+      f1L4: "A scored vendor bench, coded equipment and a skills matrix for training",
+      f1N: "Production Desk is the app I built to run it. Managers assign the work, the team accepts and delivers stage by stage, and every closed job feeds a performance score.",
+      f1B1: "Try the Production Desk demo",
+      f1B2: "Read the department proposal",
+      f2E: "For brands and agencies",
+      f2H: "Creative proposals that sell the idea",
+      f2P: "A good idea still has to be bought. I write and design the proposal that sells it, so a brand can see the film before a single shoot day is booked.",
+      f2L1: "The insight, the idea and the script, chapter by chapter",
+      f2L2: "AI key visuals made with the real product, cast and locations",
+      f2L3: "Looks, wardrobe, camera and light, set out for the client",
+      f2L4: "Deliverables, shoot days and a post plan the client can sign off",
+      f2N: "Example: Just the Two of Us, a 60-second hero film in five chapters for the LYNK & CO 900, planned as a two-day shoot in Ras Al Khaimah.",
+      f2B1: "Open the LYNK & CO 900 proposal",
+      svH2: "Crew, talent and production services",
+      pressLink: "Read the press feature",
       skip: 'Skip to the work', navSel: 'Selected work', navAi: 'AI Studio', navFilms: 'Films by type', navCases: 'Case studies', navCta: 'Start a project',
       roles: 'Creative film producer & AI creative director',
       heroSub: 'Fourteen years of commercials, music videos and social content across the Gulf and Egypt, and films directed with AI.',
@@ -29,7 +64,7 @@
       stSales: 'Increase in sales', stReach: 'Reach', stCtr: 'Click-through rate', stTraffic: 'Increase in traffic',
       caseNote: "Figures as reported in the campaign's case film.",
       btsE: 'On set', btsH: 'Behind the scenes', btsP: 'Some of the shoot days, before the edit.',
-      svE: 'Beyond the film', svH: 'Crew, talent and production services',
+      svE: 'Beyond the film',
       sv1H: 'Talent and casting', sv1P: 'Actors, models, presenters and voice artists from the Gulf, Egypt and Lebanon.',
       sv2H: 'Production services', sv2P: 'Crew, equipment, locations and permits, with one contact from the recce to delivery.',
       sv3H: 'Where', sv3P: 'United Arab Emirates, Saudi Arabia, Egypt and Lebanon.',
@@ -39,6 +74,41 @@
       close: 'Close', behance: 'See this project on Behance', film: 'Film', photo: 'Photo', lang: 'العربية'
     },
     ar: {
+      navServices: "الخدمات",
+      navPress: "الصحافة",
+      prE: "في الصحافة",
+      prH: "أعمالي في صحافة الإعلان",
+      prP: "ثلاث حملات من إنتاجي نشرتها مجلة Campaign Middle East وموقع Ads of the World التابع لشبكة كليو.",
+      pr1D: "28 نوفمبر 2025",
+      pr1H: "حملة دو للدجاج المصنوعة بالذكاء الاصطناعي في السعودية",
+      pr2D: "أغسطس 2024",
+      pr2H: "حملة سكيتشرز للعودة إلى المدارس، على شاشات الإمارات والسعودية",
+      pr3D: "نوفمبر 2024",
+      pr3H: "«هي أدرى» لتريفا، أغنية باللهجة النجدية",
+      prGo: "اقرأ المقال",
+      svH: "وأبني أيضًا ما يقف خلف الأفلام",
+      svP: "الفرق والأنظمة التي تسلّم العمل في موعده، والعروض التي تكسب المشروع من البداية.",
+      f1E: "لوكالات الإعلان وشركات الإنتاج",
+      f1H: "فرق الإنتاج وأنظمة الترافيك",
+      f1P: "أؤسس أقسام إنتاج الفيديو لوكالات الإعلان وشركات الإنتاج: من يفعل ماذا، وكيف ينتقل البريف من أول اتصال حتى النسخة النهائية، وكيف تُسعَّر كل مهمة وتُتابَع وتُراجَع. وفي القلب نظام ترافيك يعمل عليه الفريق كله.",
+      f1L1: "سبع مراحل من البريف حتى الأرشفة، مع ثلاث بوابات للجودة",
+      f1L2: "جدول متابعة حي لكل مهمة ومسؤول وموعد وقطعة معدات",
+      f1L3: "ميزانيات تُبنى قبل بيع الفكرة، بثلاثة مستويات: مختصر ومختلط وكامل",
+      f1L4: "قائمة موردين مُقيَّمة، ومعدات مُرمَّزة، ومصفوفة مهارات للتدريب",
+      f1N: "Production Desk هو التطبيق الذي بنيته لإدارة ذلك: المدير يوزّع المهام، والفريق يقبلها ويسلّمها مرحلة بمرحلة، وكل مهمة تُغلق تُحدّث تقييم الأداء.",
+      f1B1: "جرّب نسخة Production Desk التجريبية",
+      f1B2: "اقرأ عرض تأسيس القسم",
+      f2E: "للعلامات التجارية والوكالات",
+      f2H: "عروض إبداعية تبيع الفكرة",
+      f2P: "الفكرة الجيدة تحتاج من يشتريها. أكتب وأصمّم العرض الذي يبيعها، ليرى العميل الفيلم قبل أن يُحجز يوم تصوير واحد.",
+      f2L1: "الرؤية والفكرة والسيناريو، فصلًا بفصل",
+      f2L2: "صور رئيسية بالذكاء الاصطناعي بالمنتج الحقيقي والممثلين ومواقع التصوير",
+      f2L3: "الأزياء والإضاءة وحركة الكاميرا، واضحة للعميل",
+      f2L4: "المخرجات وأيام التصوير وخطة ما بعد الإنتاج، جاهزة للاعتماد",
+      f2N: "مثال: Just the Two of Us، فيلم رئيسي مدته 60 ثانية في خمسة فصول لسيارة لينك آند كو 900، مخطط له يوما تصوير في رأس الخيمة.",
+      f2B1: "افتح عرض لينك آند كو 900",
+      svH2: "الطواقم والمواهب وخدمات الإنتاج",
+      pressLink: "اقرأ المقال الصحفي",
       skip: 'انتقل إلى الأعمال', navSel: 'أعمال مختارة', navAi: 'استوديو الذكاء الاصطناعي', navFilms: 'الأفلام حسب النوع', navCases: 'دراسات حالة', navCta: 'ابدأ مشروعًا',
       roles: 'منتج أفلام إبداعي ومخرج إبداعي بالذكاء الاصطناعي',
       heroSub: 'أربعة عشر عامًا من الإعلانات والأغاني المصوّرة ومحتوى السوشيال ميديا في الخليج ومصر، وأفلام أخرجتها بالذكاء الاصطناعي.',
@@ -60,7 +130,7 @@
       stSales: 'زيادة في المبيعات', stReach: 'وصول', stCtr: 'نسبة النقر', stTraffic: 'زيادة في الزيارات',
       caseNote: 'الأرقام كما وردت في فيلم الحملة.',
       btsE: 'في موقع التصوير', btsH: 'كواليس التصوير', btsP: 'أيام من مواقع التصوير، قبل المونتاج.',
-      svE: 'أبعد من الفيلم', svH: 'الطواقم والمواهب وخدمات الإنتاج',
+      svE: 'أبعد من الفيلم',
       sv1H: 'المواهب والكاستينغ', sv1P: 'ممثلون وعارضون ومقدّمون ومعلّقون صوتيون من الخليج ومصر ولبنان.',
       sv2H: 'خدمات الإنتاج', sv2P: 'طواقم ومعدات ومواقع تصوير وتصاريح، مع جهة اتصال واحدة من المعاينة حتى التسليم.',
       sv3H: 'أين', sv3P: 'الإمارات والسعودية ومصر ولبنان.',
@@ -104,6 +174,11 @@
       en: ['Photography', 'Food, product and campaign key visuals, shot alongside the films or on their own.'],
       ar: ['التصوير الفوتوغرافي', 'تصوير الطعام والمنتجات والصور الرئيسية للحملات، مع الأفلام أو في جلسات مستقلة.'] }
   ];
+  var PRESS = {
+    'doux-a-day-with-doux': 'https://campaignme.com/saudi-arabias-doux-chicken-contatious-launch-ai-powered-campaign/',
+    'skechers-back-to-school': 'https://www.adsoftheworld.com/campaigns/back-to-school-a490c419-e4b3-4a18-a45f-2a95e914b4c7',
+    'treva-home-economist': 'https://www.adsoftheworld.com/campaigns/treva-s-new-product-launch'
+  };
   var CLIENTS = ['Hublot', 'Emaar', 'Skechers', 'Ajmal Perfumes', 'Mashreq', 'Abbott', 'Treva', 'HomeBox', 'LYNK & CO', 'ADCB', 'Nivea', 'Mercedes-Benz Egypt', 'Dubai Mallathon', 'Saudi German Health', 'Talabat', 'OSN+', 'Dabur', 'Doux', 'Rawaa Rice', 'Oxfam'];
 
   var lang = 'en';
@@ -277,7 +352,8 @@
     var cr = $('#vwCredits'); cr.textContent = '';
     p.credits.forEach(function (c) { cr.append(el('p', '', c)); });
     if (p.link) { var a = el('a', '', t('behance')); a.href = p.link; a.target = '_blank'; a.rel = 'noopener'; cr.append(a); }
-    cr.hidden = !p.credits.length && !p.link;
+    if (PRESS[p.id]) { var pa = el('a', '', t('pressLink')); pa.href = PRESS[p.id]; pa.target = '_blank'; pa.rel = 'noopener'; pa.style.marginInlineStart = '16px'; cr.append(pa); }
+    cr.hidden = !p.credits.length && !p.link && !PRESS[p.id];
     $$('main video').forEach(function (v) { v.pause(); });
     if (!dlg.open) dlg.showModal();
     if (p.videos.length && !photosFirst) show('v', Math.min(vi || 0, p.videos.length - 1)); else show('i', 0);
