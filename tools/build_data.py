@@ -12,7 +12,9 @@ AI = os.path.join(ROOT, "ai")
 
 P = [
  ("Ajmal Perfumes", "Untold Stories", "tvc cgi", [1]),
- ("Hublot x Seddiqi", "75th anniversary", "tvc cgi photo", [11, 10, 12]),
+ ("Hublot x Seddiqi", "75th anniversary", "tvc cgi photo", [11]),
+ ("Hublot x Seddiqi", "Big Bang 75th Silver", "tvc photo", [10]),
+ ("Hublot x Seddiqi", "Big Bang 75th Titanium", "tvc photo", [12]),
  ("Skechers", "Back to school", "tvc", [19, 3]),
  ("Treva", "Home Economist", "tvc music", [4]),
  ("Ghamran Camp", "Documentary", "doc", [7]),
@@ -69,7 +71,7 @@ FEATURED = [("ajmal-perfumes-untold-stories", "ajmal"), ("hublot-x-seddiqi-75th-
             ("rawaa-rice-the-longer-table", "rawaa")]
 VT = {(1, "01"): "Hero film", (1, "02"): "Behind the scenes", (1, "04"): "CEO interview",
       (8, "01"): "Hero film", (8, "02"): "Teaser 1", (8, "03"): "Teaser 2", (8, "04"): "Teaser 3",
-      (11, "01"): "Anniversary film", (10, "01"): "Big Bang Silver", (12, "01"): "Big Bang Titanium",
+      (11, "01"): "Anniversary film", (10, "01"): "TV commercial", (12, "01"): "TV commercial",
       (19, "01"): "Back to school TVC", (3, "01"): "2025 campaign film", (4, "01"): "TV commercial",
       (54, "01"): "Jingle film", (55, "01"): "World Cup ad"}
 CREDITS = {
@@ -183,7 +185,9 @@ for i, (pid, key) in enumerate(FEATURED):
     byid[pid]["feat"] = i + 1
     byid[pid]["still"] = f"media/reel/f-{key}.jpg"
     byid[pid]["loop"] = f"media/reel/f-{key}.mp4"
-out.sort(key=lambda p: p.get("feat", 99))   # stable: featured first, the rest keep their order
+# the two Big Bang films sit right after the featured anniversary film in their sections
+FOLLOW = {"hublot-x-seddiqi-big-bang-75th-silver": 2.1, "hublot-x-seddiqi-big-bang-75th-titanium": 2.2}
+out.sort(key=lambda p: p.get("feat", FOLLOW.get(p["id"], 99)))   # stable: featured first, the rest keep their order
 
 pov = vinfo("v/x/pov.mp4")
 stills = [f"ai/i/n{i:02d}.jpg" for i in range(1, 19) if os.path.exists(f"{AI}/i/n{i:02d}.jpg")]
