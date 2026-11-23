@@ -15,7 +15,8 @@ P = [
  ("Hublot x Seddiqi", "75th anniversary", "tvc cgi photo", [11]),
  ("Hublot x Seddiqi", "Big Bang 75th Silver", "tvc photo", [10]),
  ("Hublot x Seddiqi", "Big Bang 75th Titanium", "tvc photo", [12]),
- ("Skechers", "Back to school", "tvc", [19, 3]),
+ ("Skechers", "Back to school 2025", "tvc", [3]),
+ ("Skechers", "Back to school", "tvc", [19]),
  ("Treva", "Home Economist", "tvc music", [4]),
  ("Ghamran Camp", "Documentary", "doc", [7]),
  ("Emaar", "New Year's Eve film", "doc cgi", [9]),
@@ -65,18 +66,19 @@ P = [
  ("Forasna", "Job fair content", "doc", [65]),
 ]
 # Home-page panels, in this order: project id -> key of media/reel/f-<key>.mp4 and .jpg
-FEATURED = [("ajmal-perfumes-untold-stories", "ajmal"), ("hublot-x-seddiqi-75th-anniversary", "hublot"),
-            ("skechers-back-to-school", "skechers"), ("treva-home-economist", "treva"),
+FEATURED = [("ajmal-perfumes-untold-stories", "ajmal"), ("hublot-x-seddiqi-big-bang-75th-titanium", "titanium"),
+            ("skechers-back-to-school-2025", "skechers25"), ("treva-home-economist", "treva"),
             ("ghamran-camp-documentary", "ghamran"), ("emaar-new-year-s-eve-film", "emaar"),
             ("rawaa-rice-the-longer-table", "rawaa")]
 VT = {(1, "01"): "Hero film", (1, "02"): "Behind the scenes", (1, "04"): "CEO interview",
       (8, "01"): "Hero film", (8, "02"): "Teaser 1", (8, "03"): "Teaser 2", (8, "04"): "Teaser 3",
       (11, "01"): "Anniversary film", (10, "01"): "TV commercial", (12, "01"): "TV commercial",
-      (19, "01"): "Back to school TVC", (3, "01"): "2025 campaign film", (4, "01"): "TV commercial",
+      (19, "01"): "TV commercial", (3, "01"): "TV commercial", (4, "01"): "TV commercial",
       (54, "01"): "Jingle film", (55, "01"): "World Cup ad"}
 CREDITS = {
  2: ["Client: Dubai Mallathon", "Creative producer: Mostafa Elsayaad", "Filmmakers: Zeyad Sami, Tornike Gulashvili", "Agency: THREE59"],
- 19: ["Production house: LPS", "Creative producer: Mostafa Elsayaad", "Back to school director: Disha Hisham, DOP: Amr Nazeer", "2025 campaign director: Hany Visuals"],
+ 19: ["Production house: LPS", "Creative producer: Mostafa Elsayaad", "Director: Disha Hisham", "DOP: Amr Nazeer"],
+ 3: ["Production house: LPS", "Creative producer: Mostafa Elsayaad", "Director: Hany Visuals"],
  4: ["Creative producer: Mostafa Elsayaad", "Agency and production house: LPS Brands"],
  5: ["I led the video production department for the event: daily coverage across six malls, recap films, short-form and AI content."],
  7: ["Client: Ghamran Camp", "Creative producer: Mostafa Elsayaad", "Camera and edit: Zeyad Sami", "Agency: THREE59"],
@@ -119,7 +121,7 @@ def slug(s):
     return s.strip("-")
 
 EXTRA_V = {1: [], 4: [("v/x/treva-bts.mp4", "Behind the scenes"), ("v/x/case-treva.mp4", "Case film")],
-           19: [("v/x/skechers-bts.mp4", "Behind the scenes")]}
+           3: [("v/x/skechers-bts.mp4", "Behind the scenes")]}
 out = []
 for client, title, cats, nums in P:
     vids, imgs = [], []
@@ -185,8 +187,9 @@ for i, (pid, key) in enumerate(FEATURED):
     byid[pid]["feat"] = i + 1
     byid[pid]["still"] = f"media/reel/f-{key}.jpg"
     byid[pid]["loop"] = f"media/reel/f-{key}.mp4"
-# the two Big Bang films sit right after the featured anniversary film in their sections
-FOLLOW = {"hublot-x-seddiqi-big-bang-75th-silver": 2.1, "hublot-x-seddiqi-big-bang-75th-titanium": 2.2}
+# keep each brand's other films right after its featured film in the type sections
+FOLLOW = {"hublot-x-seddiqi-75th-anniversary": 2.1, "hublot-x-seddiqi-big-bang-75th-silver": 2.2,
+          "skechers-back-to-school": 3.1}
 out.sort(key=lambda p: p.get("feat", FOLLOW.get(p["id"], 99)))   # stable: featured first, the rest keep their order
 
 pov = vinfo("v/x/pov.mp4")

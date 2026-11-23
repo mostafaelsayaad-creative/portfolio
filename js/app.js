@@ -146,6 +146,8 @@
     'ajmal-perfumes-untold-stories': ['Hero film, behind the scenes and a CEO interview for the Untold Stories campaign.', 'الفيلم الرئيسي والكواليس ولقاء الرئيس التنفيذي لحملة Untold Stories.'],
     'hublot-x-seddiqi-75th-anniversary': ['From concept to delivery in one week, for the 75th anniversary.', 'من الفكرة إلى التسليم في أسبوع واحد، للذكرى الخامسة والسبعين.'],
     'skechers-back-to-school': ['The Back to school TVC and the 2025 campaign, with behind the scenes.', 'إعلان العودة إلى المدارس وحملة 2025، مع الكواليس.'],
+    'hublot-x-seddiqi-big-bang-75th-titanium': ['The titanium Big Bang, made for Seddiqi\'s 75th anniversary.', 'إصدار بيغ بانغ من التيتانيوم بمناسبة الذكرى الخامسة والسبعين لصدّيقي.'],
+    'skechers-back-to-school-2025': ['Back to school 2025, shot in the lab, the gym and the art room, with behind the scenes.', 'العودة إلى المدارس 2025، صُوّر في المختبر والصالة الرياضية ومرسم المدرسة، مع الكواليس.'],
     'treva-home-economist': ['A rap song for Saudi homemakers, shot as a music video.', 'أغنية راب لربّات البيوت في السعودية، صُوّرت فيديو كليب.'],
     'ghamran-camp-documentary': ['A documentary from the Ghamran desert camp.', 'فيلم وثائقي من مخيم غمران الصحراوي.'],
     'emaar-new-year-s-eve-film': ["The visitor film for New Year's Eve in Downtown Dubai.", 'فيلم الزوّار لليلة رأس السنة في وسط مدينة دبي.'],
