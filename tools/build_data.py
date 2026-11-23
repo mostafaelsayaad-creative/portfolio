@@ -141,9 +141,11 @@ def extra(pid, client, title, cats, files, credits, pos):
     vids = [vinfo(rel, t) for rel, t in files]
     out.insert(pos, {"id": pid, "client": client, "title": title, "cats": cats.split(),
                      "cover": vids[0]["poster"], "videos": vids, "images": [], "credits": credits, "link": ""})
+extra("three59-just-one-tweak", "THREE59", "Just One Tweak", "music",
+      [("v/x/just-one-tweak.mp4", "Music video")], ["Produced with THREE59."], 7)
 extra("saudi-german-health", "Saudi German Health", "Mental health film", "tvc",
       [("v/x/sgh-film.mp4", "Film"), ("v/x/sgh-bts.mp4", "Behind the scenes")], ["Produced with THREE59."], 6)
-extra("vatika-whatsyourflavour", "Vatika Fruitamin", "#WhatsYourFlavour on TikTok", "music social",
+extra("vatika-whatsyourflavour", "Vatika Fruitamin", "#WhatsYourFlavour on TikTok", "",
       [("v/x/case-vatika.mp4", "Case film")], [], 12)
 
 # AI studio work lives in ai/ (the AI portfolio site); reference its files instead of copying them.
