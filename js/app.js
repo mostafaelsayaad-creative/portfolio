@@ -156,8 +156,8 @@
       en: ['TV commercials', 'Hero films for TV and digital. I take them from the script through casting, the shoot and post to the final master.'],
       ar: ['الإعلانات التلفزيونية', 'أفلام رئيسية للتلفزيون والمنصات الرقمية. أتولّاها من النص إلى الكاستينغ والتصوير والمونتاج حتى النسخة النهائية.'] },
     { id: 'music', kind: 'wide',
-      en: ['Music videos', 'Songs written for a brand and shot as a proper music video, like the Treva rap for Saudi homemakers.'],
-      ar: ['الأغاني المصوّرة', 'أغانٍ تُكتب للعلامة وتُصوَّر فيديو كليب كاملًا، مثل أغنية الراب التي كتبناها لتريفا في السعودية.'] },
+      en: ['Music videos', 'Songs written for brands and shot as full music videos: the Treva rap for Saudi homemakers, and Just One Tweak, which I wrote and directed.'],
+      ar: ['الأغاني المصوّرة', 'أغانٍ تُكتب للعلامات وتُصوَّر فيديو كليب كاملًا، مثل أغنية الراب لتريفا في السعودية، وأغنية Just One Tweak التي كتبتها وأخرجتها.'] },
     { id: 'drama', kind: 'drama',
       en: ['Micro-drama', 'Three original vertical series that I write and direct, made with AI. Each episode runs about a minute.'],
       ar: ['الدراما القصيرة', 'ثلاثة مسلسلات عمودية أصلية أكتبها وأخرجها، مصنوعة بالذكاء الاصطناعي. مدة الحلقة نحو دقيقة.'] },
@@ -376,13 +376,62 @@
     });
   });
 
+
+  /* ---------- section tabs ---------- */
+  var TABS = [
+    ['work', 'Selected work', 'أعمال مختارة'], ['press', 'Press', 'الصحافة'], ['ai', 'AI Studio', 'استوديو الذكاء الاصطناعي'], '|',
+    ['sec-tvc', 'TVCs', 'الإعلانات'], ['sec-music', 'Music videos', 'الأغاني المصوّرة'], ['sec-drama', 'Micro-drama', 'الدراما القصيرة'],
+    ['sec-social', 'Short formats', 'المحتوى القصير'], ['sec-cgi', 'CGI', 'CGI'], ['sec-doc', 'Documentaries', 'الوثائقيات'],
+    ['sec-photo', 'Photography', 'التصوير الفوتوغرافي'], '|',
+    ['cases', 'Case studies', 'دراسات حالة'], ['bts', 'Behind the scenes', 'كواليس التصوير'], ['services', 'Services', 'الخدمات']
+  ];
+  var tabLinks = [];
+  function renderTabs() {
+    var box = $('#tabs'); box.textContent = ''; tabLinks = [];
+    box.setAttribute('aria-label', lang === 'ar' ? 'أقسام الموقع' : 'Sections');
+    TABS.forEach(function (tb) {
+      if (tb === '|') { box.append(el('span', 'sep')); return; }
+      if (!document.getElementById(tb[0])) return;
+      var a = el('a', '', tb[L() + 1]); a.href = '#' + tb[0];
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = document.getElementById(tb[0]);
+        target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+        history.replaceState(null, '', '#' + tb[0]);
+      });
+      box.append(a); tabLinks.push([a, tb[0]]);
+    });
+    spy();
+  }
+  var current = null;
+  function spy() {
+    var line = $('.nav').offsetHeight + 24, hit = null;
+    tabLinks.forEach(function (x) {
+      var n = document.getElementById(x[1]); if (n && n.getBoundingClientRect().top <= line) hit = x;
+    });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) hit = tabLinks[tabLinks.length - 1];
+    if (hit === current && hit && hit[0].getAttribute('aria-current')) return;
+    tabLinks.forEach(function (x) { x[0].removeAttribute('aria-current'); });
+    current = hit;
+    if (!hit) return;
+    hit[0].setAttribute('aria-current', 'true');
+    var box = $('#tabs'), r = hit[0].getBoundingClientRect(), b = box.getBoundingClientRect();
+    box.scrollBy({ left: (r.left + r.width / 2) - (b.left + b.width / 2), behavior: reduce ? 'auto' : 'smooth' });
+  }
+  var spyQueued = false;
+  window.addEventListener('scroll', function () {
+    if (spyQueued) return; spyQueued = true;
+    requestAnimationFrame(function () { spyQueued = false; spy(); });
+  }, { passive: true });
+  window.addEventListener('resize', spy);
+
   /* ---------- language ---------- */
   function applyText() {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     $$('[data-t]').forEach(function (n) { var v = t(n.getAttribute('data-t')); if (typeof v === 'string') n.textContent = v; });
     $('#lang').textContent = t('lang');
-    renderSelected(); renderSections();
+    renderSelected(); renderSections(); renderTabs();
   }
   $('#lang').addEventListener('click', function () {
     lang = lang === 'en' ? 'ar' : 'en';

@@ -142,7 +142,7 @@ def extra(pid, client, title, cats, files, credits, pos):
     out.insert(pos, {"id": pid, "client": client, "title": title, "cats": cats.split(),
                      "cover": vids[0]["poster"], "videos": vids, "images": [], "credits": credits, "link": ""})
 extra("three59-just-one-tweak", "THREE59", "Just One Tweak", "music",
-      [("v/x/just-one-tweak.mp4", "Music video")], ["Produced with THREE59."], 7)
+      [("v/x/just-one-tweak.mp4", "Music video")], ["Song written and directed by Mostafa Elsayaad", "Agency: THREE59"], 7)
 extra("saudi-german-health", "Saudi German Health", "Mental health film", "tvc",
       [("v/x/sgh-film.mp4", "Film"), ("v/x/sgh-bts.mp4", "Behind the scenes")], ["Produced with THREE59."], 6)
 extra("vatika-whatsyourflavour", "Vatika Fruitamin", "#WhatsYourFlavour on TikTok", "",
